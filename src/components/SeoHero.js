@@ -7,7 +7,7 @@ export default function SeoHero() {
         <div
           className="relative overflow-hidden rounded-3xl min-h-[520px] flex items-center justify-center"
           style={{
-            backgroundImage: "url('/seohero.jpg')",
+            backgroundImage: "url('/seohero.webp')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

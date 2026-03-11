@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function WhoWeAreSection() {
   return (
-    <section className="bg-black text-white px-4 sm:px-6 md:px-12 py-8 md:py-10">
+    <section className="bg-black text-white px-4 sm:px-6 md:px-12 py-8 md:py-10 -mt-25">
       <div className="max-w-7xl mx-auto">
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 items-center">

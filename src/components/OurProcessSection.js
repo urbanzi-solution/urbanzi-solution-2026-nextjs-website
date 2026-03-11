@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function OurProcessSection() {
   return (
-    <section className="bg-black text-white py-20 md:py-32 px-6 md:px-[75px]">
+    <section className="bg-black text-white py-20 md:py-32 px-6 md:px-[75px] -mt-25">
       <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-[45%_55%] gap-12 md:gap-20 items-center">
 
         {/* LEFT IMAGE */}

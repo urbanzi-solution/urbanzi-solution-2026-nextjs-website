@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, ChevronDown } from "lucide-react";
 
@@ -13,22 +13,27 @@ export default function Navbar() {
     setServicesOpen(false);
   };
 
+  // Prevent page scroll when menu opens
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "auto";
+  }, [open]);
+
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-lg border-b border-white/10">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-xl border-b border-white/10">
 
       {/* NAV CONTAINER */}
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
 
-        {/* MOBILE MENU BUTTON (LEFT ON PHONE) */}
+        {/* MOBILE MENU BUTTON */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-white"
+          className="md:hidden text-white z-50"
         >
           {open ? <X size={28} /> : <Menu size={28} />}
         </button>
 
         {/* LOGO */}
-        <div className="text-white text-lg md:text-xl font-semibold leading-tight text-center flex-1 md:flex-none">
+        <div className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 text-white text-lg md:text-xl font-semibold text-center leading-tight">
           URBANZI <br className="hidden sm:block" /> SOLUTIONS
         </div>
 
@@ -56,9 +61,6 @@ export default function Navbar() {
                 className="transition-transform duration-200 group-hover:rotate-180"
               />
             </Link>
-
-            {/* Hover bridge */}
-            <div className="absolute left-0 right-0 top-full h-3"></div>
 
             {/* Dropdown */}
             <div
@@ -94,6 +96,10 @@ export default function Navbar() {
                 SEO Services
               </Link>
 
+               <Link href="/digital-marketing" className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5">
+                Digital Marketing
+              </Link>
+
               <Link href="/graphics-animation" className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-b-xl">
                 Graphic Design & Animation
               </Link>
@@ -113,7 +119,9 @@ export default function Navbar() {
           <Link href="/blogs" className="hover:text-white transition">
             Blogs
           </Link>
-
+ <Link href="/contact" className="hover:text-white transition">
+            Contact Us
+          </Link>
         </div>
 
         {/* DESKTOP BUTTON */}
@@ -125,7 +133,7 @@ export default function Navbar() {
 
       {/* MOBILE MENU */}
       <div
-        className={`fixed top-0 left-0 w-full h-screen bg-[#0b1220] transform transition-transform duration-300 md:hidden ${
+        className={`fixed inset-0 bg-[#0b1220] transform transition-transform duration-300 md:hidden ${
           open ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -137,19 +145,20 @@ export default function Navbar() {
             URBANZI SOLUTIONS
           </div>
 
-          <button onClick={() => setOpen(false)} className="text-white">
+          <button onClick={closeMenu} className="text-white">
             <X size={28} />
           </button>
 
         </div>
 
         {/* MOBILE LINKS */}
-        <div className="flex flex-col px-6 py-8 space-y-6 text-gray-300 text-lg">
+        <div className="flex flex-col px-6 py-10 space-y-7 bg-sky-950 text-gray-300 text-lg">
 
           <Link href="/" onClick={closeMenu}>Home</Link>
+
           <Link href="/about" onClick={closeMenu}>About Us</Link>
 
-          {/* SERVICES MOBILE */}
+          {/* SERVICES */}
           <div>
 
             <div className="flex items-center justify-between">
@@ -188,6 +197,10 @@ export default function Navbar() {
                 SEO Services
               </Link>
 
+               <Link href="/digital-marketing" onClick={closeMenu}>
+                Digital Marketing
+              </Link>
+
               <Link href="/graphics-animation" onClick={closeMenu}>
                 Graphic Design
               </Link>
@@ -197,10 +210,14 @@ export default function Navbar() {
           </div>
 
           <Link href="/clients" onClick={closeMenu}>Clients</Link>
+
           <Link href="/careers" onClick={closeMenu}>Careers</Link>
+
           <Link href="/blogs" onClick={closeMenu}>Blogs</Link>
 
-          <button className="mt-6 bg-white text-black py-3 rounded-full font-medium">
+          <Link href="/contact" onClick={closeMenu}>Contact Us</Link>
+
+          <button className="mt-8 bg-white text-black py-3 rounded-full font-medium">
             Let’s Talk
           </button>
 

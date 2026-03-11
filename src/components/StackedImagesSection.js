@@ -1,24 +1,36 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useRef } from "react";
 
 const imagePairs = [
   {
-    images: ["/img1.jpg", "/img2.jpg"],
-    positions: ["top-20 left-20 w-60", "bottom-24 right-24 w-72"],
+    images: ["/img1.webp", "/img2.webp"],
+    positions: [
+      "top-20 left-10 md:left-20 w-40 md:w-60",
+      "bottom-24 right-10 md:right-24 w-44 md:w-72",
+    ],
   },
   {
-    images: ["/img3.jpg", "/img4.jpg"],
-    positions: ["top-32 right-16 w-64", "bottom-20 left-32 w-56"],
+    images: ["/img3.webp", "/img4.webp"],
+    positions: [
+      "top-28 right-10 md:right-16 w-44 md:w-64",
+      "bottom-20 left-10 md:left-32 w-40 md:w-56",
+    ],
   },
   {
-    images: ["/img5.jpg", "/img6.jpg"],
-    positions: ["top-24 left-1/3 w-72", "bottom-32 right-1/4 w-60"],
+    images: ["/img5.webp", "/img6.webp"],
+    positions: [
+      "top-24 left-1/4 md:left-1/3 w-44 md:w-72",
+      "bottom-28 right-1/4 w-40 md:w-60",
+    ],
   },
   {
-    images: ["/img7.jpg", "/img8.jpg"],
-    positions: ["top-1/4 right-1/3 w-64", "bottom-1/4 left-1/4 w-56"],
+    images: ["/img7.webp", "/img8.webp"],
+    positions: [
+      "top-1/4 right-1/4 md:right-1/3 w-44 md:w-64",
+      "bottom-1/4 left-1/4 w-40 md:w-56",
+    ],
   },
 ];
 
@@ -30,21 +42,28 @@ export default function FloatingStackSection() {
     offset: ["start start", "end end"],
   });
 
+  /* SMOOTH SPRING SCROLL */
+  const smoothScroll = useSpring(scrollYProgress, {
+    stiffness: 60,
+    damping: 25,
+    mass: 0.3,
+  });
+
   return (
     <section
       ref={ref}
-      className="relative h-[800vh] bg-black text-white"
-      style={{ perspective: "1600px" }}
+      className="relative h-[600vh] bg-black text-white"
+      style={{ perspective: "1400px" }}
     >
-      <div className="sticky top-0 h-screen overflow-hidden">
+      <div className="sticky top-0 h-screen overflow-hidden flex items-center justify-center">
 
         {/* CENTER TEXT */}
-        <div className="absolute inset-0 flex items-center justify-center z-30 text-center pointer-events-none">
+        <div className="absolute inset-0 flex items-center justify-center z-30 text-center px-6 pointer-events-none">
           <div>
-            <h2 className="text-6xl font-light">
+            <h2 className="text-3xl md:text-6xl font-light">
               Future-Ready Systems.
             </h2>
-            <p className="text-5xl text-gray-500 mt-4">
+            <p className="text-2xl md:text-5xl text-gray-500 mt-4">
               Built by Urbanzi
             </p>
           </div>
@@ -57,30 +76,30 @@ export default function FloatingStackSection() {
 
           const nextPair = imagePairs[pairIndex + 1];
 
-          // FRONT ACTIVE PAIR
+          /* FRONT */
           const frontOpacity = useTransform(
-            scrollYProgress,
-            [start, start + 0.15, end - 0.2, end],
+            smoothScroll,
+            [start, start + 0.15, end - 0.15, end],
             [0, 1, 1, 0]
           );
 
           const frontScale = useTransform(
-            scrollYProgress,
+            smoothScroll,
             [start, end],
-            [0.95, 1.4]
+            [0.96, 1.2]
           );
 
-          // BACK PREVIEW PAIR
+          /* BACK */
           const backOpacity = useTransform(
-            scrollYProgress,
+            smoothScroll,
             [start, start + 0.1],
-            [0.4, 0.8]
+            [0.3, 0.7]
           );
 
           const backScale = useTransform(
-            scrollYProgress,
+            smoothScroll,
             [start, end],
-            [0.8, 1]
+            [0.9, 1]
           );
 
           return (
@@ -99,7 +118,7 @@ export default function FloatingStackSection() {
                     <motion.img
                       key={i}
                       src={src}
-                      className={`absolute ${nextPair.positions[i]} rounded-xl blur-md opacity-70`}
+                      className={`absolute ${nextPair.positions[i]} rounded-xl blur-sm opacity-70`}
                     />
                   ))}
                 </motion.div>

@@ -29,7 +29,7 @@ export default function FAQSection() {
   const [open, setOpen] = useState(0);
 
   return (
-    <section className="bg-black text-white py-20 md:py-32 px-4 md:px-[75px]">
+    <section className="bg-black text-white py-20 md:py-32 px-4 md:px-[75px] -mt-28">
       <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-20">
 
         {/* Left title */}

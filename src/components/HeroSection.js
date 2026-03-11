@@ -2,7 +2,7 @@
 
 export default function HeroSection() {
   return (
-    <section className="bg-black text-white min-h-screen flex items-center">
+    <section className="bg-black text-white min-h-screen flex -mt-35 items-center">
       <div className="max-w-7xl mx-auto px-5 w-full">
         
         <div className="grid lg:grid-cols-2 gap-12 items-center">

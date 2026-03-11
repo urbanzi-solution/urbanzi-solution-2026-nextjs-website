@@ -27,7 +27,7 @@ export default function RunningHeadline() {
         }
 
         .animate-marquee-left {
-          animation: marqueeLeft 10s linear infinite;
+          animation: marqueeLeft 15s linear infinite;
           will-change: transform;
         }
       `}</style>

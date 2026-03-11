@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function MissionSection() {
   return (
-    <section className="bg-black text-white px-6 md:px-12 py-24 overflow-hidden">
+    <section className="bg-black text-white px-6 md:px-12 py-24 overflow-hidden -mt-30">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
         {/* Image - Slide In From Left */}
@@ -17,7 +17,7 @@ export default function MissionSection() {
           className="relative w-full h-[400px] md:h-[500px] rounded-3xl overflow-hidden"
         >
           <Image
-            src="/mission.jpg"   // put your image inside public folder
+            src="/mission.webp"   // put your image inside public folder
             alt="Mission"
             fill
             className="object-cover"

@@ -2,7 +2,7 @@
 
 export default function HeroGlobeSection() {
   return (
-    <section className="relative bg-[#050816] text-white overflow-hidden">
+    <section className="relative bg-[#050816] text-white overflow-hidden ">
 
       {/* HERO CONTENT */}
       <div className="flex flex-col items-center justify-center text-center px-6 pt-28 pb-12 relative z-20">
@@ -36,25 +36,50 @@ export default function HeroGlobeSection() {
 
       {/* ================= GLOBE SECTION ================= */}
 
-      <div className="relative flex items-center justify-center mt-24">
+      <div className="relative flex items-center justify-center mt-16">
 
         {/* Rotating Globe */}
-        <div className="absolute w-[700px] h-[700px] sm:w-[900px] sm:h-[900px] md:w-[1200px] md:h-[1200px] animate-rotateSlow opacity-65">
+        <div className="
+        absolute
+        left-1/2
+        -translate-x-1/2
+        transform-gpu
+        will-change-transform
+        w-[420px] h-[420px]
+        sm:w-[650px] sm:h-[650px]
+        md:w-[900px] md:h-[900px]
+        animate-rotateSlow
+        opacity-70
+        ">
+
           <img
-            src="/globe.png"
+            src="/globe.webp"
             alt="Globe"
-            className="w-full h-full object-contain"
+            className="w-full h-full object-contain select-none"
           />
+
         </div>
 
         {/* Top Blue Glow */}
-        <div className="absolute w-[400px] sm:w-[600px] md:w-[900px] h-[300px] bg-blue-600/30 blur-[150px] rounded-full top-10" />
+        <div className="
+        absolute
+        left-1/2
+        -translate-x-1/2
+        w-[300px]
+        sm:w-[500px]
+        md:w-[700px]
+        h-[250px]
+        bg-blue-600/30
+        blur-[140px]
+        rounded-full
+        top-6
+        " />
 
-        {/* Bottom Dark Fade */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/90 to-black" />
+        {/* Bottom Fade */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/80 to-black" />
 
         {/* TEXT ON GLOBE */}
-        <div className="relative z-30 text-center px-6 py-32 max-w-4xl">
+        <div className="relative z-30 text-center px-6 py-28 max-w-4xl">
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight">
             <span className="block">Urbanzi Delivers</span>
             <span className="block text-gray-200">B2B Virtual</span>

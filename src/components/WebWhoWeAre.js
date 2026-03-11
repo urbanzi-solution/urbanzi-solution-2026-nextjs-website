@@ -9,7 +9,7 @@ export default function WebWhoWeAre() {
           {/* Image side */}
           <div className="flex justify-center">
             <img
-              src="/webare.png"
+              src="/webare.webp"
               alt="Who we are"
               className="max-w-full"
             />
@@ -25,7 +25,8 @@ export default function WebWhoWeAre() {
             <div className="w-20 h-[3px] bg-[#9fd0ff] mt-4 mb-8" />
 
             <p className="text-white/90 text-[16px] md:text-[18px] leading-relaxed">
-              At <span className="font-semibold text-white">Urbanzi Solutions</span>, we believe your business deserves to be seen and celebrated online. Proudly based in Trivandrum and serving all of Kerala, our team combines creativity, empathy, and advanced technology to help real businesses like yours grow, connect, and succeed on the web. We know that navigating the digital world can be stressful, so we walk beside you at every step—making the journey simple and rewarding.
+              At <span className="font-semibold text-white">Urbanzi Solutions</span>,  A professional web development company designs, builds, and optimizes websites that are fast, secure, mobile-friendly, SEO-ready, and conversion-focused. At Urbanzi, we help businesses in Trivandrum and across Kerala turn their websites into powerful digital assets that generate leads, sales, and long-term growth.
+
             </p>
 
             <div className="mt-10">

@@ -9,7 +9,7 @@ export default function SeoWebWhoWeAre() {
           {/* Image side */}
           <div className="flex justify-center">
             <img
-              src="/Seoare.png"
+              src="/Seoare.webp"
               alt="Who we are"
               className="max-w-70"
             />

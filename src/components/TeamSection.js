@@ -43,7 +43,7 @@ const teamMembers = [
 
 export default function TeamSection() {
   return (
-    <section className="bg-black text-white px-6 md:px-12 py-24">
+    <section className="bg-black text-white px-6 md:px-12 py-24 -mt-25">
       <div className="max-w-7xl mx-auto">
 
         {/* Section Heading */}

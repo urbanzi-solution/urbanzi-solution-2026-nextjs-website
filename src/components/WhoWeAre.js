@@ -9,7 +9,7 @@ export default function WhoWeAre() {
           {/* Image side */}
           <div className="flex justify-center">
             <img
-              src="/who-we-are.png"
+              src="/who-we-are.webp"
               alt="Who we are"
               className="max-w-full"
             />

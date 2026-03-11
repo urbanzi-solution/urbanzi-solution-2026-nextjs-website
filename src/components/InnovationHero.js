@@ -7,7 +7,7 @@ export default function InnovationHero() {
         <div
           className="relative overflow-hidden rounded-3xl min-h-[520px] flex items-center justify-center"
           style={{
-            backgroundImage: "url('/innovation-hero.jpg')",
+            backgroundImage: "url('/innovation-hero.webp')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

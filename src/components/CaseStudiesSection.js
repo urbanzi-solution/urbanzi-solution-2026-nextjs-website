@@ -8,7 +8,7 @@ const cases = [
     title: "Digital Marketing Pro",
     subtitle: "Leading marketing agency",
     work: "Branding / Marketing",
-    image: "/market.jpg",
+    image: "/market.webp",
     stats: [
       { value: "3000+", label: "Campaigns Delivered" },
       { value: "75%", label: "Conversion Rate" },
@@ -19,7 +19,7 @@ const cases = [
     title: "Arrow Cabs",
     subtitle: "Best car rental in Trivandrum",
     work: "Website / SEO",
-    image: "/car.jpg",
+    image: "/car.webp",
     stats: [
       { value: "5000+", label: "Leads Delivered" },
       { value: "50%", label: "Organic Traffic Increase" },
@@ -37,7 +37,7 @@ export default function CaseStudiesSection() {
     setIndex((p) => (p - 1 + cases.length) % cases.length);
 
   return (
-    <section className="bg-black py-16 md:py-20 px-4 md:px-6">
+    <section className="bg-black py-16 md:py-20 px-4 md:px-6 -mt-30">
       <div className="max-w-6xl mx-auto rounded-[28px] p-6 md:p-10
         bg-gradient-to-br from-[#030303] via-[#000000] to-[#020202]
         text-white shadow-[0_15px_40px_rgba(0,0,0,0.35)]">

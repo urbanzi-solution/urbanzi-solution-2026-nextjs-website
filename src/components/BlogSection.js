@@ -37,7 +37,7 @@ export default function BlogSection() {
 
             <div className="col-span-12 md:col-span-4">
               <img
-                src="/img7.jpg"
+                src="/img7.webp"
                 alt="Post"
                 className="w-full h-52 md:h-64 object-cover"
               />
@@ -77,7 +77,7 @@ export default function BlogSection() {
 
             <div className="col-span-12 md:col-span-4">
               <img
-                src="/img3.jpg"
+                src="/img3.webp"
                 alt="Post"
                 className="w-full h-52 md:h-64 object-cover"
               />
@@ -117,7 +117,7 @@ export default function BlogSection() {
 
             <div className="col-span-12 md:col-span-4">
               <img
-                src="/post3.jpg"
+                src="/post3.webp"
                 alt="Post"
                 className="w-full h-52 md:h-64 object-cover"
               />

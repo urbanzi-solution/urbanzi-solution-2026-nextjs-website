@@ -9,7 +9,7 @@ export default function AboutPage() {
 
         {/* Background Image */}
         <Image
-          src="/marketin.jpg"
+          src="/marketin.webp"
           alt="About Hero"
           fill
           className="object-cover"

@@ -12,5 +12,71 @@ body {
 }
 
 .animate-rotateSlow {
-  animation: rotateSlow 25s linear infinite;
+  animation: rotateSlow 60s linear infinite;
+}
+.contact-input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #111827;
+  border: 1px solid rgba(255,255,255,0.08);
+  color: white;
+  font-size: 14px;
+  transition: all 0.25s ease;
+}
+
+.contact-input::placeholder {
+  color: #6b7280;
+}
+
+.contact-input:focus {
+  outline: none;
+  border-color: #ec4899;
+  box-shadow: 0 0 0 2px rgba(236,72,153,0.2);
+}
+.whatsapp-button{
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #25D366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  animation: heartbeat 1.8s infinite;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-button:hover{
+  transform: translateY(-50%) scale(1.1);
+}
+
+@keyframes heartbeat{
+
+  0%{
+    transform: translateY(-50%) scale(1);
+  }
+
+  25%{
+    transform: translateY(-50%) scale(1.15);
+  }
+
+  40%{
+    transform: translateY(-50%) scale(1);
+  }
+
+  60%{
+    transform: translateY(-50%) scale(1.15);
+  }
+
+  100%{
+    transform: translateY(-50%) scale(1);
+  }
+
 }

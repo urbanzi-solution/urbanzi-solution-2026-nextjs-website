@@ -7,7 +7,7 @@ export default function GraphicsHero() {
         <div
           className="relative overflow-hidden rounded-3xl min-h-[520px] flex items-center justify-center"
           style={{
-            backgroundImage: "url('/grahero.jpg')",
+            backgroundImage: "url('/grahero.webp')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

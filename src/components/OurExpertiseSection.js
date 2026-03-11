@@ -32,7 +32,7 @@ export default function OurExpertiseSection() {
   const secondRow = techStack.slice(5);
 
   return (
-    <section className="bg-black text-white py-16 md:py-32 px-6 md:px-[75px] overflow-hidden">
+    <section className="bg-black text-white py-16 md:py-32 px-6 md:px-[75px] overflow-hidden -mt-25">
       <div className="max-w-[1400px] mx-auto relative md:-mt-28">
 
         <h2 className="text-3xl sm:text-4xl md:text-[56px] font-light mb-3">

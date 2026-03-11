@@ -9,7 +9,7 @@ export default function SoftWhoWeAre() {
           {/* Image side */}
           <div className="flex justify-center">
             <img
-              src="/soft.jpg"
+              src="/soft.webp"
               alt="Who we are"
               className="max-w-100"
             />
@@ -25,7 +25,8 @@ export default function SoftWhoWeAre() {
             <div className="w-20 h-[3px] bg-[#9fd0ff] mt-4 mb-8" />
 
             <p className="text-white/90 text-[16px] md:text-[18px] leading-relaxed">
-              At <span className="font-semibold text-white">Urbanzi Solutions</span>,is a top software development company in Kerala, trusted by ambitious organizations that need more than cookie-cutter tools. With deep roots in Trivandrum and clients across India, our team listens to your unique needs, then designs, builds, and supports software that solves real challenges—making your work smoother, smarter, and ready for the future.
+              At <span className="font-semibold text-white">Urbanzi Solutions</span>, A software development company designs, builds, and maintains custom digital systems that automate workflows, centralize data, and improve operational efficiency. At Urbanzi, we help businesses in Kerala replace fragmented tools with scalable, secure, and purpose-built software that actually fits how they work.
+
             </p>
 
             <div className="mt-10">

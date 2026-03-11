@@ -9,7 +9,7 @@ export default function GraphicsWhoWeAre() {
           {/* Image side */}
           <div className="flex justify-center">
             <img
-              src="/graphics.png"
+              src="/graphics.webp"
               alt="Who we are"
               className="max-w-full"
             />

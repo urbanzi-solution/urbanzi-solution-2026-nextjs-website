@@ -7,7 +7,7 @@ export default function WebbHero() {
         <div
           className="relative overflow-hidden rounded-3xl min-h-[520px] flex items-center justify-center"
           style={{
-            backgroundImage: "url('/Webhero.jpg')",
+            backgroundImage: "url('/Webhero.webp')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -19,14 +19,15 @@ export default function WebbHero() {
           <div className="relative z-10 text-center px-6">
             <h1 className="text-[42px] md:text-[56px] lg:text-[64px] leading-[1.1] font-semibold text-[#9fd0ff]">
               
-                Bring Your Ideas Online with Kerala's
+               Web Development Company in Trivandrum, Kerala 
               <br />
-              Trusted Web Development
-                Company
+             High-Performance Websites That Convert
+
             </h1>
 
             <p className="mt-6 max-w-[720px] mx-auto text-white/90 text-[16px] md:text-[18px] leading-relaxed">
-              Struggling to turn your business vision into a website that truly works? Based in Trivandrum, Urbanzi Solutions understands the frustration of feeling invisible online, outdated, or held back by tech headaches. We listen to your challenges, then craft SEO-friendly, stunning websites that break barriers, attract real customers, and finally give your brand the spotlight it deserves.
+              Urbanzi is a professional web development company in Trivandrum, Kerala, building fast, secure, SEO-optimized websites and e-commerce platforms. Custom WordPress, Shopify, React & Next.js solutions for businesses that want more leads and sales.
+
             </p>
 
             <div className="mt-10">

@@ -97,7 +97,7 @@ export default function ServicesStackSection() {
   }
 
   return (
-    <section className="bg-black text-white py-20 md:py-40 px-6 md:px-[95px]">
+    <section className="bg-black text-white py-20 md:py-40 px-6 md:px-[95px] -mt-25">
 
       <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-[38%_62%] gap-16 md:gap-4">
 
@@ -111,7 +111,7 @@ export default function ServicesStackSection() {
             </span>
           </h2>
 
-          <button className="mt-8 md:mt-12 bg-white text-orange-600 px-7 py-3 rounded-full text-base md:text-lg font-medium">
+          <button className="mt-8 md:mt-12 bg-white text-orange-600 px-7 py-3 rounded-full text-base md:text-lg font-medium hover:scale-105 transition-all duration-300">
             See More Services
           </button>
         </div>
@@ -131,10 +131,10 @@ export default function ServicesStackSection() {
                 return (
                   <div
                     key={index}
-                    className="sticky top-24 mb-10"
+                    className="sticky top-24 mb-10 transition-all duration-500 ease-out"
                     style={{ zIndex: index + 1 }}
                   >
-                    <div className="rounded-3xl p-7 flex flex-col justify-center items-center text-center shadow-xl bg-[#173070]">
+                    <div className="rounded-3xl p-7 flex flex-col justify-center items-center text-center shadow-xl bg-[#173070] transform-gpu transition-all duration-500 ease-out hover:scale-[1.02] will-change-transform">
 
                       <div className="bg-blue-600 p-4 rounded-xl mb-6 shadow-lg shadow-black/30">
                         <Icon size={28}/>
@@ -155,13 +155,13 @@ export default function ServicesStackSection() {
 
             </div>
 
-            {/* DESKTOP STACK (UNCHANGED) */}
+            {/* DESKTOP STACK */}
             <div className="hidden md:block">
 
               {rows.map((row, rowIndex) => (
                 <div
                   key={rowIndex}
-                  className="mb-8 md:sticky md:top-28"
+                  className="mb-8 md:sticky md:top-28 transition-all duration-500 ease-out"
                   style={{ zIndex: rowIndex + 1 }}
                 >
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-3">
@@ -173,7 +173,7 @@ export default function ServicesStackSection() {
                       return (
                         <div
                           key={index}
-                          className="rounded-3xl p-12 flex flex-col justify-center items-center text-center shadow-xl bg-[#173070]"
+                          className="rounded-3xl p-12 flex flex-col justify-center items-center text-center shadow-xl bg-[#173070] transform-gpu transition-all duration-500 ease-out hover:scale-[1.03] will-change-transform"
                         >
 
                           <div className="bg-blue-600 p-5 rounded-xl mb-8 shadow-lg shadow-black/30">

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function CTASection() {
   return (
-    <section className="bg-black px-4 md:px-12 py-16 md:py-24">
+    <section className="bg-black px-4 md:px-12 py-16 md:py-24 -mt-25">
       <div className="max-w-7xl mx-auto">
 
         <div className="relative rounded-3xl overflow-hidden">

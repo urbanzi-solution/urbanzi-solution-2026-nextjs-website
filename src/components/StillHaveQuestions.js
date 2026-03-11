@@ -2,7 +2,7 @@
 
 export default function StillHaveQuestions() {
   return (
-    <section className="bg-black py-16 md:py-24 px-5 md:px-[75px] -mt-10 md:-mt-15">
+    <section className="bg-black py-16 md:py-24 px-5 md:px-[75px] -mt-10 md:-mt-25">
       <div className="max-w-[1400px] mx-auto">
 
         <div

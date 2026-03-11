@@ -7,7 +7,7 @@ export default function SoftHero() {
         <div
           className="relative overflow-hidden rounded-3xl min-h-[520px] flex items-center justify-center"
           style={{
-            backgroundImage: "url('/softhero.jpg')",
+            backgroundImage: "url('/softhero.webp')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -18,13 +18,15 @@ export default function SoftHero() {
           {/* content */}
           <div className="relative z-10 text-center px-6">
             <h1 className="text-[42px] md:text-[56px] lg:text-[64px] leading-[1.1] font-semibold text-[#9fd0ff]">
-              Build Your Edge with Leading
+              Software Development Company in Trivandrum, Kerala 
               <br />
-             Software Companies in Trivandrum & Kerala
+             Custom Business Software That Scales
+
             </h1>
 
             <p className="mt-6 max-w-[720px] mx-auto text-white/90 text-[16px] md:text-[18px] leading-relaxed">
-             Struggling with generic, off-the-shelf software that slows you down? At Urbanzi Solutions, we hear you. As Kerala's trusted software development company, we create tailor-made solutions—from CRM to enterprise and SaaS—helping you simplify processes, scale faster, and finally get tech that fits your business like a glove.
+              Urbanzi is a leading software development company in Trivandrum, Kerala, delivering custom CRM, enterprise software, SaaS platforms & healthcare solutions. Build scalable, secure business software tailored to your workflows.
+
             </p>
 
             <div className="mt-10">
