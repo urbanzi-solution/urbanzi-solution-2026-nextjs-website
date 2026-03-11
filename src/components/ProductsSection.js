@@ -31,7 +31,7 @@ export default function ProductsSection() {
           <div className="flex-1">
             <div className="rounded-xl overflow-hidden border border-white/10">
               <Image
-                src="/hrms.png"
+                src="/hrms.webp"
                 alt="HRMS"
                 width={600}
                 height={400}
@@ -65,7 +65,7 @@ export default function ProductsSection() {
           <div className="flex-1">
             <div className="rounded-xl overflow-hidden border border-white/10">
               <Image
-                src="/gym.jpg"
+                src="/gym.webp"
                 alt="Gym"
                 width={600}
                 height={400}
@@ -99,7 +99,7 @@ export default function ProductsSection() {
           <div className="flex-1">
             <div className="rounded-xl overflow-hidden border border-white/10">
               <Image
-                src="/whatsapp.jpg"
+                src="/whatsapp.webp"
                 alt="WhatsApp Automation"
                 width={600}
                 height={400}

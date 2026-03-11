@@ -36,7 +36,10 @@ export default function TestimonialSection() {
               name="Akshay"
             />
 
-            <FadeCard text="Working with Urbanzi Solution has been a wonderful experience. They took the time to understand our needs." />
+            {/* Hidden on mobile */}
+            <div className="hidden md:block">
+              <FadeCard text="Working with Urbanzi Solution has been a wonderful experience. They took the time to understand our needs." />
+            </div>
           </div>
 
           {/* COLUMN 2 */}
@@ -51,7 +54,10 @@ export default function TestimonialSection() {
               name="Jeril"
             />
 
-            <FadeCard text="Working with Urbanzi Solution has been a wonderful experience. They took the time to understand our needs." />
+            {/* Hidden on mobile */}
+            <div className="hidden md:block">
+              <FadeCard text="Working with Urbanzi Solution has been a wonderful experience. They took the time to understand our needs." />
+            </div>
           </div>
 
           {/* COLUMN 3 */}
@@ -66,7 +72,10 @@ export default function TestimonialSection() {
               name="Mathew"
             />
 
-            <FadeCard text="Working with Urbanzi Solution has been a wonderful experience. They took the time to understand our needs." />
+            {/* Hidden on mobile */}
+            <div className="hidden md:block">
+              <FadeCard text="Working with Urbanzi Solution has been a wonderful experience. They took the time to understand our needs." />
+            </div>
           </div>
 
         </div>

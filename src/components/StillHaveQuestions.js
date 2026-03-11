@@ -8,7 +8,7 @@ export default function StillHaveQuestions() {
         <div
           className="relative overflow-hidden rounded-[22px] md:rounded-[28px] min-h-[260px] md:min-h-[320px] flex items-center justify-center text-center"
           style={{
-            backgroundImage: "url('/ct-bg.jpg')",
+            backgroundImage: "url('/ct-bg.webp')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

@@ -32,7 +32,7 @@ export default function CaseStudies() {
           <div className="relative group rounded-3xl overflow-hidden cursor-pointer">
 
             <Image
-              src="/car.jpg"
+              src="/car.webp"
               alt="Arrow Cabs"
               width={800}
               height={600}
@@ -70,7 +70,7 @@ export default function CaseStudies() {
           <div className="relative group rounded-3xl overflow-hidden cursor-pointer">
 
             <Image
-              src="/market.jpg"
+              src="/market.webp"
               alt="Digital Marketing Pro"
               width={800}
               height={600}

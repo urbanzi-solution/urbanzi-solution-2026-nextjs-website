@@ -43,7 +43,7 @@ export default function ServiceHeroSection() {
           {/* Bottom Image */}
           <div className="relative w-full h-[200px] sm:h-[240px] md:h-[400px] rounded-2xl overflow-hidden">
             <Image
-              src="/services-hero.jpg"
+              src="/services-hero.webp"
               alt="Web Development"
               fill
               priority

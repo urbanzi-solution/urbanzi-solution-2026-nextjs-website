@@ -19,10 +19,10 @@ export default function Navbar() {
   }, [open]);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-xl border-b border-white/10">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-xl border-b border-white/10 ">
 
       {/* NAV CONTAINER */}
-      <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between overflow-hidden">
 
         {/* MOBILE MENU BUTTON */}
         <button

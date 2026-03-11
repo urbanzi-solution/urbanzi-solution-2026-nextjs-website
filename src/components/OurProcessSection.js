@@ -10,7 +10,7 @@ export default function OurProcessSection() {
         {/* LEFT IMAGE */}
         <div className="relative w-full h-[350px] md:h-[800px] md:w-130 rounded-3xl overflow-hidden">
           <Image
-            src="/process.jpg"
+            src="/process.webp"
             alt="Process"
             fill
             className="object-cover"
