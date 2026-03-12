@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react"
 
 export default function DigitCTA() {
   return (
-    <section className="relative py-24 px-6 bg-black text-white overflow-hidden -mt-20">
+    <section className="relative py-14 md:py-20 px-6 bg-black text-white overflow-hidden -mt-20">
 
       {/* Glow Background */}
       <div className="absolute w-[90vw] max-w-[500px] h-[500px] blur-[160px] rounded-full top-0 left-1/2 -translate-x-1/2"></div>
@@ -37,7 +37,7 @@ export default function DigitCTA() {
           {/* Main CTA */}
           <Link
             href="/contact"
-            className="flex items-center justify-center gap-2 px-10 py-5 rounded-full bg-blue-500 font-semibold text-lg hover:scale-105 transition"
+            className="flex items-center justify-center gap-2 px-5 py-5 rounded-full bg-blue-500 font-semibold hover:scale-105 transition"
           >
             Get a Free Marketing Audit
             <ArrowRight size={20}/>
@@ -46,7 +46,7 @@ export default function DigitCTA() {
           {/* Secondary CTA */}
           <Link
             href="/contact"
-            className="flex items-center justify-center px-10 py-5 rounded-full border border-white/20 text-lg hover:bg-white/5 transition"
+            className="flex items-center justify-center px-10 py-5 rounded-full border border-white/20 hover:bg-white/5 transition"
           >
             Book a Strategy Call
           </Link>

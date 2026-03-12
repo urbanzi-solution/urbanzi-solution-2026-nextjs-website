@@ -22,11 +22,11 @@ export default function WebDevelopmentFAQ() {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section className="bg-black text-white py-24 px-6">
+    <section className="bg-black text-white py-10 pb-30 md:py-30 lg:pt-10 px-6">
       <div className="max-w-4xl mx-auto">
 
         {/* Heading */}
-        <h2 className="text-4xl md:text-5xl font-semibold text-center mb-14">
+        <h2 className="text-3xl md:text-5xl font-semibold text-center mb-14">
           Frequently Asked{" "}
           <span className="text-blue-400 italic">Questions</span>
         </h2>

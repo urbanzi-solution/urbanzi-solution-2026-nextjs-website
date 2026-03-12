@@ -22,7 +22,7 @@ export default function GraphicsFaq() {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section className="bg-black text-white py-16 md:py-24 px-4 sm:px-6 -mt-25">
+    <section className="bg-black text-white py-10 pb-20 lg:pb-20 px-4 sm:px-6">
       <div className="max-w-4xl mx-auto">
 
         {/* Heading */}

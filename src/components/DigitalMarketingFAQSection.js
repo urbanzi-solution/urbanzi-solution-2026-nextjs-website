@@ -29,7 +29,7 @@ export default function DigitalMarketingFAQSection() {
   };
 
   return (
-    <section className="bg-black text-white py-20 md:py-32 px-4 md:px-[75px]">
+    <section className="bg-black text-white pt-10  pb-20 px-4 md:px-[75px]">
       <div className="max-w-4xl mx-auto">
 
         <h2 className="text-3xl md:text-5xl font-light mb-10 md:mb-16 text-center">

@@ -17,7 +17,7 @@ const stack = [
 
 export default function GraphicsExpertise() {
   return (
-    <section className="bg-black py-20 md:py-28 px-4 md:px-6 text-white">
+    <section className="bg-black py-20 lg:py-28 px-4 md:px-6 text-white">
       <div className="max-w-6xl mx-auto text-center">
 
         <h2 className="text-3xl md:text-5xl font-semibold">

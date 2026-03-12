@@ -15,7 +15,7 @@ const services = [
 
 export default function SeoServicesSection() {
   return (
-    <section className="bg-black py-20 px-6 text-white">
+    <section className="bg-black py-10 lg:pb-20  px-6 text-white">
       <div className="max-w-7xl mx-auto">
 
         <motion.div
@@ -25,7 +25,7 @@ export default function SeoServicesSection() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.7, ease }}
         >
-          <h2 className="text-4xl md:text-5xl font-semibold">
+          <h2 className="text-3xl md:text-5xl font-semibold">
             Our <span className="text-white">SEO</span> Services
           </h2>
           <div className="flex justify-center mt-4">
@@ -58,7 +58,7 @@ export default function SeoServicesSection() {
         </div>
 
         <motion.div
-          className="mt-28 text-center max-w-4xl mx-auto"
+          className="mt-20 text-center max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 28 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}

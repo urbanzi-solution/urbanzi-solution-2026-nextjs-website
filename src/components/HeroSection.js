@@ -6,23 +6,13 @@ const ease = [0.22, 1, 0.36, 1];
 
 export default function HeroSection() {
   return (
-    <section className="bg-black text-white min-h-screen flex -mt-35 items-center">
+    <section className="bg-black text-white min-h-screen flex -mt-35 md:-mt-60 lg:-mt-30 items-center">
       <div className="max-w-7xl mx-auto px-5 w-full">
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
 
           {/* LEFT CONTENT */}
           <div>
-
-            {/* Top Badge */}
-            <motion.div
-              className="block max-w-max bg-white/10 text-gray-300 text-xs tracking-wider px-4 py-2 rounded-md mb-6 uppercase"
-              initial={{ opacity: 0, y: -14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, ease }}
-            >
-              One Platform. Complete Digital Solutions
-            </motion.div>
 
             {/* Heading */}
             <div className="overflow-hidden">

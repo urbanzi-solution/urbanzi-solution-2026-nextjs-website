@@ -22,11 +22,11 @@ export default function SeoFaqSection() {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section className="bg-black text-white py-24 px-6">
+    <section className="bg-black text-white pt-10 pb-30 px-6">
       <div className="max-w-4xl mx-auto">
 
         {/* Heading */}
-        <h2 className="text-4xl md:text-5xl font-semibold text-center mb-14">
+        <h2 className="text-3xl md:text-5xl font-semibold text-center mb-14">
           Frequently Asked{" "}
           <span className="text-blue-400 italic">Questions</span>
         </h2>

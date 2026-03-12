@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 
 export default function MissionSection() {
   return (
-    <section className="bg-black text-white px-6 md:px-12 py-24 overflow-hidden -mt-30">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+    <section className="bg-black text-white px-6 md:px-12 p-20 overflow-hidden -mt-30">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
         {/* Image - Slide In From Left */}
         <motion.div

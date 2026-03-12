@@ -6,7 +6,7 @@ const ease = [0.22, 1, 0.36, 1];
 
 export default function PerformanceSection() {
   return (
-    <section className="px-5 md:px-12 py-16 md:py-24 bg-black text-white -mt-10">
+    <section className="px-5 md:px-12 py-25 md:py-24 bg-black text-white -mt-10">
       <div className="max-w-7xl mx-auto">
 
         {/* Heading */}
@@ -93,7 +93,7 @@ export default function PerformanceSection() {
                 We build secure, stable, and reliable platforms you can trust to perform without interruption.
               </p>
               <div>
-                <h3 className="text-4xl md:text-6xl font-bold text-blue-300">99.9%</h3>
+                <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-300">99.9%</h3>
                 <p className="text-blue-300 mt-2 text-base md:text-xl">Uptime Guarantee</p>
               </div>
             </div>

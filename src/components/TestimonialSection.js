@@ -15,7 +15,7 @@ const colVariants = (delay = 0) => ({
 
 export default function TestimonialSection() {
   return (
-    <section className="bg-[#000002] py-16 md:py-24 text-white relative overflow-hidden">
+    <section className="bg-[#000002] py-8 md:py-24 text-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
         {/* Header */}

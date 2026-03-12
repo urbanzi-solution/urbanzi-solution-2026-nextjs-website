@@ -103,7 +103,7 @@ const cardVariants = {
 
 export default function ServicesGrid() {
   return (
-    <section className="bg-[#050914] text-white py-10 px-0">
+    <section className="bg-[#050914] text-white pb-10 md:py-10 px-0">
       <div className="w-full">
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-white/10"
@@ -179,7 +179,7 @@ export default function ServicesGrid() {
         </motion.div>
 
         <motion.div
-          className="flex justify-center mt-16"
+          className="flex justify-center mt-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

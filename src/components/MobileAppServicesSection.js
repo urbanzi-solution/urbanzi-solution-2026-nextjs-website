@@ -19,7 +19,7 @@ const services = [
 
 export default function MobileAppServicesSection() {
   return (
-    <section className="bg-[#020617] py-20 md:py-24 px-5 md:px-6 text-white">
+    <section className="bg-[#020617] py-10 md:py-20 px-5 md:px-6 text-white">
       <div className="max-w-7xl mx-auto">
 
         <motion.div
@@ -29,7 +29,7 @@ export default function MobileAppServicesSection() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.7, ease }}
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white">
+          <h2 className="text-3xl md:text-5xl font-semibold text-white">
             Our Mobile App Development Services
           </h2>
           <div className="w-20 h-[3px] bg-white mx-auto mt-4 rounded-full" />

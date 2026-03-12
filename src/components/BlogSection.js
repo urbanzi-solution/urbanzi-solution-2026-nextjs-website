@@ -42,7 +42,7 @@ const posts = [
 
 export default function BlogSection() {
   return (
-    <section className="py-16 md:py-24 bg-black text-white">
+    <section className="py-8 lg:py-15 bg-black text-white">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
 
         {/* Header */}

@@ -16,7 +16,7 @@ export default function WhyChooseGraphics() {
   ];
 
   return (
-    <section className="relative py-28 px-6 bg-black text-white overflow-hidden -mt-30">
+    <section className="relative py-10 px-6 bg-black text-white overflow-hidden ">
       <div className="absolute w-[90vw] max-w-[500px] h-[500px] blur-[160px] rounded-full top-0 left-1/2 -translate-x-1/2" />
 
       <div className="relative max-w-6xl mx-auto">
@@ -40,7 +40,7 @@ export default function WhyChooseGraphics() {
           ))}
         </div>
 
-        <motion.div className="mt-20 text-center" initial={{ opacity: 0, y: 24, scale: 0.97 }} whileInView={{ opacity: 1, y: 0, scale: 1 }} viewport={{ once: true, amount: 0.4 }} transition={{ duration: 0.7, delay: 0.2, ease }}>
+        <motion.div className="mt-10 text-center" initial={{ opacity: 0, y: 24, scale: 0.97 }} whileInView={{ opacity: 1, y: 0, scale: 1 }} viewport={{ once: true, amount: 0.4 }} transition={{ duration: 0.7, delay: 0.2, ease }}>
           <div className="max-w-3xl mx-auto bg-[#0f1629]/80 border border-white/10 rounded-2xl p-8 backdrop-blur-md">
             <p className="text-xl md:text-2xl text-gray-200 leading-relaxed">
               We don&apos;t design for awards.

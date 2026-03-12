@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 export default function About() {
  return (
     <> 
-    < SoftHero />
+    <SoftHero />
     <SoftWhoWeAre />
     <SoftwareServicesSection/>
     <SoftProcess />

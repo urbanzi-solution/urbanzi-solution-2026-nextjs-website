@@ -29,7 +29,7 @@ const stack = [
 
 export default function OurWebExpertiseSection() {
   return (
-    <section className="bg-black py-28 px-6 text-white">
+    <section className="bg-black py-15 md:py-28 px-6 text-white">
       <div className="max-w-6xl mx-auto text-center">
 
         {/* Heading */}

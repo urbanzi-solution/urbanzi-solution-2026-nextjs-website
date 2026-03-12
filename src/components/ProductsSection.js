@@ -38,7 +38,7 @@ export default function ProductsSection() {
   ];
 
   return (
-    <section className="bg-black px-6 text-white py-20">
+    <section className="bg-black px-6 text-white py-8 lg:py-10">
       <div className="max-w-6xl mx-auto space-y-5">
         {products.map((product, i) => (
           <motion.div

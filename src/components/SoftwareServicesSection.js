@@ -35,7 +35,7 @@ function Card({ service, delay }) {
 
 export default function SoftwareServicesSection() {
   return (
-    <section className="bg-[#020617] py-28 px-6 text-white">
+    <section className="bg-[#020617] py-10 md:py-20 px-6 text-white">
       <div className="max-w-7xl mx-auto">
 
         <motion.div
@@ -45,7 +45,7 @@ export default function SoftwareServicesSection() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.7, ease }}
         >
-          <h2 className="text-4xl md:text-5xl font-semibold text-white">Our Custom Software Development Services</h2>
+          <h2 className="text-3xl md:text-5xl font-semibold text-white">Our Custom Software Development Services</h2>
           <div className="w-24 h-[3px] bg-white/80 mx-auto mt-5 rounded-full" />
           <p className="text-gray-400 mt-6">Everything You Need for Business-Boosting Software</p>
         </motion.div>

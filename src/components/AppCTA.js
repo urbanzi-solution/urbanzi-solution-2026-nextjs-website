@@ -8,7 +8,7 @@ const ease = [0.22, 1, 0.36, 1];
 
 export default function AppCTA() {
   return (
-    <section className="relative py-24 px-6 bg-black text-white overflow-hidden -mt-20">
+    <section className="relative py-14 px-6 bg-black text-white overflow-hidden -mt-20">
       <div className="absolute w-[90vw] max-w-[500px] h-[500px] blur-[160px] rounded-full top-0 left-1/2 -translate-x-1/2" />
       <div className="absolute w-[90vw] max-w-[400px] h-[400px] rounded-full bottom-0 right-0" />
 
@@ -49,10 +49,10 @@ export default function AppCTA() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.34, ease }}
         >
-          <Link href="/contact" className="flex items-center justify-center gap-2 px-10 py-5 rounded-full bg-blue-500 font-semibold text-lg hover:scale-105 transition">
+          <Link href="/contact" className="flex items-center justify-center gap-2 px-5 py-5 rounded-full bg-blue-500 font-semibold hover:scale-105 transition">
             Book a Free App Consultation <ArrowRight size={20} />
           </Link>
-          <Link href="/contact" className="flex items-center justify-center px-10 py-5 rounded-full border border-white/20 text-lg hover:bg-white/5 transition">
+          <Link href="/contact" className="flex items-center justify-center px-10 py-5 rounded-full border border-white/20 hover:bg-white/5 transition">
             Get Your App Roadmap in 24 Hours
           </Link>
         </motion.div>

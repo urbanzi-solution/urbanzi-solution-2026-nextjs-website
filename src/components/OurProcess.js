@@ -21,7 +21,7 @@ const steps = [
 
 export default function TheProcess() {
   return (
-    <section className="bg-black text-white py-20 md:py-28">
+    <section className="bg-black text-white py-10 md:py-20 lg:py-20">
       <div className="max-w-6xl mx-auto px-5 md:px-6">
 
         {/* Heading */}

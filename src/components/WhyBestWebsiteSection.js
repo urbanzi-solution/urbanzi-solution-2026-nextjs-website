@@ -15,7 +15,7 @@ const cards = [
 
 export default function WhyBestWebsiteSection() {
   return (
-    <section className="bg-black py-28 px-6 text-white">
+    <section className="bg-black py-10 px-6 text-white">
       <div className="max-w-6xl mx-auto">
 
         <motion.div
@@ -25,7 +25,7 @@ export default function WhyBestWebsiteSection() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.7, ease }}
         >
-          <h2 className="text-3xl md:text-4xl font-semibold leading-tight">
+          <h2 className="text-3xl md:text-5xl font-semibold leading-tight">
             Why We Are Best in Website Development and Design
           </h2>
         </motion.div>

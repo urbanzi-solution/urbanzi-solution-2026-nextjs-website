@@ -52,7 +52,7 @@ export default function FloatingStackSection() {
   return (
     <section
       ref={ref}
-      className="relative h-[600vh] bg-black text-white"
+      className="relative h-[400vh] bg-black text-white"
       style={{ perspective: "1500px" }}
     >
       <div className="sticky top-0 overflow-hidden h-[100dvh]">

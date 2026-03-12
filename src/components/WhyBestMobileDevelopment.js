@@ -15,7 +15,7 @@ const features = [
 
 export default function WhyBestMobileDevelopment() {
   return (
-    <section className="bg-black text-white py-24">
+    <section className="bg-black text-white py-10 ">
       <div className="max-w-6xl mx-auto px-6">
 
         <motion.h2

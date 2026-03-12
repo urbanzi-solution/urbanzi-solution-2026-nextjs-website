@@ -18,8 +18,8 @@ export default function About() {
     <OurWebExpertiseSection />
     <OurWebProcessSection />
     <WhyBestWebsiteSection />
-    <WebDevelopmentFaq />
     <CaseStudiesSection />
+    <WebDevelopmentFaq />
     <WebCTA />
     <Footer />
     </>

@@ -23,7 +23,7 @@ export default function GraphicsHero() {
 
           <div className="relative z-10 text-center px-6">
             <motion.h1
-              className="text-[40px] md:text-[15vw] md:text-[56px] lg:text-[58px] leading-[1.1] font-semibold text-[#9fd0ff]"
+              className="text-[25px] md:text-[15vw] md:text-[56px] lg:text-[58px] leading-[1.1] font-semibold text-[#9fd0ff]"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.85, delay: 0.2, ease }}

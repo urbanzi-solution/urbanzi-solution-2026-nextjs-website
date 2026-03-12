@@ -16,7 +16,7 @@ export default function WhyChooseApp() {
   ];
 
   return (
-    <section className="relative py-28 px-6 bg-black text-white overflow-hidden -mt-30">
+    <section className="relative py-20 px-6 bg-black text-white overflow-hidden -mt-30">
       <div className="absolute w-[90vw] max-w-[500px] h-[500px] blur-[160px] rounded-full top-0 left-1/2 -translate-x-1/2" />
 
       <div className="relative max-w-6xl mx-auto">
@@ -55,7 +55,7 @@ export default function WhyChooseApp() {
         </div>
 
         <motion.div
-          className="mt-20 text-center"
+          className="mt-10 text-center"
           initial={{ opacity: 0, y: 24, scale: 0.97 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true, amount: 0.4 }}

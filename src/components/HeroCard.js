@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function HeroSection() {
   return (
-    <section className="bg-black text-white py-24 px-6">
+    <section className="bg-black text-white py-15 md:py-20 px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* Badge */}
@@ -41,7 +41,7 @@ export default function HeroSection() {
 
           {/* Right Buttons */}
           <motion.div
-            className="flex flex-wrap lg:justify-end gap-4 sm:gap-5 mt-6 lg:mt-0"
+            className="flex flex-wrap lg:justify-end gap-4 sm:gap-5 lg:mt-0"
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}

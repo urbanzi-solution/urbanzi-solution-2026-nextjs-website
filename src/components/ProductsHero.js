@@ -6,7 +6,7 @@ const ease = [0.22, 1, 0.36, 1];
 
 export default function ProductsHero() {
   return (
-    <section className="bg-black text-white py-23 px-6">
+    <section className="bg-black text-white py-15 lg:py-20 px-6">
       <div className="max-w-6xl mx-auto">
 
         {/* Top Badge */}

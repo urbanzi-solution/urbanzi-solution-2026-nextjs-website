@@ -7,7 +7,7 @@ const ease = [0.22, 1, 0.36, 1];
 
 export default function AboutPage() {
   return (
-    <section className="pt-24 md:pt-32 px-4 md:px-12 bg-black min-h-screen">
+    <section className="pt-24 md:pt-32 px-4 md:px-12 bg-black ">
       <motion.div
         className="relative w-full h-[420px] md:h-[600px] rounded-3xl overflow-hidden"
         initial={{ opacity: 0, scale: 0.97, y: 30 }}

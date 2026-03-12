@@ -22,7 +22,7 @@ export default function SoftFaq() {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section className="bg-black text-white py-24 px-6">
+    <section className="bg-black text-white pb-30 px-6">
       <div className="max-w-4xl mx-auto">
 
         {/* Heading */}

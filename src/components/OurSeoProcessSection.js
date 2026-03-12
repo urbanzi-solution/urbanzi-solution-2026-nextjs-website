@@ -33,7 +33,7 @@ const steps = [
 
 export default function OurSeoProcessSection() {
   return (
-    <section className="bg-black py-20 md:py-28 px-5 md:px-6 text-white">
+    <section className="bg-black py-10 md:py-20 lg:py-10 px-5 md:px-6 text-white">
       <div className="max-w-6xl mx-auto">
 
         {/* Heading */}

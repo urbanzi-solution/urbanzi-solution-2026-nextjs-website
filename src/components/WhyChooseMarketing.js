@@ -13,7 +13,7 @@ export default function WhyChooseMarketing() {
   ]
 
   return (
-    <section className="relative py-28 px-6 bg-black text-white overflow-hidden -mt-30">
+    <section className="relative py-10 md:py-25 px-6 bg-black text-white overflow-hidden -mt-30">
 
       {/* Glow Background */}
       <div className="absolute w-[90vw] max-w-[500px] h-[500px] blur-[160px] rounded-full top-0 left-1/2 -translate-x-1/2"></div>
@@ -60,7 +60,7 @@ export default function WhyChooseMarketing() {
         </div>
 
         {/* Bottom Statement */}
-        <div className="mt-20 text-center">
+        <div className="mt-10 text-center">
 
           <div className="max-w-3xl mx-auto bg-[#0f1629]/80 border border-white/10 rounded-2xl p-8 backdrop-blur-md">
 

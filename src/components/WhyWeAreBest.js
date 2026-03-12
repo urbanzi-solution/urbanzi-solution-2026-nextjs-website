@@ -2,7 +2,7 @@
 
 export default function WhyWeAreBest() {
   return (
-    <section className="bg-black text-white py-24 px-6 -mt-6">
+    <section className="bg-black text-white py-10 pb-30 lg:py-10 px-6 -mt-6">
       <div className="max-w-6xl mx-auto">
 
         {/* Heading */}

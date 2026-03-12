@@ -4,7 +4,7 @@ export default function RunningHeadline() {
   const text = "Make your company standout from the competition.";
 
   return (
-    <div className="w-full overflow-hidden bg-black">
+    <div className="w-full overflow-hidden bg-black py-8 md:py-10">
       <div className="flex w-max animate-marquee-left">
         {[...Array(6)].map((_, i) => (
           <h1

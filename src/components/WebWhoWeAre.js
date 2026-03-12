@@ -6,7 +6,7 @@ const ease = [0.22, 1, 0.36, 1];
 
 export default function WebWhoWeAre() {
   return (
-    <section className="bg-black py-24 px-6 -mt-25">
+    <section className="bg-black py-10 md:py-24 px-6 -mt-25">
       <div className="max-w-[1400px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
@@ -26,7 +26,7 @@ export default function WebWhoWeAre() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, delay: 0.15, ease }}
           >
-            <h2 className="text-[42px] md:text-[52px] font-semibold text-[#9fd0ff]">Who We Are</h2>
+            <h2 className="text-[42px] md:text-[52px] font-semibold text-[#9fd0ff] -mt-10">Who We Are</h2>
             <div className="w-20 h-[3px] bg-[#9fd0ff] mt-4 mb-8" />
             <p className="text-white/90 text-[16px] md:text-[18px] leading-relaxed">
               At <span className="font-semibold text-white">Urbanzi Solutions</span>, A professional web development company designs, builds, and optimizes websites that are fast, secure, mobile-friendly, SEO-ready, and conversion-focused. At Urbanzi, we help businesses in Trivandrum and across Kerala turn their websites into powerful digital assets that generate leads, sales, and long-term growth.

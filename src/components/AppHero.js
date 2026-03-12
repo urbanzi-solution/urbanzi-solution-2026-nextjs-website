@@ -14,7 +14,7 @@ export default function webHero() {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.9, ease }}
           style={{
-            backgroundImage: "url('/app-hero.jpg')",
+            backgroundImage: "url('/app-hero.webp')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

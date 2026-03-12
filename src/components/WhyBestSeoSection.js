@@ -16,7 +16,7 @@ const reasons = [
 
 export default function WhyBestSeoSection() {
   return (
-    <section className="bg-black py-24 px-6 text-white">
+    <section className="bg-black py-10 lg:py-20 px-6 text-white">
       <div className="max-w-6xl mx-auto">
         <motion.h2
           className="text-center text-4xl md:text-5xl font-semibold mb-16"

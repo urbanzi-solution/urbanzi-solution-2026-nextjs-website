@@ -22,10 +22,10 @@ export default function MobileAppFAQ() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section className="bg-black py-24 px-4 text-white">
+    <section className="bg-black pb-30 md:pt-10 px-4 text-white">
       <div className="max-w-5xl mx-auto">
         {/* Heading */}
-        <h2 className="text-4xl md:text-5xl font-light text-center mb-14">
+        <h2 className="text-3xl md:text-5xl font-light text-center mb-14">
           Frequently Asked{" "}
           <span className="text-sky-400 italic font-normal">Questions</span>
         </h2>

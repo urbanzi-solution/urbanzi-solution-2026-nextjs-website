@@ -56,12 +56,12 @@ const services = [
 
 export default function DigitalMarketingServices() {
   return (
-    <section className="bg-[#050914] text-white pt-16 pb-16 md:pb-20 px-6">
+    <section className="bg-[#050914] text-white py-10 md:py-20 px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* Heading */}
         <div className="text-center mb-10 md:mb-12">
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold text-white">
+          <h2 className="text-3xl md:text-5xl font-semibold text-white">
             Our Digital Marketing Services
           </h2>
 

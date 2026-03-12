@@ -6,7 +6,7 @@ const ease = [0.22, 1, 0.36, 1];
 
 export default function Appwhoweare() {
   return (
-    <section className="bg-black py-16 md:py-24 px-4 md:px-6">
+    <section className="bg-black pb-10 md:pb-15  px-4 md:px-6">
       <div className="max-w-[1400px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
 
@@ -19,7 +19,7 @@ export default function Appwhoweare() {
             transition={{ duration: 0.8, ease }}
           >
             <img
-              src="/appwho.png"
+              src="/appwho.webp"
               alt="Who we are"
               className="max-w-full h-auto"
             />
