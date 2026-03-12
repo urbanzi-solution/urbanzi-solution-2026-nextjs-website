@@ -45,7 +45,7 @@ export default function HeroGlobeSection() {
         -translate-x-1/2
         transform-gpu
         will-change-transform
-        w-[90vw] max-w-[420px] h-[90vw] max-h-[420px]
+        w-[480px] h-[480px]
         sm:w-[650px] sm:h-[650px]
         md:w-[900px] md:h-[900px]
         animate-rotateSlow

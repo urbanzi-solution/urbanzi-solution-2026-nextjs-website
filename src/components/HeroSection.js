@@ -11,7 +11,7 @@ export default function HeroSection() {
           <div>
 
             {/* Top Badge */}
-            <div className="inline-block bg-white/10 text-gray-300 text-xs tracking-widest px-4 py-2 rounded-md mb-6 uppercase">
+            <div className="block max-w-max bg-white/10 text-gray-300 text-xs tracking-wider px-4 py-2 rounded-md mb-6 uppercase">
               One Platform. Complete Digital Solutions
             </div>
 
