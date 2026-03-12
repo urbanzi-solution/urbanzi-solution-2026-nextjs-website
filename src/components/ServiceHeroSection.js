@@ -2,6 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+
+const ease = [0.22, 1, 0.36, 1];
 
 export default function ServiceHeroSection() {
   return (
@@ -9,22 +12,34 @@ export default function ServiceHeroSection() {
       <div className="max-w-7xl mx-auto">
 
         {/* Rounded Hero Container */}
-        <div className="bg-[#111] rounded-3xl p-6 sm:p-8 md:p-14">
-
+        <motion.div
+          className="bg-[#111] rounded-3xl p-6 sm:p-8 md:p-14"
+          initial={{ opacity: 0, y: 40, scale: 0.98 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.9, ease }}
+        >
           {/* Top Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center mb-10 md:mb-12">
 
             {/* Left Heading */}
-            <div>
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease }}
+            >
               <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl font-semibold tracking-wide leading-tight text-blue-300">
-                Kerala’s Trusted Web
+                Kerala&apos;s Trusted Web
                 <br />
                 Development Experts
               </h1>
-            </div>
+            </motion.div>
 
             {/* Right Content */}
-            <div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.3, ease }}
+            >
               <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed mb-6">
                 Custom-built websites engineered for performance, visibility,
                 and long-term digital success.
@@ -36,12 +51,17 @@ export default function ServiceHeroSection() {
               >
                 Start Your Project
               </Link>
-            </div>
+            </motion.div>
 
           </div>
 
           {/* Bottom Image */}
-          <div className="relative w-full h-[200px] sm:h-[240px] md:h-[400px] rounded-2xl overflow-hidden">
+          <motion.div
+            className="relative w-full h-[200px] sm:h-[240px] md:h-[400px] rounded-2xl overflow-hidden"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.85, delay: 0.4, ease }}
+          >
             <Image
               src="/services-hero.webp"
               alt="Web Development"
@@ -49,9 +69,9 @@ export default function ServiceHeroSection() {
               priority
               className="object-cover"
             />
-          </div>
+          </motion.div>
 
-        </div>
+        </motion.div>
 
       </div>
     </section>

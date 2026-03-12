@@ -1,7 +1,17 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { StarIcon } from "@heroicons/react/24/solid";
+
+const colVariants = (delay = 0) => ({
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, delay, ease: [0.22, 1, 0.36, 1] },
+  },
+});
 
 export default function TestimonialSection() {
   return (
@@ -9,30 +19,43 @@ export default function TestimonialSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
         {/* Header */}
-        <span className="text-xs tracking-widest px-4 py-2 bg-neutral-800 rounded-full text-neutral-300">
-          REAL STORIES. REAL RESULTS
-        </span>
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <span className="text-xs tracking-widest px-4 py-2 bg-neutral-800 rounded-full text-neutral-300">
+            REAL STORIES. REAL RESULTS
+          </span>
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mt-6 md:mt-8 leading-tight">
-          Customer <span className="text-blue-400 italic">Testimonials</span>
-        </h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mt-6 md:mt-8 leading-tight">
+            Customer <span className="text-blue-400 italic">Testimonials</span>
+          </h2>
 
-        <p className="text-neutral-400 mt-4 md:mt-6 max-w-3xl text-sm sm:text-base">
-          Every dream deserves a chance to grow. At Urbanzi, we turn your ambitions into reality building digital solutions that connect and inspire.
-        </p>
+          <p className="text-neutral-400 mt-4 md:mt-6 max-w-3xl text-sm sm:text-base">
+            Every dream deserves a chance to grow. At Urbanzi, we turn your ambitions into reality building digital solutions that connect and inspire.
+          </p>
+        </motion.div>
 
         {/* GRID */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-14 md:mt-20">
 
           {/* COLUMN 1 */}
-          <div className="space-y-6 md:space-y-2 md:mt-6 md:-space-x-5">
+          <motion.div
+            className="space-y-6 md:space-y-2 md:mt-6 md:-space-x-5"
+            variants={colVariants(0)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.15 }}
+          >
             <Card
               text="Working with Urbanzi Solution has been a wonderful experience. They took the time to understand our needs and delivered a solution that was both effective and user-friendly."
               name="Arjun"
             />
 
             <Card
-              text="Urbanzi Solution didn’t just build us a website, they helped us shape our brand online. The team is approachable and creative."
+              text="Urbanzi Solution didn't just build us a website, they helped us shape our brand online. The team is approachable and creative."
               name="Akshay"
             />
 
@@ -40,10 +63,16 @@ export default function TestimonialSection() {
             <div className="hidden md:block">
               <FadeCard text="Working with Urbanzi Solution has been a wonderful experience. They took the time to understand our needs." />
             </div>
-          </div>
+          </motion.div>
 
           {/* COLUMN 2 */}
-          <div className="space-y-6 md:space-y-2 md:-mt-10">
+          <motion.div
+            className="space-y-6 md:space-y-2 md:-mt-10"
+            variants={colVariants(0.12)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.15 }}
+          >
             <Card
               text="Urbanzi Solution blends technical expertise with a human touch. They not only delivered a top-quality application but also supported us patiently."
               name="Wazim"
@@ -58,12 +87,18 @@ export default function TestimonialSection() {
             <div className="hidden md:block">
               <FadeCard text="Working with Urbanzi Solution has been a wonderful experience. They took the time to understand our needs." />
             </div>
-          </div>
+          </motion.div>
 
           {/* COLUMN 3 */}
-          <div className="space-y-6 md:space-y-2 md:mt-6 md:-ml-5">
+          <motion.div
+            className="space-y-6 md:space-y-2 md:mt-6 md:-ml-5"
+            variants={colVariants(0.24)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.15 }}
+          >
             <Card
-              text="The team genuinely cares about their clients’ success. Their work has been transformative and built long-term trust."
+              text="The team genuinely cares about their clients' success. Their work has been transformative and built long-term trust."
               name="Samad"
             />
 
@@ -76,7 +111,7 @@ export default function TestimonialSection() {
             <div className="hidden md:block">
               <FadeCard text="Working with Urbanzi Solution has been a wonderful experience. They took the time to understand our needs." />
             </div>
-          </div>
+          </motion.div>
 
         </div>
 
@@ -89,11 +124,9 @@ export default function TestimonialSection() {
 }
 
 /* CARD */
-
 function Card({ text, name }) {
   return (
     <div className="bg-neutral-200 text-black rounded-2xl p-5 md:p-6 shadow-lg">
-
       <div className="flex gap-1 text-orange-500">
         {[...Array(5)].map((_, i) => (
           <StarIcon key={i} className="w-4 h-4" />
@@ -118,17 +151,14 @@ function Card({ text, name }) {
           <p className="text-xs text-neutral-500">Startup Founder</p>
         </div>
       </div>
-
     </div>
   );
 }
 
 /* FADE CARD */
-
 function FadeCard({ text }) {
   return (
     <div className="relative bg-neutral-200 text-black rounded-2xl p-5 md:p-6 shadow-lg overflow-hidden">
-
       <div className="flex gap-1 text-orange-500">
         {[...Array(5)].map((_, i) => (
           <StarIcon key={i} className="w-4 h-4" />
@@ -140,7 +170,6 @@ function FadeCard({ text }) {
       </p>
 
       <div className="absolute inset-0 bg-gradient-to-t from-[#050816] via-[#050816]/80 to-transparent"></div>
-
     </div>
   );
 }

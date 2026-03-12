@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import {
   DevicePhoneMobileIcon,
   GlobeAltIcon,
@@ -35,7 +36,6 @@ const services = [
     hover: "hover:bg-[#853500]",
     link: "/services/ui-ux-design",
   },
-
   {
     icon: CloudIcon,
     title: "Cloud Solutions",
@@ -58,7 +58,6 @@ const services = [
     whiteHover: true,
     link: "/seo",
   },
-
   {
     icon: ShoppingCartIcon,
     title: "E-commerce Solutions",
@@ -83,19 +82,45 @@ const services = [
   },
 ];
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.07,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40, scale: 0.96 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+  },
+};
+
 export default function ServicesGrid() {
   return (
     <section className="bg-[#050914] text-white py-10 px-0">
       <div className="w-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-white/10">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-white/10"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
           {services.map((service, index) => {
             const Icon = service.icon;
 
             return (
-              <a
+              <motion.a
                 key={index}
                 href={service.link}
                 className="block"
+                variants={cardVariants}
               >
                 <div
                   className={`
@@ -148,16 +173,22 @@ export default function ServicesGrid() {
                     {service.desc}
                   </p>
                 </div>
-              </a>
+              </motion.a>
             );
           })}
-        </div>
+        </motion.div>
 
-        <div className="flex justify-center mt-16">
+        <motion.div
+          className="flex justify-center mt-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
+        >
           <button className="bg-white text-black px-8 py-3 rounded-full text-sm font-medium hover:bg-gray-200 transition">
             See More
           </button>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

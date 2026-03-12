@@ -1,56 +1,76 @@
 "use client";
 
+import { motion } from "framer-motion";
+
+const ease = [0.22, 1, 0.36, 1];
+
 export default function HeroSection() {
   return (
     <section className="bg-black text-white min-h-screen flex -mt-35 items-center">
       <div className="max-w-7xl mx-auto px-5 w-full">
-        
+
         <div className="grid lg:grid-cols-2 gap-12 items-center">
 
           {/* LEFT CONTENT */}
           <div>
 
             {/* Top Badge */}
-            <div className="block max-w-max bg-white/10 text-gray-300 text-xs tracking-wider px-4 py-2 rounded-md mb-6 uppercase">
+            <motion.div
+              className="block max-w-max bg-white/10 text-gray-300 text-xs tracking-wider px-4 py-2 rounded-md mb-6 uppercase"
+              initial={{ opacity: 0, y: -14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease }}
+            >
               One Platform. Complete Digital Solutions
-            </div>
+            </motion.div>
 
             {/* Heading */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-light leading-tight mb-6">
-              
-              <span className="block">
-                Empowering India's Digital Future with
-              </span>
-
-              <span className="block text-blue-400 italic font-medium">
-                Urbanzi Solutions
-              </span>
-
-            </h1>
+            <div className="overflow-hidden">
+              <motion.h1
+                className="text-3xl sm:text-4xl md:text-5xl font-light leading-tight mb-6"
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.85, delay: 0.1, ease }}
+              >
+                <span className="block">
+                  Empowering India&apos;s Digital Future with
+                </span>
+                <span className="block text-blue-400 italic font-medium">
+                  Urbanzi Solutions
+                </span>
+              </motion.h1>
+            </div>
 
             {/* Paragraph */}
-            <p className="text-gray-400 text-lg leading-relaxed max-w-xl">
+            <motion.p
+              className="text-gray-400 text-lg leading-relaxed max-w-xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.75, delay: 0.25, ease }}
+            >
               At Urbanzi, we help businesses grow with innovative and tailored
               digital solutions. From web development to branding we create
-              seamless experiences that elevate your brand. Let's bring your
+              seamless experiences that elevate your brand. Let&apos;s bring your
               vision to life with creativity and technology.
-            </p>
+            </motion.p>
 
           </div>
 
-
           {/* RIGHT BUTTONS */}
-          <div className="flex flex-wrap lg:justify-end gap-5 mt-8 lg:mt-0">
-
+          <motion.div
+            className="flex flex-wrap lg:justify-end gap-5 mt-8 lg:mt-0"
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3, ease }}
+          >
             <button className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full font-medium transition">
-              Let’s Start
+              Let&apos;s Start
             </button>
 
             <button className="bg-gray-200 text-black hover:bg-white px-6 py-3 rounded-full font-medium transition">
               Our Solutions
             </button>
-
-          </div>
+          </motion.div>
 
         </div>
 

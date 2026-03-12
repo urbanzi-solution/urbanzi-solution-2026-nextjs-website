@@ -42,11 +42,11 @@ export default function FloatingStackSection() {
     offset: ["start start", "end end"],
   });
 
-  /* BUTTERY SMOOTH SPRING SCROLL */
+  /* ULTRA-PREMIUM SPRING — heavy luxury lag */
   const smoothScroll = useSpring(scrollYProgress, {
-    stiffness: 70, // Softer for luxury feel
-    damping: 35,
-    mass: 0.1,
+    stiffness: 50,   // Heavier weight = more cinematic
+    damping: 42,     // Less oscillation = cleaner settle
+    mass: 0.15,
   });
 
   return (
@@ -91,13 +91,13 @@ export default function FloatingStackSection() {
             ["12px", "0px", "0px", "12px"]
           );
 
-          // Vertical parallax drift
-          const driftUp   = useTransform(smoothScroll, [start, end], [25, -25]);
-          const driftDown = useTransform(smoothScroll, [start, end], [-25, 25]);
+          // Enhanced vertical parallax drift for depth
+          const driftUp   = useTransform(smoothScroll, [start, end], [35, -35]);
+          const driftDown = useTransform(smoothScroll, [start, end], [-35, 35]);
 
-          // Ghost preview of next pair
-          const ghostOpacity = useTransform(smoothScroll, [start, start + 0.15], [0, 0.35]);
-          const ghostScale   = useTransform(smoothScroll, [start, end], [0.88, 1.0]);
+          // Ghost preview — more subtle for premium feel
+          const ghostOpacity = useTransform(smoothScroll, [start, start + 0.15], [0, 0.25]);
+          const ghostScale   = useTransform(smoothScroll, [start, end], [0.86, 1.0]);
 
           return (
             <div key={pi}>

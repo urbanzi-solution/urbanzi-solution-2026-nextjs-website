@@ -1,5 +1,7 @@
 "use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function CaseStudies() {
   return (
@@ -7,7 +9,13 @@ export default function CaseStudies() {
       <div className="max-w-7xl mx-auto">
 
         {/* Heading */}
-        <div className="mb-12 md:mb-16">
+        <motion.div
+          className="mb-12 md:mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        >
           <div className="inline-block bg-white/10 text-gray-300 text-[10px] md:text-xs tracking-widest px-4 md:px-5 py-2 rounded-full uppercase mb-4 md:mb-6">
             Innovation. Implementation. Success.
           </div>
@@ -23,14 +31,19 @@ export default function CaseStudies() {
             We help organizations overcome their biggest business challenges.
             Discover how our clients improved their performance.
           </p>
-        </div>
+        </motion.div>
 
         {/* Cards */}
         <div className="grid md:grid-cols-2 gap-6 md:gap-8">
 
           {/* CARD 1 */}
-          <div className="relative group rounded-3xl overflow-hidden cursor-pointer">
-
+          <motion.div
+            className="relative group rounded-3xl overflow-hidden cursor-pointer"
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          >
             <Image
               src="/car.webp"
               alt="Arrow Cabs"
@@ -48,7 +61,6 @@ export default function CaseStudies() {
             </div>
 
             <div className="absolute inset-0 p-6 md:p-10 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition duration-500">
-
               <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4">
                 Best car rental in Trivandrum
               </h3>
@@ -64,11 +76,16 @@ export default function CaseStudies() {
                 <Stat number="95+" label="Client Satisfaction" />
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* CARD 2 */}
-          <div className="relative group rounded-3xl overflow-hidden cursor-pointer">
-
+          <motion.div
+            className="relative group rounded-3xl overflow-hidden cursor-pointer"
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+          >
             <Image
               src="/market.webp"
               alt="Digital Marketing Pro"
@@ -90,7 +107,6 @@ export default function CaseStudies() {
             </div>
 
             <div className="absolute inset-0 p-6 md:p-10 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition duration-500">
-
               <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4">
                 Leading marketing agency
               </h3>
@@ -106,7 +122,7 @@ export default function CaseStudies() {
                 <Stat number="95+" label="Client Satisfaction" />
               </div>
             </div>
-          </div>
+          </motion.div>
 
         </div>
       </div>
