@@ -39,14 +39,14 @@ export default function FloatingStackSection() {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start start", "end end"],
+    offset: ["start 30%", "end end"],
   });
 
   /* SMOOTH SPRING SCROLL */
   const smoothScroll = useSpring(scrollYProgress, {
-    stiffness: 60,
-    damping: 25,
-    mass: 0.3,
+    stiffness: 90,
+    damping: 30,
+    mass: 0.15,
   });
 
   return (
@@ -55,7 +55,10 @@ export default function FloatingStackSection() {
       className="relative h-[600vh] bg-black text-white"
       style={{ perspective: "1400px" }}
     >
-      <div className="sticky top-0 h-screen overflow-hidden flex items-center justify-center">
+      <div
+        className="sticky top-[30vh] md:top-[12vh] overflow-hidden"
+        style={{ height: "calc(100vh - 64px)" }}
+      >
 
         {/* CENTER TEXT */}
         <div className="absolute inset-0 flex items-center justify-center z-30 text-center px-6 pointer-events-none">

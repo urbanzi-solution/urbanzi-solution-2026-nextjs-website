@@ -37,8 +37,7 @@ body {
 .whatsapp-button{
   position: fixed;
   right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 24px;
   background: #25D366;
   color: white;
   width: 60px;
@@ -54,29 +53,29 @@ body {
 }
 
 .whatsapp-button:hover{
-  transform: translateY(-50%) scale(1.1);
+  transform: scale(1.1);
 }
 
 @keyframes heartbeat{
 
   0%{
-    transform: translateY(-50%) scale(1);
+    transform: scale(1);
   }
 
   25%{
-    transform: translateY(-50%) scale(1.15);
+    transform: scale(1.15);
   }
 
   40%{
-    transform: translateY(-50%) scale(1);
+    transform: scale(1);
   }
 
   60%{
-    transform: translateY(-50%) scale(1.15);
+    transform: scale(1.15);
   }
 
   100%{
-    transform: translateY(-50%) scale(1);
+    transform: scale(1);
   }
 
 }

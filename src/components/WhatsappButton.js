@@ -15,6 +15,12 @@ export default function WhatsappButton() {
       target="_blank"
       rel="noopener noreferrer"
       className="whatsapp-button"
+      style={{
+        position: "fixed",
+        bottom: "24px",
+        right: "24px",
+        zIndex: 9999,
+      }}
     >
       <FaWhatsapp size={28} />
     </a>

@@ -22,7 +22,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-xl border-b border-white/10 ">
 
       {/* NAV CONTAINER */}
-      <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
 
         {/* MOBILE MENU BUTTON */}
         <button
@@ -65,42 +65,46 @@ export default function Navbar() {
             {/* Dropdown */}
             <div
               className="
-              absolute left-1/2 -translate-x-1/2 top-10
-              bg-[#0b1220]
+              absolute left-0 top-[calc(100%+12px)]
+              bg-[#0b1220]/90 backdrop-blur-xl
               border border-white/10
-              rounded-xl
-              w-56
+              rounded-2xl
+              w-60
               opacity-0 invisible
               translate-y-2
               group-hover:opacity-100
               group-hover:visible
               group-hover:translate-y-0
               transition-all duration-300
-              shadow-xl
+              shadow-[0_8px_32px_rgba(0,0,0,0.5)]
+              overflow-hidden
               "
             >
+              <div className="px-4 py-2 text-[10px] uppercase tracking-widest text-gray-500 border-b border-white/5">
+                Our Services
+              </div>
 
-              <Link href="/software-development" className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-t-xl">
+              <Link href="/software-development" className="flex items-center gap-2 px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 transition-colors">
                 Software Development
               </Link>
 
-              <Link href="/web-development" className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5">
+              <Link href="/web-development" className="flex items-center gap-2 px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 transition-colors">
                 Web Development
               </Link>
 
-              <Link href="/app-development" className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5">
+              <Link href="/app-development" className="flex items-center gap-2 px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 transition-colors">
                 App Development
               </Link>
 
-              <Link href="/seo" className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5">
+              <Link href="/seo" className="flex items-center gap-2 px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 transition-colors">
                 SEO Services
               </Link>
 
-               <Link href="/digital-marketing" className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5">
+              <Link href="/digital-marketing" className="flex items-center gap-2 px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 transition-colors">
                 Digital Marketing
               </Link>
 
-              <Link href="/graphics-animation" className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-b-xl">
+              <Link href="/graphics-animation" className="flex items-center gap-2 px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 transition-colors">
                 Graphic Design & Animation
               </Link>
 
@@ -119,7 +123,7 @@ export default function Navbar() {
           <Link href="/blogs" className="hover:text-white transition">
             Blogs
           </Link>
- <Link href="/contact" className="hover:text-white transition">
+          <Link href="/contact" className="hover:text-white transition">
             Contact Us
           </Link>
         </div>
@@ -133,9 +137,8 @@ export default function Navbar() {
 
       {/* MOBILE MENU */}
       <div
-        className={`fixed inset-0 bg-[#0b1220] transform transition-transform duration-300 md:hidden ${
-          open ? "translate-x-0" : "-translate-x-full"
-        }`}
+        className={`fixed inset-0 bg-[#0b1220] transform transition-transform duration-300 md:hidden ${open ? "translate-x-0" : "-translate-x-full"
+          }`}
       >
 
         {/* MOBILE HEADER */}
@@ -176,9 +179,8 @@ export default function Navbar() {
             </div>
 
             <div
-              className={`flex flex-col ml-4 mt-4 space-y-4 text-base text-gray-400 overflow-hidden transition-all duration-300 ${
-                servicesOpen ? "max-h-96" : "max-h-0"
-              }`}
+              className={`flex flex-col ml-4 mt-4 space-y-4 text-base text-gray-400 overflow-hidden transition-all duration-300 ${servicesOpen ? "max-h-96" : "max-h-0"
+                }`}
             >
 
               <Link href="/software-development" onClick={closeMenu}>
@@ -197,7 +199,7 @@ export default function Navbar() {
                 SEO Services
               </Link>
 
-               <Link href="/digital-marketing" onClick={closeMenu}>
+              <Link href="/digital-marketing" onClick={closeMenu}>
                 Digital Marketing
               </Link>
 
