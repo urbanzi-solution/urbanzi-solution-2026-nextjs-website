@@ -8,8 +8,8 @@ export default function CTASoft() {
     <section className="relative py-24 px-6 bg-black text-white overflow-hidden -mt-20">
 
       {/* Glow Background */}
-      <div className="absolute w-[500px] h-[500px] bg-blue-600/20 blur-[160px] rounded-full top-0 left-1/2 -translate-x-1/2"></div>
-      <div className="absolute w-[400px] h-[400px] rounded-full bottom-0 right-0"></div>
+      <div className="absolute w-[90vw] max-w-[500px] h-[500px] bg-blue-600/20 blur-[160px] rounded-full top-0 left-1/2 -translate-x-1/2"></div>
+      <div className="absolute w-[90vw] max-w-[400px] h-[400px] rounded-full bottom-0 right-0"></div>
 
       <div className="relative max-w-6xl mx-auto text-center">
 

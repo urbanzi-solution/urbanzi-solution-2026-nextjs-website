@@ -17,7 +17,7 @@ export default function SeoHero() {
 
           {/* content */}
           <div className="relative z-10 text-center px-6">
-            <h1 className="text-[42px] md:text-[56px] lg:text-[64px] leading-[1.1] font-semibold text-[#9fd0ff]">
+            <h1 className="text-[12vw] sm:text-[42px] md:text-[15vw] md:text-[56px] lg:text-[18vw] lg:text-[64px] leading-[1.1] font-semibold text-[#9fd0ff]">
               Unlock Growth With The Leading
               <br />
               SEO Companies in Trivandrum & Kerala

@@ -11,7 +11,7 @@ export default function SoftWhoWeAre() {
             <img
               src="/soft.webp"
               alt="Who we are"
-              className="max-w-100"
+              className="max-w-full w-full sm:w-auto h-auto"
             />
           </div>
 

@@ -8,8 +8,8 @@ export default function UnderDevelopment() {
     <section className="relative min-h-screen bg-black text-white px-6 py-24">
 
       {/* Background Glow */}
-      <div className="absolute w-[600px] h-[600px] bg-blue-600/20 blur-[180px] rounded-full top-0 left-1/2 -translate-x-1/2"></div>
-      <div className="absolute w-[500px] h-[500px]  blur-[160px] rounded-full bottom-0 right-0"></div>
+      <div className="absolute w-[90vw] max-w-[600px] h-[600px] bg-blue-600/20 blur-[180px] rounded-full top-0 left-1/2 -translate-x-1/2"></div>
+      <div className="absolute w-[90vw] max-w-[500px] h-[500px]  blur-[160px] rounded-full bottom-0 right-0"></div>
 
       <div className="relative z-10 max-w-3xl mx-auto text-center">
 

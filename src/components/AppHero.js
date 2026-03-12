@@ -17,7 +17,7 @@ export default function webHero() {
 
           {/* content */}
           <div className="relative z-10 text-center px-4 md:px-6">
-            <h1 className="text-[28px] sm:text-[36px] md:text-[56px] lg:text-[64px] leading-[1.15] md:leading-[1.1] font-semibold text-[#9fd0ff]">
+            <h1 className="text-[28px] sm:text-[36px] md:text-[15vw] md:text-[56px] lg:text-[18vw] lg:text-[64px] leading-[1.15] md:leading-[1.1] font-semibold text-[#9fd0ff]">
               Turn Your App Idea into Reality with
               Kerala's Trusted Mobile
               <br className="hidden md:block" />

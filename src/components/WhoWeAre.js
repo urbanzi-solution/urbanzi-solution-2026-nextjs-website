@@ -17,7 +17,7 @@ export default function WhoWeAre() {
 
           {/* Content side */}
           <div>
-            <h2 className="text-[42px] md:text-[52px] font-semibold text-[#9fd0ff]">
+            <h2 className="text-3xl sm:text-4xl md:text-[52px] font-semibold text-[#9fd0ff]">
               Who We Are
             </h2>
 

@@ -99,10 +99,10 @@ export default function ServicesStackSection() {
   return (
     <section className="bg-black text-white py-20 md:py-40 px-6 md:px-[95px] -mt-25">
 
-      <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-[38%_62%] gap-16 md:gap-4">
+      <div className="max-w-[1400px] mx-auto flex flex-col lg:grid lg:grid-cols-12 gap-10 md:gap-16">
 
         {/* LEFT SIDE */}
-        <div className="md:sticky md:top-32 self-start text-center md:text-left">
+        <div className="lg:col-span-5 md:sticky md:top-32 self-start text-center md:text-left">
           <h2 className="text-3xl sm:text-4xl md:text-[58px] leading-[1.15] font-light">
             Our Web <br className="hidden md:block"/>
             Development <br className="hidden md:block"/>
@@ -118,7 +118,7 @@ export default function ServicesStackSection() {
 
         {/* RIGHT SIDE */}
 
-        <div className="relative flex justify-center md:justify-end">
+        <div className="lg:col-span-7 relative flex justify-center lg:justify-end">
           <div className="w-full md:w-[820px]">
 
             {/* MOBILE STACK */}

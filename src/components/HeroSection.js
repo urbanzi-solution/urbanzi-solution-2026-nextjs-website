@@ -16,9 +16,9 @@ export default function HeroSection() {
             </div>
 
             {/* Heading */}
-            <h1 className="text-4xl md:text-5xl font-light leading-tight mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-light leading-tight mb-6">
               
-              <span className="block md:whitespace-nowrap">
+              <span className="block">
                 Empowering India's Digital Future with
               </span>
 
@@ -40,7 +40,7 @@ export default function HeroSection() {
 
 
           {/* RIGHT BUTTONS */}
-          <div className="flex lg:justify-end gap-6 mt-8 lg:mt-0">
+          <div className="flex flex-wrap lg:justify-end gap-5 mt-8 lg:mt-0">
 
             <button className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full font-medium transition">
               Let’s Start

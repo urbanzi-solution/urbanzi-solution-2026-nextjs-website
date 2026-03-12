@@ -16,14 +16,14 @@ export default function WhyChooseMarketing() {
     <section className="relative py-28 px-6 bg-black text-white overflow-hidden -mt-30">
 
       {/* Glow Background */}
-      <div className="absolute w-[500px] h-[500px] blur-[160px] rounded-full top-0 left-1/2 -translate-x-1/2"></div>
+      <div className="absolute w-[90vw] max-w-[500px] h-[500px] blur-[160px] rounded-full top-0 left-1/2 -translate-x-1/2"></div>
 
       <div className="relative max-w-6xl mx-auto">
 
         {/* Section Heading */}
         <div className="text-center mb-16">
 
-          <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6">
             Why Choose 
             <span className="bg-blue-400 text-transparent bg-clip-text">
               {" "}Urbanzi

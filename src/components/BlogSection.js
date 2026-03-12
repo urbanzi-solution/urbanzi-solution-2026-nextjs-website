@@ -29,7 +29,7 @@ export default function BlogSection() {
 
           <div className="absolute inset-0 bg-neutral-900 rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
 
-          <div className="relative z-10 grid grid-cols-12 gap-6 md:gap-8 py-10 md:py-12 items-start">
+          <div className="relative z-10 flex flex-col md:grid md:grid-cols-12 gap-6 md:gap-8 py-10 md:py-12 items-start">
 
             <div className="col-span-12 md:col-span-2 text-neutral-400 text-sm">
               Oct 20, 2025
@@ -69,7 +69,7 @@ export default function BlogSection() {
 
           <div className="absolute inset-0 bg-neutral-900 rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
 
-          <div className="relative z-10 grid grid-cols-12 gap-6 md:gap-8 py-10 md:py-12 items-start">
+          <div className="relative z-10 flex flex-col md:grid md:grid-cols-12 gap-6 md:gap-8 py-10 md:py-12 items-start">
 
             <div className="col-span-12 md:col-span-2 text-neutral-400 text-sm">
               Oct 20, 2025
@@ -109,7 +109,7 @@ export default function BlogSection() {
 
           <div className="absolute inset-0 bg-neutral-900 rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
 
-          <div className="relative z-10 grid grid-cols-12 gap-6 md:gap-8 py-10 md:py-12 items-start">
+          <div className="relative z-10 flex flex-col md:grid md:grid-cols-12 gap-6 md:gap-8 py-10 md:py-12 items-start">
 
             <div className="col-span-12 md:col-span-2 text-neutral-400 text-sm">
               Oct 20, 2025

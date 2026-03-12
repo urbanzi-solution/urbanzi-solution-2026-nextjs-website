@@ -17,7 +17,7 @@ export default function GraphicsHero() {
 
           {/* content */}
           <div className="relative z-10 text-center px-6">
-            <h1 className="text-[40px] md:text-[56px] lg:text-[58px] leading-[1.1] font-semibold text-[#9fd0ff]">
+            <h1 className="text-[40px] md:text-[15vw] md:text-[56px] lg:text-[58px] leading-[1.1] font-semibold text-[#9fd0ff]">
               Transform Your Ideas Into Powerful Visuals With
               <br />
              Kerala's Trusted Graphic Design And Animation Company

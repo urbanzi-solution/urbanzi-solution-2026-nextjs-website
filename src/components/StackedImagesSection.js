@@ -39,7 +39,7 @@ export default function FloatingStackSection() {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start 30%", "end end"],
+    offset: ["start start", "end end"],
   });
 
   /* BUTTERY SMOOTH SPRING SCROLL */
@@ -55,10 +55,7 @@ export default function FloatingStackSection() {
       className="relative h-[600vh] bg-black text-white"
       style={{ perspective: "1500px" }}
     >
-      <div
-        className="sticky top-[30vh] md:top-[12vh] overflow-hidden"
-        style={{ height: "calc(100vh - 64px)" }}
-      >
+      <div className="sticky top-0 overflow-hidden h-[100dvh]">
 
         {/* ── CENTER TEXT ── */}
         <div className="absolute inset-0 flex flex-col items-center justify-center z-30 text-center px-6 pointer-events-none gap-4">
@@ -138,7 +135,7 @@ export default function FloatingStackSection() {
                       rotate: i === 0 ? -4 : 4,
                       filter: blurValue
                     }}
-                    className="w-60 md:w-72 rounded-2xl md:rounded-3xl object-cover aspect-[4/3] shadow-[0_30px_80px_rgba(0,0,0,0.9)]"
+                    className="w-40 md:w-72 rounded-2xl md:rounded-3xl object-cover aspect-[4/3] shadow-[0_30px_80px_rgba(0,0,0,0.9)]"
                   />
                 ))}
               </motion.div>

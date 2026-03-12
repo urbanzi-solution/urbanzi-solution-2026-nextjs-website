@@ -56,12 +56,12 @@ const services = [
 
 export default function DigitalMarketingServices() {
   return (
-    <section className="bg-[#050914] text-white pb-16 md:pb-20 px-4">
+    <section className="bg-[#050914] text-white pt-16 pb-16 md:pb-20 px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* Heading */}
         <div className="text-center mb-10 md:mb-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold text-white">
             Our Digital Marketing Services
           </h2>
 
@@ -75,7 +75,7 @@ export default function DigitalMarketingServices() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 md:gap-x-20 gap-y-6 md:gap-y-4 md:-ml-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10 lg:gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
 
@@ -84,8 +84,8 @@ export default function DigitalMarketingServices() {
                 key={index}
                 className="
                   group
-                  aspect-square
-                  min-h-[300px] md:min-h-[340px]
+                  aspect-auto sm:aspect-square
+                  min-h-[260px] md:min-h-[340px]
                   rounded-xl
                   border border-white/10
                   bg-gradient-to-br from-[#0a1a35] to-[#02060f]

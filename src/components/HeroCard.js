@@ -29,7 +29,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right Buttons */}
-          <div className="flex lg:justify-end gap-5 mt-6 lg:mt-0">
+          <div className="flex flex-wrap lg:justify-end gap-4 sm:gap-5 mt-6 lg:mt-0">
             <button className="bg-blue-600 hover:bg-blue-700 transition px-7 py-3 rounded-full font-medium text-white">
               Let’s Start
             </button>
