@@ -3,33 +3,33 @@
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useRef } from "react";
 
-const imagePairs = [
+const pairs = [
   {
     images: ["/img1.webp", "/img2.webp"],
-    positions: [
-      "top-20 left-10 md:left-20 w-40 md:w-60",
-      "bottom-24 right-10 md:right-24 w-44 md:w-72",
+    pos: [
+      { top: "8%",    left: "4%",  right: "auto", bottom: "auto" },
+      { bottom: "8%", right: "4%", top: "auto",   left: "auto"  },
     ],
   },
   {
     images: ["/img3.webp", "/img4.webp"],
-    positions: [
-      "top-28 right-10 md:right-16 w-44 md:w-64",
-      "bottom-20 left-10 md:left-32 w-40 md:w-56",
+    pos: [
+      { top: "8%",    right: "4%", left: "auto",  bottom: "auto" },
+      { bottom: "8%", left: "4%",  top: "auto",   right: "auto"  },
     ],
   },
   {
     images: ["/img5.webp", "/img6.webp"],
-    positions: [
-      "top-24 left-1/4 md:left-1/3 w-44 md:w-72",
-      "bottom-28 right-1/4 w-40 md:w-60",
+    pos: [
+      { top: "14%",   left: "7%",  right: "auto", bottom: "auto" },
+      { bottom: "14%",right: "7%", top: "auto",   left: "auto"  },
     ],
   },
   {
     images: ["/img7.webp", "/img8.webp"],
-    positions: [
-      "top-1/4 right-1/4 md:right-1/3 w-44 md:w-64",
-      "bottom-1/4 left-1/4 w-40 md:w-56",
+    pos: [
+      { top: "14%",   right: "7%", left: "auto",  bottom: "auto" },
+      { bottom: "14%",left: "7%",  top: "auto",   right: "auto"  },
     ],
   },
 ];
@@ -42,104 +42,103 @@ export default function FloatingStackSection() {
     offset: ["start 30%", "end end"],
   });
 
-  /* SMOOTH SPRING SCROLL */
+  /* BUTTERY SMOOTH SPRING SCROLL */
   const smoothScroll = useSpring(scrollYProgress, {
-    stiffness: 90,
-    damping: 30,
-    mass: 0.15,
+    stiffness: 70, // Softer for luxury feel
+    damping: 35,
+    mass: 0.1,
   });
 
   return (
     <section
       ref={ref}
       className="relative h-[600vh] bg-black text-white"
-      style={{ perspective: "1400px" }}
+      style={{ perspective: "1500px" }}
     >
       <div
         className="sticky top-[30vh] md:top-[12vh] overflow-hidden"
         style={{ height: "calc(100vh - 64px)" }}
       >
 
-        {/* CENTER TEXT */}
-        <div className="absolute inset-0 flex items-center justify-center z-30 text-center px-6 pointer-events-none">
-          <div>
-            <h2 className="text-3xl md:text-6xl font-light">
-              Future-Ready Systems.
-            </h2>
-            <p className="text-2xl md:text-5xl text-gray-500 mt-4">
-              Built by Urbanzi
-            </p>
-          </div>
+        {/* ── CENTER TEXT ── */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center z-30 text-center px-6 pointer-events-none gap-4">
+          <h2 className="text-3xl md:text-6xl font-light tracking-tight leading-tight">
+            Future-Ready <br className="md:hidden" /> Systems.
+          </h2>
+          <p className="text-xl md:text-4xl text-gray-500 font-light">
+            Built by Urbanzi
+          </p>
         </div>
 
-        {imagePairs.map((pair, pairIndex) => {
-          const segment = 1 / imagePairs.length;
-          const start = pairIndex * segment;
-          const end = start + segment;
+        {/* ── IMAGE PAIRS ── */}
+        {pairs.map((pair, pi) => {
+          const seg   = 1 / pairs.length;
+          const start = pi * seg;
+          const end   = start + seg;
+          
+          // Safety check: "next" will be undefined on the final pair.
+          const next  = pairs[pi + 1];
 
-          const nextPair = imagePairs[pairIndex + 1];
-
-          /* FRONT */
-          const frontOpacity = useTransform(
+          // Active pair: Wider fade window for cinematic overlap
+          const opacity = useTransform(
             smoothScroll,
             [start, start + 0.15, end - 0.15, end],
             [0, 1, 1, 0]
           );
-
-          const frontScale = useTransform(
+          
+          // Subtle scale and blur-to-clear effect
+          const scale = useTransform(smoothScroll, [start, end], [0.94, 1.08]);
+          const blurValue = useTransform(
             smoothScroll,
-            [start, end],
-            [0.96, 1.2]
+            [start, start + 0.1, end - 0.1, end],
+            ["12px", "0px", "0px", "12px"]
           );
 
-          /* BACK */
-          const backOpacity = useTransform(
-            smoothScroll,
-            [start, start + 0.1],
-            [0.3, 0.7]
-          );
+          // Vertical parallax drift
+          const driftUp   = useTransform(smoothScroll, [start, end], [25, -25]);
+          const driftDown = useTransform(smoothScroll, [start, end], [-25, 25]);
 
-          const backScale = useTransform(
-            smoothScroll,
-            [start, end],
-            [0.9, 1]
-          );
+          // Ghost preview of next pair
+          const ghostOpacity = useTransform(smoothScroll, [start, start + 0.15], [0, 0.35]);
+          const ghostScale   = useTransform(smoothScroll, [start, end], [0.88, 1.0]);
 
           return (
-            <div key={pairIndex}>
+            <div key={pi}>
 
-              {/* BACK PREVIEW */}
-              {nextPair && (
+              {/* GHOST (rendered only if there is a next pair) */}
+              {next && (
                 <motion.div
-                  style={{
-                    opacity: backOpacity,
-                    scale: backScale,
-                  }}
+                  style={{ opacity: ghostOpacity, scale: ghostScale }}
                   className="absolute inset-0 z-10"
                 >
-                  {nextPair.images.map((src, i) => (
-                    <motion.img
+                  {next.images.map((src, i) => (
+                    <img
                       key={i}
                       src={src}
-                      className={`absolute ${nextPair.positions[i]} rounded-xl blur-sm opacity-70`}
+                      style={{ ...next.pos[i], position: "absolute" }}
+                      className="w-32 md:w-52 rounded-3xl blur-xl opacity-40 object-cover aspect-[4/3]"
                     />
                   ))}
                 </motion.div>
               )}
 
-              {/* FRONT ACTIVE */}
+              {/* ACTIVE */}
               <motion.div
-                style={{
-                  opacity: frontOpacity,
-                  scale: frontScale,
-                }}
+                style={{ opacity, scale, filter: blurValue }}
                 className="absolute inset-0 z-20"
               >
                 {pair.images.map((src, i) => (
                   <motion.img
                     key={i}
                     src={src}
-                    className={`absolute ${pair.positions[i]} rounded-xl shadow-2xl`}
+                    style={{
+                      ...pair.pos[i],
+                      position: "absolute",
+                      y: i === 0 ? driftUp : driftDown,
+                      rotate: i === 0 ? -4 : 4,
+                      filter: blurValue
+                    }}
+                    className="w-60 md:w-72 rounded-2xl md:rounded-3xl object-cover aspect-[4/3] shadow-[0_30px_80px_rgba(0,0,0,0.9)]"
                   />
                 ))}
               </motion.div>
@@ -152,3 +151,4 @@ export default function FloatingStackSection() {
     </section>
   );
 }
+

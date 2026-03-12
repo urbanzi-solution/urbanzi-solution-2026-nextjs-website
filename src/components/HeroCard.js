@@ -14,7 +14,7 @@ export default function HeroSection() {
 
           {/* Left Content */}
           <div>
-            <h1 className="text-4xl md:text-5xl font-light leading-tight whitespace-nowrap">
+            <h1 className="text-4xl md:text-5xl font-light leading-tight">
   <span className="block">
     Build Beyond Boundaries Shape
   </span>
