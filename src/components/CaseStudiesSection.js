@@ -37,7 +37,7 @@ export default function CaseStudiesSection() {
     setIndex((p) => (p - 1 + cases.length) % cases.length);
 
   return (
-    <section className="bg-black pt-30 md:pt-30 lg:pt-20 px-4 md:px-6 -mt-30">
+    <section className="bg-black pt-30 md:pt-30 lg:pt-20 px-4 md:px-6 -mt-20">
       <div className="max-w-6xl mx-auto rounded-[28px] p-6 md:p-10
         bg-gradient-to-br from-[#030303] via-[#000000] to-[#020202]
         text-white shadow-[0_15px_40px_rgba(0,0,0,0.35)]">

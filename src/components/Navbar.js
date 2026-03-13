@@ -28,18 +28,18 @@ export default function Navbar() {
           {/* MOBILE MENU BUTTON */}
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden text-white z-50"
+            className="lg:hidden text-white z-50"
           >
             <Menu size={28} />
         </button>
 
         {/* LOGO */}
-        <Link href="/" className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 text-white text-lg md:text-xl font-semibold text-center leading-tight hover:opacity-80 transition-opacity">
+        <Link href="/" className="absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0 text-white text-lg lg:text-xl font-semibold text-center leading-tight hover:opacity-80 transition-opacity">
           URBANZI <br className="hidden sm:block" /> SOLUTIONS
         </Link>
 
         {/* DESKTOP MENU */}
-        <div className="hidden md:flex items-center gap-8 text-gray-300 text-sm">
+        <div className="hidden lg:flex items-center gap-8 text-gray-300 text-sm">
 
           <Link href="/" className="hover:text-white transition">
             Home
@@ -130,7 +130,7 @@ export default function Navbar() {
         </div>
 
         {/* DESKTOP BUTTON */}
-        <Link href="/contact" className="hidden md:block bg-white text-black px-5 py-2 rounded-full font-medium hover:bg-gray-200 transition">
+        <Link href="/contact" className="hidden lg:block bg-white text-black px-5 py-2 rounded-full font-medium hover:bg-gray-200 transition">
           Start a Project
         </Link>
 
@@ -139,7 +139,7 @@ export default function Navbar() {
 
       {/* MOBILE MENU */}
       <div
-        className={`fixed inset-0 z-[60] bg-[#0b1220] transform transition-transform duration-300 md:hidden flex flex-col ${open ? "translate-x-0" : "-translate-x-full"
+        className={`fixed inset-0 z-[60] bg-[#0b1220] transform transition-transform duration-300 lg:hidden flex flex-col ${open ? "translate-x-0" : "-translate-x-full"
           }`}
       >
 

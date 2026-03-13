@@ -16,7 +16,7 @@ export default function WhyChooseApp() {
   ];
 
   return (
-    <section className="relative py-20 px-6 bg-black text-white overflow-hidden -mt-30">
+    <section className="relative py-20 px-6 bg-black text-white overflow-hidden  -mt-10">
       <div className="absolute w-[90vw] max-w-[500px] h-[500px] blur-[160px] rounded-full top-0 left-1/2 -translate-x-1/2" />
 
       <div className="relative max-w-6xl mx-auto">

@@ -21,7 +21,7 @@ const services = [
 export default function MobileAppServicesSection() {
   const { openModal } = useLeadModal();
   return (
-    <section className="bg-[#020617] py-10 md:py-20 px-5 md:px-6 text-white">
+    <section className="bg-[#020617] py-10 md:py-20 px-6 md:px-12 text-white">
       <div className="max-w-7xl mx-auto">
 
         <motion.div
@@ -40,7 +40,7 @@ export default function MobileAppServicesSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 md:-ml-16 gap-x-6 md:gap-x-20 gap-y-6 md:gap-y-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 md:gap-x-10 gap-y-6 md:gap-y-4">
           {services.map((service, index) => (
             <motion.div
               key={index}
