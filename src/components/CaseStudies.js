@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function CaseStudies() {
   return (
-    <section className="bg-black py-8 lg:py-15 px-4 md:px-6 text-white">
+    <section className="bg-black py-8 lg:py-15 px-4 md:px-6 text-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
 
         {/* Heading */}

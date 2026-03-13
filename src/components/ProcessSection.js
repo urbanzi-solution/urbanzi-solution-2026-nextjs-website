@@ -14,7 +14,7 @@ const steps = [
 
 export default function ProcessSection() {
   return (
-    <section className="bg-black text-white py-20 md:py-24">
+    <section className="bg-black text-white py-20 md:py-24 overflow-hidden">
       <div className="max-w-6xl mx-auto px-5 md:px-6">
 
         <motion.h2

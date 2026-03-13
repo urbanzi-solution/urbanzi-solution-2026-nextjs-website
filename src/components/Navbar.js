@@ -15,7 +15,7 @@ export default function Navbar() {
 
   // Prevent page scroll when menu opens
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "auto";
+    document.body.style.overflow = open ? "hidden" : "";
   }, [open]);
 
   return (

@@ -43,7 +43,7 @@ export default function TestimonialSection() {
 
           {/* COLUMN 1 */}
           <motion.div
-            className="space-y-6 md:space-y-2 md:mt-6 md:-space-x-5"
+            className="space-y-6 md:space-y-8 md:mt-12"
             variants={colVariants(0)}
             initial="hidden"
             whileInView="visible"
@@ -69,7 +69,7 @@ export default function TestimonialSection() {
 
           {/* COLUMN 2 */}
           <motion.div
-            className="space-y-6 md:space-y-2 md:-mt-10"
+            className="space-y-6 md:space-y-8"
             variants={colVariants(0.12)}
             initial="hidden"
             whileInView="visible"
@@ -95,7 +95,7 @@ export default function TestimonialSection() {
 
           {/* COLUMN 3 */}
           <motion.div
-            className="space-y-6 md:space-y-2 md:mt-6 md:-ml-5"
+            className="space-y-6 md:space-y-8 md:mt-12"
             variants={colVariants(0.24)}
             initial="hidden"
             whileInView="visible"
