@@ -87,7 +87,7 @@ export default function HeroGlobeSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/80 to-black" />
 
         {/* TEXT ON GLOBE */}3
-        <div className="relative z-30 text-center px-4 md:px-6 py-10 md:py-20 max-w-4xl w-full">
+        <div className="relative z-30 text-center px-4 md:px-6 py-15 md:py-20 max-w-4xl w-full">
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight">
             <span className="block">Urbanzi Delivers</span>
             <span className="block text-gray-200">B2B Virtual</span>

@@ -7,7 +7,7 @@ const ease = [0.22, 1, 0.36, 1];
 
 export default function HeroSection() {
   return (
-    <section className="bg-black text-white min-h-[80vh] flex items-center py-10 md:py-0">
+    <section className="bg-black text-white  flex items-center py-15 md:py-20">
       <div className="max-w-7xl mx-auto px-5 w-full">
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
