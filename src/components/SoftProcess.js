@@ -3,7 +3,7 @@
 const steps = [
   {
     title: "Discovery",
-    desc: "WorTired of vendors who just sell you what they know? We start by listening—learning your business and biggest pain points.",
+    desc: "Tired of vendors who just sell you what they know? We start by listening — learning your business and your biggest pain points.",
   },
   {
     title: "Plan & Design",

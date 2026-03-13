@@ -1,10 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useLeadModal } from "@/context/LeadContext";
 
 const ease = [0.22, 1, 0.36, 1];
 
 export default function GraphicsHero() {
+  const { openModal } = useLeadModal();
   return (
     <section className="bg-black py-24 px-6">
       <div className="max-w-[1400px] mx-auto">
@@ -28,9 +30,7 @@ export default function GraphicsHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.85, delay: 0.2, ease }}
             >
-              Transform Your Ideas Into Powerful Visuals With
-              <br />
-              Kerala&apos;s Trusted Graphic Design And Animation Company
+              Graphic Designing & Animation Company in Trivandrum, Kerala – Visuals That Convert Attention Into Action
             </motion.h1>
 
             <motion.p
@@ -39,7 +39,7 @@ export default function GraphicsHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.75, delay: 0.38, ease }}
             >
-              Urbanzi is a creative graphic designing and animation company in Trivandrum, Kerala, delivering branding, social media creatives, motion graphics, 2D/3D animation, and video editing using Adobe Creative Suite, Blender &amp; DaVinci Resolve. Build a brand that looks premium and converts.
+               A graphic designing and animation company creates visual content that communicates your brand, captures attention, and drives engagement across digital platforms. At Urbanzi, we design high-impact visuals, motion graphics, and animations that make your brand look premium—and perform better across ads, social media, and websites.
             </motion.p>
 
             <motion.div
@@ -48,8 +48,11 @@ export default function GraphicsHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.52, ease }}
             >
-              <button className="px-8 py-3 rounded-full bg-blue-600 text-white hover:bg-blue-700 hover:text-white transition">
-                Start Your Project
+              <button 
+                onClick={() => openModal("Graphics & Animation Hero")}
+                className="px-8 py-3 rounded-full bg-blue-600 text-white hover:bg-blue-700 hover:text-white transition"
+              >
+                 Request Design Call
               </button>
             </motion.div>
           </div>

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Palette, Megaphone, Clapperboard, Box, Film, Layout } from "lucide-react";
+import { useLeadModal } from "@/context/LeadContext";
 
 const ease = [0.22, 1, 0.36, 1];
 
@@ -15,6 +16,7 @@ const services = [
 ];
 
 export default function GraphicsServicesSection() {
+  const { openModal } = useLeadModal();
   return (
     <section className="bg-[#020617] py-10 md:py-20 px-6 text-white">
       <div className="max-w-7xl mx-auto">
@@ -29,7 +31,7 @@ export default function GraphicsServicesSection() {
           <h2 className="text-3xl md:text-5xl font-semibold text-white">Our Graphic Designing &amp; Animation Services</h2>
           <div className="w-20 h-[3px] bg-white mx-auto mt-4 rounded-full" />
           <p className="text-white/70 mt-6 max-w-2xl mx-auto">
-            Everything You Need to <span>Bring Your Brand Visuals to Life</span>
+            Everything You Need to Make Your Brand Unforgettable.
           </p>
         </motion.div>
 
@@ -59,7 +61,10 @@ export default function GraphicsServicesSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3, ease }}
         >
-          <button className="px-8 py-3 bg-white text-black font-medium rounded-full hover:scale-105 transition duration-300">
+          <button 
+            onClick={() => openModal("Graphics Services Section")}
+            className="px-8 py-3 bg-white text-black font-medium rounded-full hover:scale-105 transition duration-300"
+          >
             See More Services →
           </button>
         </motion.div>

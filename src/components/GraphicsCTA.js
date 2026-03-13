@@ -1,12 +1,13 @@
 "use client";
 
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import { useLeadModal } from "@/context/LeadContext";
 
 const ease = [0.22, 1, 0.36, 1];
 
 export default function GraphicsCTA() {
+  const { openModal } = useLeadModal();
   return (
     <section className="relative py-14 md:py-20 px-6 bg-black text-white overflow-hidden -mt-20">
       <div className="absolute w-[90vw] max-w-[500px] h-[500px] blur-[160px] rounded-full top-0 left-1/2 -translate-x-1/2" />
@@ -22,12 +23,18 @@ export default function GraphicsCTA() {
           and elevate your brand with stunning visuals, creative storytelling, and high-impact designs that attract customers.
         </motion.p>
         <motion.div className="flex flex-col md:flex-row justify-center gap-6" initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.34, ease }}>
-          <Link href="/contact" className="flex items-center justify-center gap-2 px-5 py-5 rounded-full bg-blue-500 font-semibold hover:scale-105 transition">
+          <button 
+            onClick={() => openModal("Graphics Consultation Section")}
+            className="flex items-center justify-center gap-2 px-5 py-5 rounded-full bg-blue-500 font-semibold hover:scale-105 transition w-full md:w-auto"
+          >
             Get a Free Creative Consultation <ArrowRight size={20} />
-          </Link>
-          <Link href="/contact" className="flex items-center justify-center px-10 py-5 rounded-full border border-white/20 hover:bg-white/5 transition">
+          </button>
+          <button 
+            onClick={() => openModal("Graphics Quote Section")} 
+            className="flex items-center justify-center px-10 py-5 rounded-full border border-white/20 hover:bg-white/5 transition w-full md:w-auto"
+          >
             Request a Custom Design Quote
-          </Link>
+          </button>
         </motion.div>
       </motion.div>
     </section>

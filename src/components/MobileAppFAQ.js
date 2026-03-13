@@ -10,11 +10,23 @@ const faqs = [
   },
   {
     q: "How long does it take to develop a mobile app?",
-    a: "Basic apps take 4–8 weeks. Complex apps may take 2–4 months depending on features and integrations.",
+    a: "A simple app typically takes 6–10 weeks. A feature-rich or custom app can take 3–5 months. We give you a clear timeline after reviewing your requirements.",
   },
   {
     q: "Do you provide post-launch support?",
     a: "Yes. We provide long-term maintenance, updates, bug fixes, and performance optimization.",
+  },
+  {
+    q: "Will my app work on both Android and iPhone?",
+    a: "Yes. We build both native and cross-platform apps using Flutter and React Native — so your app reaches users on both Android and iOS without doubling the cost.",
+  },
+  {
+    q: "Do you help with publishing the app on Play Store and App Store?",
+    a: "Absolutely. We handle the full submission process for both Google Play Store and Apple App Store — including all guidelines, screenshots, and descriptions.",
+  },
+  {
+    q: "Can you update or improve my existing app?",
+    a: "Yes. Whether it needs a redesign, new features, or performance fixes — our team can take over any existing app and improve it from where it stands.",
   },
 ];
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -46,13 +47,19 @@ export default function HeroSection() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
           >
-            <button className="bg-blue-600 hover:bg-blue-700 transition px-7 py-3 rounded-full font-medium text-white">
-              Let's Start
-            </button>
+            <Link 
+              href="/contact"
+              className="bg-blue-600 hover:bg-blue-700 transition px-7 py-3 rounded-full font-medium text-white"
+            >
+              Start Your Innovation
+            </Link>
 
-            <button className="bg-zinc-200 hover:bg-white transition px-7 py-3 rounded-full font-medium text-black">
-              Our Solutions
-            </button>
+            <Link 
+              href="/services/web-development"
+              className="bg-zinc-200 hover:bg-white transition px-7 py-3 rounded-full font-medium text-black"
+            >
+              Web Solutions
+            </Link>
           </motion.div>
 
         </div>

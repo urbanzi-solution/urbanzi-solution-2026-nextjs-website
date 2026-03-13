@@ -76,7 +76,7 @@ export default function OurExpertiseSection() {
           <div className="pointer-events-none absolute inset-y-0 left-0 w-10 md:w-32 bg-gradient-to-r from-black to-transparent z-10" />
           <div className="pointer-events-none absolute inset-y-0 right-0 w-10 md:w-32 bg-gradient-to-l from-black to-transparent z-10" />
 
-          <div className="flex gap-8 md:gap-24 w-max animate-marquee-right">
+          <div className="flex pb-10 gap-8 md:gap-24 w-max animate-marquee-right">
             {[...secondRow, ...secondRow].map((item, index) => {
               const Icon = item.icon;
               return (

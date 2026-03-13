@@ -19,19 +19,19 @@ export default function ProductsSection() {
   const products = [
     {
       title: "HRMS",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.",
+      desc: "Urbanzi's HRMS simplifies your entire HR process — from attendance and payroll to leave management.Built for Kerala businesses, it reduces manual work and keeps your team organized every single day.",
       img: "/hrms.webp",
       alt: "HRMS",
     },
     {
       title: "GYM",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.",
+      desc: "Our Gym Management Software helps fitness centers across Kerala manage memberships, payments, and schedules from one simple dashboard. Save time and grow your business.",
       img: "/gym.webp",
       alt: "Gym",
     },
     {
       title: "WHATSAPP AUTOMATION",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.",
+      desc: "Send instant updates, confirmations, and offers directly to your customers on WhatsApp. Our automation tool helps Trivandrum businesses stay connected without extra effort.",
       img: "/whatsapp.webp",
       alt: "WhatsApp Automation",
     },

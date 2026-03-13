@@ -25,13 +25,8 @@ export default function WhoWeAre() {
             <div className="w-20 h-[3px] bg-[#9fd0ff] mt-4 mb-8" />
 
             <p className="text-white/90 text-[16px] md:text-[18px] leading-relaxed">
-              At <span className="font-semibold text-white">Urbanzi Solutions</span>, we're your digital
-              growth partners who truly care about your success. As a dedicated
-              digital marketing agency in Trivandrum and Kerala, we help
-              businesses of all sizes navigate the online world with confidence.
-              Our approach is personal, results-driven, and focused on turning
-              your digital marketing challenges into real business growth. Let
-              us help your brand shine in the crowded digital space.
+              Urbanzi is a full-service digital marketing agency in Trivandrum, Kerala, helping startups, SMEs, and growing brands build predictable online growth. We combine data, creativity, and performance marketing to create campaigns that don’t just look good — they convert.
+              If your website isn’t bringing leads, your ads aren’t profitable, or your social media isn’t moving the needle, we fix the system — not just the surface.
             </p>
 
             <div className="mt-10">

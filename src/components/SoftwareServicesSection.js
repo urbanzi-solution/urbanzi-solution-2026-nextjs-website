@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Code2, Database, Building2, Users, Cloud, HeartPulse, Truck } from "lucide-react";
+import { useLeadModal } from "@/context/LeadContext";
 
 const ease = [0.22, 1, 0.36, 1];
 
@@ -34,6 +35,7 @@ function Card({ service, delay }) {
 }
 
 export default function SoftwareServicesSection() {
+  const { openModal } = useLeadModal();
   return (
     <section className="bg-[#020617] py-10 md:py-20 px-6 text-white">
       <div className="max-w-7xl mx-auto">
@@ -69,7 +71,10 @@ export default function SoftwareServicesSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3, ease }}
         >
-          <button className="px-8 py-3 bg-white text-black rounded-full font-medium hover:scale-105 transition">
+          <button 
+            onClick={() => openModal("Software Services Section")}
+            className="px-8 py-3 bg-white text-black rounded-full font-medium hover:scale-105 transition"
+          >
             Get Custom Software Quote →
           </button>
         </motion.div>

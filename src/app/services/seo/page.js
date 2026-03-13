@@ -8,7 +8,15 @@ import CaseStudiesSection from "@/components/CaseStudiesSection";
 import SeoFaqSection from "@/components/SeoFaqSection";
 import SEOCTAA from "@/components/SEOCTAA";
 import Footer from "@/components/Footer";
-export default function About() {
+export const metadata = {
+  title: "SEO Services in Kerala & Trivandrum | Urbanzi Solutions",
+  description: "Urbanzi Solutions is a trusted SEO company in Trivandrum, Kerala. We offer local SEO, Google My Business optimization, on-page SEO, and backlink building to help your business rank and grow.",
+  alternates: {
+    canonical: "https://urbanzi.in/services/seo",
+  },
+};
+
+export default function SeoPage() {
  return (
     <>
     <SeoHero />

@@ -1,10 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useLeadModal } from "@/context/LeadContext";
 
 const ease = [0.22, 1, 0.36, 1];
 
 export default function SeoHero() {
+  const { openModal } = useLeadModal();
   return (
     <section className="bg-black py-24 px-6">
       <div className="max-w-[1400px] mx-auto">
@@ -28,9 +30,7 @@ export default function SeoHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.85, delay: 0.2, ease }}
             >
-              Unlock Growth With The Leading
-              <br />
-              SEO Companies in Trivandrum &amp; Kerala
+              SEO Company in Trivandrum, Kerala – Get Found on Google & Grow Your Business
             </motion.h1>
 
             <motion.p
@@ -39,7 +39,7 @@ export default function SeoHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.75, delay: 0.38, ease }}
             >
-              Tired of seeing your competitors rank higher on Google? Frustrated by confusing SEO jargon and no real results? Urbanzi Solutions listens first—we turn your challenges into clear, step-by-step strategies that finally get your business found, trusted, and growing online.
+               An SEO company helps your website rank higher on Google so potential customers can find your business when they search for your products or services. At Urbanzi, we use ethical, data-driven SEO strategies to increase your visibility, website traffic, and qualified leads across Kerala.
             </motion.p>
 
             <motion.div
@@ -48,8 +48,11 @@ export default function SeoHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.52, ease }}
             >
-              <button className="px-8 py-3 rounded-full bg-blue-600 text-white hover:bg-blue-700 hover:text-white transition">
-                Start Your Project
+              <button 
+                onClick={() => openModal("SEO Hero")}
+                className="px-8 py-3 rounded-full bg-blue-600 text-white hover:bg-blue-700 hover:text-white transition"
+              >
+                Get a Free SEO Audit
               </button>
             </motion.div>
           </div>

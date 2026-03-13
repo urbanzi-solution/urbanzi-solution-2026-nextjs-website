@@ -6,7 +6,7 @@ const ease = [0.22, 1, 0.36, 1];
 
 const reasons = [
   { title: "Local SEO Focus & Kerala-Wide Expertise", desc: "We get Trivandrum and Kerala markets, and what works for your unique audience." },
-  { title: "Clear, Measurable Results", desc: "We don't just promise—every campaign comes with simple reports showing calls." },
+  { title: "Clear, Measurable Results", desc: "We don't just promise — every campaign comes with simple monthly reports showing rankings, traffic, calls, and leads so you always know what you're getting." },
   { title: "White-Hat, Sustainable Tactic", desc: "Only safe, Google-endorsed methods—no risky shortcuts or tricks." },
   { title: "Transparent, Honest Support", desc: "We explain every step and never leave you guessing." },
   { title: "Google My Business Masters", desc: "More reviews, top-3 map visibility, and higher local trust." },

@@ -16,6 +16,18 @@ const faqs = [
     q: "Can you design for ads and performance marketing?",
     a: "Absolutely. Our creatives are designed specifically to improve CTR, engagement, and conversion rates for paid campaigns.",
   },
+  {
+    q: "Do you create content for Instagram Reels and YouTube Shorts?",
+    a: "Yes. We design and edit short-form video content optimized for Reels, Shorts, and Stories — tailored to your brand tone and platform best practices.",
+  },
+  {
+    q: "Can you redesign our existing logo or brand identity?",
+    a: "Absolutely. We regularly help businesses in Kerala refresh outdated logos and build complete brand identity systems that feel modern and trustworthy.",
+  },
+  {
+    q: "What file formats do you deliver?",
+    a: "We deliver all final assets in the formats you need — PNG, JPEG, SVG, PDF for print, MP4 for video, and editable source files on request.",
+  },
 ];
 
 export default function GraphicsFaq() {

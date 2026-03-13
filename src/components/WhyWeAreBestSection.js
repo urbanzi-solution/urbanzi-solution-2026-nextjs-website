@@ -5,18 +5,18 @@ import { motion } from "framer-motion";
 const ease = [0.22, 1, 0.36, 1];
 
 const cards = [
-  { title: "Expertise Across Platforms", text: "We have deep experience building websites on WordPress, Shopify, React, Next.js, and more so you get the ideal solution, every time.", span: "md:col-span-7" },
-  { title: "Tailored to Your Needs", text: "Every project is uniquely designed to reflect your brand and meet your specific business goals, never a cookie-cutter approach.", span: "md:col-span-5" },
-  { title: "User-Centered Design", text: "We focus on intuitive navigation, engaging experiences, and visually appealing layouts that turn visitors into loyal customers.", span: "md:col-span-4" },
-  { title: "SEO-Driven From Day One", text: "Our sites are built with the latest SEO best practices, ensuring your business gets found on Google and reaches more potential customers.", span: "md:col-span-4" },
-  { title: "Reliable, End-to-End Support", text: "From discovery to launch and ongoing maintenance, you always have a dedicated team beside you.", span: "md:col-span-4" },
-  { title: "Transparent Communication", text: "We keep you in the loop at every step, providing clear updates, honest advice, and a stress-free experience.", span: "md:col-span-6" },
-  { title: "Proven Results", text: "Our portfolio speaks for itself—businesses across India trust Urbanzi Solutions for websites that drive growth and deliver real value.", span: "md:col-span-6" },
+  { title: "Expertise Across Platforms", text: "We have deep experience building websites on WordPress, Shopify, React, Next.js, and more so you get the ideal solution, every time.", span: "lg:col-span-7" },
+  { title: "Tailored to Your Needs", text: "Every project is uniquely designed to reflect your brand and meet your specific business goals, never a cookie-cutter approach.", span: "lg:col-span-5" },
+  { title: "User-Centered Design", text: "We focus on intuitive navigation, engaging experiences, and visually appealing layouts that turn visitors into loyal customers.", span: "lg:col-span-4" },
+  { title: "SEO-Driven From Day One", text: "Our sites are built with the latest SEO best practices, ensuring your business gets found on Google and reaches more potential customers.", span: "lg:col-span-4" },
+  { title: "Reliable, End-to-End Support", text: "From discovery to launch and ongoing maintenance, you always have a dedicated team beside you.", span: "lg:col-span-4" },
+  { title: "Transparent Communication", text: "We keep you in the loop at every step, providing clear updates, honest advice, and a stress-free experience.", span: "lg:col-span-6" },
+  { title: "Proven Results", text: "Our portfolio speaks for itself—businesses across India trust Urbanzi Solutions for websites that drive growth and deliver real value.", span: "lg:col-span-6" },
 ];
 
 export default function WhyWeAreBestSection() {
   return (
-    <section className="bg-black text-white py-20 md:py-32 px-6 md:px-[75px] -mt-10 md:-mt-28">
+    <section className="bg-black text-white py-20 md:py-20 lg:py-32 px-6 md:px-[75px] -mt-10 md:-mt-28">
       <div className="max-w-[1400px] mx-auto">
 
         {/* Heading */}
@@ -32,7 +32,7 @@ export default function WhyWeAreBestSection() {
         </motion.h2>
 
         {/* GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-2">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
           {cards.map((card, i) => (
             <motion.div
               key={i}

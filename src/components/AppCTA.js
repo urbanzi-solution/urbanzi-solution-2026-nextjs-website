@@ -1,12 +1,14 @@
 "use client";
 
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import { useLeadModal } from "@/context/LeadContext";
 
 const ease = [0.22, 1, 0.36, 1];
 
 export default function AppCTA() {
+  const { openModal } = useLeadModal();
+
   return (
     <section className="relative py-14 px-6 bg-black text-white overflow-hidden -mt-20">
       <div className="absolute w-[90vw] max-w-[500px] h-[500px] blur-[160px] rounded-full top-0 left-1/2 -translate-x-1/2" />
@@ -49,12 +51,18 @@ export default function AppCTA() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.34, ease }}
         >
-          <Link href="/contact" className="flex items-center justify-center gap-2 px-5 py-5 rounded-full bg-blue-500 font-semibold hover:scale-105 transition">
+          <button 
+            onClick={() => openModal("App Development CTA Section")}
+            className="flex items-center justify-center gap-2 px-5 py-5 rounded-full bg-blue-500 font-semibold hover:scale-105 transition w-full md:w-auto"
+          >
             Book a Free App Consultation <ArrowRight size={20} />
-          </Link>
-          <Link href="/contact" className="flex items-center justify-center px-10 py-5 rounded-full border border-white/20 hover:bg-white/5 transition">
+          </button>
+          <button 
+            onClick={() => openModal("App Development Roadmap CTA")}
+            className="flex items-center justify-center px-10 py-5 rounded-full border border-white/20 hover:bg-white/5 transition w-full md:w-auto"
+          >
             Get Your App Roadmap in 24 Hours
-          </Link>
+          </button>
         </motion.div>
       </motion.div>
     </section>

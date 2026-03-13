@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -7,37 +8,32 @@ const teamMembers = [
   {
     name: "Govardhan",
     role: "Co-Founder · Project Head",
-    image: "/team1.jpg",
+    image: "/govardhan.webp",
+    website: "#", // Placeholder
   },
   {
     name: "Abhijith",
     role: "Co-Founder · Project Manager (Operational Lead)",
-    image: "/team2.jpg",
+    image: "/abhijith.webp",
+    website: "https://abhijith.urbanzi.in", // Placeholder
   },
   {
     name: "Abhishek",
     role: "Co-Founder · Design Head",
-    image: "/team3.jpg",
-  },
-  {
-    name: "Shuhaib",
-    role: "Founding Member · Project Development Head",
-    image: "/team4.jpg",
+    image: "/abhishek.webp",
+    website: "#", // Placeholder
   },
   {
     name: "Anoop",
     role: "Co-Founder · Partner",
-    image: "/team5.jpg",
+    image: "/annop.webp",
+    website: "#", // Placeholder
   },
   {
     name: "Sajin",
     role: "Co-Founder · Partner",
-    image: "/team6.jpg",
-  },
-  {
-    name: "Abhiram",
-    role: "Founding Member · Designer",
-    image: "/team7.jpg",
+    image: "/sajin.webp",
+    website: "#", // Placeholder
   },
 ];
 
@@ -57,10 +53,8 @@ export default function TeamSection() {
         </div>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 justify-items-center">
+        <div className="flex flex-wrap justify-center gap-10">
           {teamMembers.map((member, index) => {
-            const isLast = index === teamMembers.length - 1;
-
             return (
               <motion.div
                 key={index}
@@ -68,11 +62,14 @@ export default function TeamSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`group w-full max-w-sm ${
-                  isLast ? "md:col-span-3 flex justify-center" : ""
-                }`}
+                className="group w-full sm:w-[calc(50%-20px)] md:w-[calc(33.33%-27px)] max-w-sm"
               >
-                <div className="relative bg-[#111] rounded-3xl overflow-hidden border border-white/5 hover:border-white/10 transition-all duration-300 w-full">
+                <Link 
+                  href={member.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block relative bg-[#111] rounded-3xl overflow-hidden border border-white/5 hover:border-white/20 transition-all duration-500 w-full group"
+                >
 
                   {/* Image */}
                   <div className="relative h-[300px] w-full overflow-hidden">
@@ -80,13 +77,18 @@ export default function TeamSection() {
                       src={member.image}
                       alt={member.name}
                       fill
-                      className="object-cover group-hover:scale-105 transition duration-500"
+                      className="object-cover group-hover:scale-110 transition duration-700 ease-out"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                      <span className="bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-sm border border-white/20">
+                        View Website
+                      </span>
+                    </div>
                   </div>
 
                   {/* Info */}
                   <div className="p-6 text-center">
-                    <h3 className="text-lg font-semibold mb-2">
+                    <h3 className="text-lg font-semibold mb-2 group-hover:text-blue-300 transition-colors duration-300">
                       {member.name}
                     </h3>
                     <p className="text-gray-400 text-sm leading-relaxed">
@@ -94,7 +96,7 @@ export default function TeamSection() {
                     </p>
                   </div>
 
-                </div>
+                </Link>
               </motion.div>
             );
           })}

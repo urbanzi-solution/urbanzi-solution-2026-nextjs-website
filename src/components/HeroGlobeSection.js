@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function HeroGlobeSection() {
   return (
     <section className="relative bg-[#050816] text-white overflow-hidden ">
@@ -9,26 +11,32 @@ export default function HeroGlobeSection() {
         <div className="max-w-4xl mx-auto">
 
           <div className="inline-flex items-center px-6 py-2 rounded-full border border-blue-500/40 bg-blue-500/10 text-sm text-gray-300 mb-8">
-            Supercharges Your Entire Dev Workflow with AI
+            Kerala's #1 Digital Agency — Based in Trivandrum
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-blue-400 leading-tight">
-            Limitless
+            Your Strategic Partner for Digital Growth
           </h1>
 
           <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Immersive digital experiences by blending cutting-edge technology
-            with innovative storytelling.
+            We build powerful apps, websites, and digital solutions
+            for businesses across Kerala and beyond.
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-full font-medium transition">
-              Let’s Start
-            </button>
+            <Link 
+              href="/contact"
+              className="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-full font-medium transition"
+            >
+              Get Your Free Quote
+            </Link>
 
-            <button className="bg-white text-black hover:bg-gray-200 px-8 py-3 rounded-full font-medium transition">
-              Learn More
-            </button>
+            <Link 
+              href="#services"
+              className="bg-white text-black hover:bg-gray-200 px-8 py-3 rounded-full font-medium transition"
+            >
+              Explore Our Services
+            </Link>
           </div>
 
         </div>

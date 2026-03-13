@@ -1,10 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useLeadModal } from "@/context/LeadContext";
 
 const ease = [0.22, 1, 0.36, 1];
 
 export default function WebbHero() {
+  const { openModal } = useLeadModal();
   return (
     <section className="bg-black py-24 px-6">
       <div className="max-w-[1400px] mx-auto">
@@ -29,7 +31,6 @@ export default function WebbHero() {
               transition={{ duration: 0.85, delay: 0.2, ease }}
             >
               Web Development Company in Trivandrum, Kerala
-              <br />
               High-Performance Websites That Convert
             </motion.h1>
 
@@ -48,8 +49,11 @@ export default function WebbHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.52, ease }}
             >
-              <button className="px-8 py-3 rounded-full bg-blue-600 text-white hover:bg-blue-700 hover:text-white transition">
-                Start Your Project
+              <button 
+                onClick={() => openModal("Web Development Hero")}
+                className="px-8 py-3 rounded-full bg-blue-600 text-white hover:bg-blue-700 hover:text-white transition"
+              >
+                Request a Cost Estimate
               </button>
             </motion.div>
           </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import {
   FaFacebookF,
   FaPinterestP,
@@ -44,11 +45,11 @@ export default function Footer() {
               Pages
             </h3>
             <ul className="space-y-2 text-sm text-gray-800">
-              <li>Home</li>
-              <li>About us</li>
-              <li>Blog</li>
-              <li>Our clients</li>
-              <li>Contact us</li>
+              <li><Link href="/" className="hover:text-blue-700 transition">Home</Link></li>
+              <li><Link href="/about" className="hover:text-blue-700 transition">About us</Link></li>
+              <li><Link href="/blogs" className="hover:text-blue-700 transition">Blog</Link></li>
+              <li><Link href="/clients" className="hover:text-blue-700 transition">Our clients</Link></li>
+              <li><Link href="/contact" className="hover:text-blue-700 transition">Contact us</Link></li>
             </ul>
           </div>
 
@@ -58,23 +59,30 @@ export default function Footer() {
               Services
             </h3>
             <ul className="space-y-2 text-sm text-gray-800">
-              <li>Web Development</li>
-              <li>Digital Marketing</li>
-              <li>Software Development</li>
-              <li>Mobile App Development</li>
-              <li>SEO</li>
+              <li><Link href="/services/web-development" className="hover:text-blue-700 transition">Web Development</Link></li>
+              <li><Link href="/services/digital-marketing" className="hover:text-blue-700 transition">Digital Marketing</Link></li>
+              <li><Link href="/services/software-development" className="hover:text-blue-700 transition">Software Development</Link></li>
+              <li><Link href="/services/app-development" className="hover:text-blue-700 transition">Mobile App Development</Link></li>
+              <li><Link href="/services/seo" className="hover:text-blue-700 transition">SEO</Link></li>
+              <li><Link href="/services/graphic-design-animation" className="hover:text-blue-700 transition">Graphic Design</Link></li>
             </ul>
           </div>
 
           {/* COMPANY */}
           <div className="lg:col-span-2">
             <h3 className="text-base font-semibold text-[#1F3A6D] mb-4">
-              Company
+              Contact Us
             </h3>
             <ul className="space-y-2 text-sm text-gray-800">
-              <li>+91 7012050812</li>
-              <li>+91 9074496405</li>
-              <li>contact@urbanzi.in</li>
+              <li>
+                <a href="tel:+917012050812" className="hover:text-blue-700 transition">+91 7012050812</a>
+              </li>
+              <li>
+                <a href="tel:+919074496405" className="hover:text-blue-700 transition">+91 9074496405</a>
+              </li>
+              <li>
+                <a href="mailto:contact@urbanzi.in" className="hover:text-blue-700 transition">contact@urbanzi.in</a>
+              </li>
               <li>Trivandrum, Kerala</li>
             </ul>
           </div>
@@ -84,7 +92,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center mt-12 gap-4">
 
           <p className="text-sm text-gray-900">
-            © 2025 Urbanzi Solutions LLP. All rights reserved.
+            © 2026 Urbanzi Solutions LLP. All rights reserved.
           </p>
 
           <div className="flex gap-4">

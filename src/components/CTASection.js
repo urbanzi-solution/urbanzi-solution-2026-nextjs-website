@@ -3,10 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useLeadModal } from "@/context/LeadContext";
 
 const ease = [0.22, 1, 0.36, 1];
 
 export default function CTASection() {
+  const { openModal } = useLeadModal();
   return (
     <section className="bg-black px-4 md:px-12 py-16 md:py-24 -mt-25">
       <div className="max-w-7xl mx-auto">
@@ -41,9 +43,8 @@ export default function CTASection() {
               transition={{ duration: 0.75, delay: 0.2, ease }}
             >
               <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight">
-                Ready to Get
-                <br />
-                Started
+                Ready to Grow Your Business in Kerala?
+
               </h2>
             </motion.div>
 
@@ -56,23 +57,22 @@ export default function CTASection() {
               transition={{ duration: 0.75, delay: 0.3, ease }}
             >
               <p className="text-sm sm:text-base md:text-lg text-gray-200 leading-relaxed mb-6 md:mb-8">
-                Take the next step with Urbanzi Solutions. Whether you&apos;re a
-                visionary entrepreneur or a growing business, our team is
-                dedicated to building digital experiences that inspire,
-                connect, and help you achieve more. Let&apos;s create something
-                extraordinary together.
+                Take the next step with Urbanzi Solutions. Whether you're a
+                startup in Trivandrum or an established business across Kerala,
+                our team is ready to build digital solutions that connect,
+                perform, and drive real results. Let's build something great together.
               </p>
 
               <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 justify-center md:justify-start">
-                <Link
-                  href="/contact"
+                <button
+                  onClick={() => openModal("Homepage Main CTA")}
                   className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full text-white font-medium transition duration-300"
                 >
                   Contact Us
-                </Link>
+                </button>
                 <Link
                   href="/services"
-                  className="bg-white text-black hover:bg-gray-200 px-6 py-3 rounded-full font-medium transition duration-300"
+                  className="bg-white text-black hover:bg-gray-200 px-6 py-3 rounded-full font-medium transition duration-300 text-center"
                 >
                   Learn More
                 </Link>

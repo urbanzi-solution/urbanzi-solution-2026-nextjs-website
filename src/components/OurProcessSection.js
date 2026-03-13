@@ -6,20 +6,20 @@ import { motion } from "framer-motion";
 const ease = [0.22, 1, 0.36, 1];
 
 const steps = [
-  { num: "01", title: "Discover", desc: "We sit down with you virtually or in person to listen, understand your challenges, and learn about your audience and goals." },
-  { num: "02", title: "Design", desc: "We sit down with you virtually or in person to listen, understand your challenges, and learn about your audience and goals." },
-  { num: "03", title: "Development", desc: "We sit down with you virtually or in person to listen, understand your challenges, and learn about your audience and goals." },
-  { num: "04", title: "Launch & Support", desc: "We sit down with you virtually or in person to listen, understand your challenges, and learn about your audience and goals.", isLast: true },
+  { num: "01", title: "Discover", desc: "We sit with you to understand your business, your goals, and your audience — so every decision we make is built around what you actually need." },
+  { num: "02", title: "Design", desc: "We create wireframes and visual designs that reflect your brand identity — clean, modern, and focused on giving your visitors the best possible experience." },
+  { num: "03", title: "Development", desc: "We build your website with clean code, fast load times, and full mobile responsiveness — tested thoroughly before a single line goes live." },
+  { num: "04", title: "Launch & Support", desc: "We launch your site with confidence and stay with you after — handling updates, monitoring performance, and making sure everything keeps running smoothly.", isLast: true },
 ];
 
 export default function OurProcessSection() {
   return (
-    <section className="bg-black text-white py-20 md:py-32 px-6 md:px-[75px] -mt-25">
-      <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-[45%_55%] gap-12 md:gap-20 items-center">
+    <section className="bg-black text-white py-10 md:py-32 px-6 md:px-[75px] -mt-25">
+      <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-[45%_55%] gap-12 md:gap-20 items-center">
 
         {/* LEFT IMAGE */}
         <motion.div
-          className="relative w-full h-[350px] md:h-[800px] md:w-130 rounded-3xl overflow-hidden"
+          className="relative w-full h-[350px] md:h-[500px] lg:h-[800px] md:w-full rounded-3xl overflow-hidden"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -40,7 +40,7 @@ export default function OurProcessSection() {
             Our <span className="text-blue-300 italic">Process</span>
           </motion.h2>
 
-          <div className="space-y-8 md:space-y-10 md:-ml-14">
+          <div className="space-y-8 md:space-y-10 ">
             {steps.map((step, i) => (
               <motion.div
                 key={i}
@@ -49,10 +49,12 @@ export default function OurProcessSection() {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.65, delay: i * 0.1, ease }}
               >
-                <div className="grid grid-cols-[50px_1fr] md:grid-cols-[80px_200px_1fr] items-start gap-3 md:gap-4">
-                  <span className="text-2xl md:text-[32px] font-semibold">{step.num}</span>
-                  <h3 className="text-lg md:text-[26px]">{step.title}</h3>
-                  <p className="text-white/70 leading-relaxed col-span-2 md:col-span-1 text-sm md:text-base">{step.desc}</p>
+                <div className="flex flex-col gap-2 lg:grid lg:grid-cols-[80px_200px_1fr] lg:items-start lg:gap-4">
+                  <div className="flex items-center gap-3 lg:contents">
+                    <span className="text-2xl md:text-[32px] font-semibold">{step.num}</span>
+                    <h3 className="text-lg md:text-[26px]">{step.title}</h3>
+                  </div>
+                  <p className="text-white/70 leading-relaxed text-sm md:text-base w-full">{step.desc}</p>
                 </div>
                 {!step.isLast && (
                   <motion.div

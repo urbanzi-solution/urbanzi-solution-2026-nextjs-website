@@ -19,24 +19,24 @@ const posts = [
     img: "/img7.webp",
     tag: "Tools",
     tagColor: "bg-purple-900 text-purple-300",
-    title: "Why One-Click Deployment Is a Game Changer for AI-Powered Apps",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Why Every Kerala Business Needs a Mobile App in 2025",
+    desc: "Customers in Kerala are searching on mobile. Here's why having your own app puts you ahead of the competition.",
   },
   {
     date: "Oct 20, 2025",
     img: "/img3.webp",
     tag: "Business",
     tagColor: "bg-green-900 text-green-300",
-    title: "Collaborative Coding at Scale: Supporting Developers in Real-Time",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "How SEO Helped Trivandrum Businesses Get More Customers",
+    desc: "Real results from local SEO strategies that brought more traffic and leads to businesses right here in Kerala.",
   },
   {
     date: "Oct 20, 2025",
     img: "/post3.webp",
     tag: "Ideas",
     tagColor: "bg-cyan-900 text-cyan-300",
-    title: "Seamless Integrations: Connecting Your SaaS to the Modern Stack",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Top Digital Marketing Strategies for Small Businesses in Kerala",
+    desc: "From social media to Google Ads — the digital marketing moves that are actually working for Kerala businesses today.",
   },
 ];
 
@@ -53,7 +53,7 @@ export default function BlogSection() {
           transition={{ duration: 0.65, ease }}
         >
           <span className="text-[10px] md:text-xs tracking-widest px-3 md:px-4 py-2 bg-neutral-800 rounded-full text-neutral-300">
-            INSIGHTS THAT DRIVE DIGITAL GROWTH.
+            DIGITAL GROWTH TIPS FOR KERALA BUSINESSES
           </span>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mt-6 md:mt-8 leading-tight">

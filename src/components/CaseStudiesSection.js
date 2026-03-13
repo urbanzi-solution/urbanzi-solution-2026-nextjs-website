@@ -45,10 +45,10 @@ export default function CaseStudiesSection() {
         {/* HEADER */}
         <div className="flex justify-between items-start mb-8 md:mb-10">
           <h2 className="text-2xl md:text-4xl font-light leading-tight">
-            Case Studies in Decision-
+           Real Results for
             <br />
             <span className="italic text-white/70">
-              Making Excellence
+               Real Businesses
             </span>
           </h2>
 

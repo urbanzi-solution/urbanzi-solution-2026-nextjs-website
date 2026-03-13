@@ -45,7 +45,7 @@ export default function FAQSection() {
           </h2>
 
           <p className="text-white/60 mt-4 md:mt-6 max-w-sm mx-auto md:mx-0 text-sm md:text-base">
-            Everything you need to know about the product and billing.
+           Everything you need to know about our web development services.
           </p>
         </div>
 

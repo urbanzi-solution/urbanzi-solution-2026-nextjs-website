@@ -7,14 +7,71 @@ const ease = [0.22, 1, 0.36, 1];
 
 export default function ContactSection() {
   const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState(null); // 'success', 'error', or null
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
 
-  const handleSubmit = (e) => {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    if (status) setStatus(null); // Clear status when user starts typing again
+  };
+
+  const getISTTime = () => {
+    const options = {
+      timeZone: "Asia/Kolkata",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    };
+    return new Intl.DateTimeFormat("en-IN", options).format(new Date());
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
+    setStatus(null);
+
+    const scriptURL = "https://script.google.com/macros/s/AKfycbyjizOY4VSCcdrsMx_J9z6Oy34IjgBNyKMB4sZwY2K6R5bedDx_Hn0DlziiErSdJDXP/exec";
+    
+    // Create form data object to send
+    const dataToSend = new FormData();
+    dataToSend.append("FirstName", formData.firstName);
+    dataToSend.append("LastName", formData.lastName);
+    dataToSend.append("Email", formData.email);
+    dataToSend.append("Phone", formData.phone);
+    dataToSend.append("Message", formData.message);
+    dataToSend.append("Timestamp", getISTTime());
+
+    try {
+      await fetch(scriptURL, {
+        method: "POST",
+        body: dataToSend,
+        mode: "no-cors", // Important for Google Apps Script
+      });
+
       setLoading(false);
-      alert("Message sent successfully!");
-    }, 1500);
+      setStatus("success");
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Error!", error.message);
+      setLoading(false);
+      setStatus("error");
+    }
   };
 
   return (
@@ -88,27 +145,67 @@ export default function ContactSection() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-gray-400 ml-1">First name</label>
-                  <input type="text" placeholder="John" required className="contact-input-premium" />
+                  <input
+                    type="text"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    placeholder="John"
+                    required
+                    className="contact-input-premium"
+                  />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-gray-400 ml-1">Last name</label>
-                  <input type="text" placeholder="Doe" required className="contact-input-premium" />
+                  <input
+                    type="text"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    placeholder="Doe"
+                    required
+                    className="contact-input-premium"
+                  />
                 </div>
               </div>
 
               <div className="space-y-2">
                 <label className="text-sm font-medium text-gray-400 ml-1">Email address</label>
-                <input type="email" placeholder="john@company.com" required className="contact-input-premium" />
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="john@company.com"
+                  required
+                  className="contact-input-premium"
+                />
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-medium text-gray-400 ml-1">Phone (Optional)</label>
-                <input type="tel" placeholder="+91 98765 43210" className="contact-input-premium" />
+                <label className="text-sm font-medium text-gray-400 ml-1">Phone</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  placeholder="+91 7012050812"
+                  required  
+                  className="contact-input-premium"
+                />
               </div>
 
               <div className="space-y-2">
                 <label className="text-sm font-medium text-gray-400 ml-1">Your message</label>
-                <textarea rows="4" placeholder="Tell us how we can help..." required className="contact-input-premium resize-none" />
+                <textarea
+                  rows="4"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Tell us how we can help..."
+                  required
+                  className="contact-input-premium resize-none"
+                />
               </div>
 
               <div className="flex items-start gap-3 text-sm text-gray-400 px-1">
@@ -117,6 +214,32 @@ export default function ContactSection() {
                   I agree to Urbanzi&apos;s <a href="#" className="text-blue-400 hover:text-blue-300 underline transition-colors">privacy policy</a>.
                 </p>
               </div>
+
+              {status === "success" && (
+                <motion.div 
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="bg-green-500/10 border border-green-500/20 text-green-400 p-4 rounded-2xl text-sm flex items-center gap-3"
+                >
+                  <svg className="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Message sent successfully! We&apos;ll get back to you soon.
+                </motion.div>
+              )}
+
+              {status === "error" && (
+                <motion.div 
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="bg-red-500/10 border border-red-500/20 text-red-400 p-4 rounded-2xl text-sm flex items-center gap-3"
+                >
+                  <svg className="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  Something went wrong. Please try again.
+                </motion.div>
+              )}
 
               <button
                 disabled={loading}
@@ -152,11 +275,11 @@ export default function ContactSection() {
               </div>
               contact@urbanzi.in
             </a>
-            <a href="tel:+919876543210" className="flex items-center gap-3 text-lg md:text-xl font-medium text-white/70 hover:text-blue-400 transition-colors group">
+            <a href="tel:+917012050812" className="flex items-center gap-3 text-lg md:text-xl font-medium text-white/70 hover:text-blue-400 transition-colors group">
               <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-blue-500/50 transition-colors">
                 <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
               </div>
-              +91 98765 43210
+              +91 7012050812
             </a>
           </div>
         </motion.div>

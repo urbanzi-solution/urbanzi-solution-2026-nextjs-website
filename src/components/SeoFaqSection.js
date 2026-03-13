@@ -16,6 +16,18 @@ const faqs = [
     q: "Do you guarantee #1 rankings?",
     a: "No ethical SEO company can guarantee rankings. We guarantee best-practice SEO, transparent work, and measurable growth.",
   },
+  {
+    q: "What is Local SEO and do I need it?",
+    a: "Local SEO helps your business appear when people nearby search for your services on Google. If you run a business in Trivandrum or anywhere in Kerala, local SEO is essential to getting found by customers in your area.",
+  },
+  {
+    q: "What is the difference between SEO and paid ads?",
+    a: "Paid ads stop working the moment you stop paying. SEO builds long-term organic visibility that keeps bringing traffic and leads over time — making it a much better investment for sustained business growth.",
+  },
+  {
+    q: "Do you provide monthly SEO reports?",
+    a: "Yes. Every month you receive a clear report covering keyword rankings, traffic growth, Google My Business performance, and the work completed — with zero jargon.",
+  },
 ];
 
 export default function SeoFaqSection() {

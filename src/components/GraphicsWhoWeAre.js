@@ -29,7 +29,8 @@ export default function GraphicsWhoWeAre() {
             <h2 className="text-[42px] md:text-[52px] font-semibold text-[#9fd0ff]">Who We Are</h2>
             <div className="w-20 h-[3px] bg-[#9fd0ff] mt-4 mb-8" />
             <p className="text-white/90 text-[16px] md:text-[18px] leading-relaxed">
-              At <span className="font-semibold text-white">Urbanzi Solutions</span>, is a creative graphic design and animation company in Kerala, trusted by growing businesses that want more than ordinary visuals. With strong roots in Trivandrum and clients across India, our team understands your brand story and transforms it into stunning designs and engaging animations. From brand graphics to motion visuals, we create creative solutions that capture attention, communicate your message clearly, and help your business stand out in today&apos;s fast-moving digital world.
+              Urbanzi is a professional graphic designing and animation company in Trivandrum, Kerala, helping brands stand out in crowded digital spaces. We combine brand strategy, design psychology, and motion storytelling to create visuals that don’t just look good — they sell your story.
+              From social media creatives to full-scale brand identity systems and animations, we turn raw ideas into polished, scroll-stopping visuals.
             </p>
             <div className="mt-10">
               <a href="/contact" className="inline-flex items-center justify-center px-8 py-3 rounded-full border border-white/40 text-white hover:bg-white hover:text-black transition">

@@ -3,13 +3,21 @@
 import {
   SiAdobe,
   SiBlender,
-  SiDavinciresolve
+  SiDavinciresolve,
+  SiAdobeaftereffects,
+  SiAdobepremierepro,
+  SiFigma,
+  SiCanva
 } from "react-icons/si";
 
 import { MdVideoLibrary } from "react-icons/md";
 
 const stack = [
   { icon: <SiAdobe size={34} className="text-red-500" />, name: "Adobe Creative Suite" },
+  { icon: <SiAdobeaftereffects size={34} className="text-indigo-500" />, name: "After Effects" },
+  { icon: <SiAdobepremierepro size={34} className="text-purple-500" />, name: "Premiere Pro" },
+  { icon: <SiFigma size={34} className="text-pink-500" />, name: "Figma" },
+  { icon: <SiCanva size={34} className="text-blue-400" />, name: "Canva Pro" },
   { icon: <SiBlender size={34} className="text-orange-500" />, name: "Blender" },
   { icon: <SiDavinciresolve size={34} className="text-blue-400" />, name: "DaVinci Resolve" },
   { icon: <MdVideoLibrary size={34} className="text-white" />, name: "CapCut" },
@@ -17,7 +25,7 @@ const stack = [
 
 export default function GraphicsExpertise() {
   return (
-    <section className="bg-black py-20 lg:py-28 px-4 md:px-6 text-white">
+    <section className="bg-black pb-20  px-4 md:px-6 text-white">
       <div className="max-w-6xl mx-auto text-center">
 
         <h2 className="text-3xl md:text-5xl font-semibold">
@@ -36,7 +44,7 @@ export default function GraphicsExpertise() {
 
         <div className="mt-10 md:mt-16 rounded-3xl border border-white/10 bg-gradient-to-br from-[#0b1628] to-[#060b16] px-5 md:px-8 py-8 md:py-12">
 
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-y-8 md:gap-y-0 justify-items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-y-8 md:gap-y-12 justify-items-center">
             {stack.map((item, i) => (
               <div key={i} className="flex flex-col items-center text-center">
 

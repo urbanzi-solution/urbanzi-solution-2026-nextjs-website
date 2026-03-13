@@ -1,10 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useLeadModal } from "@/context/LeadContext";
 
 const ease = [0.22, 1, 0.36, 1];
 
 export default function SoftHero() {
+  const { openModal } = useLeadModal();
   return (
     <section className="bg-black py-24 px-6">
       <div className="max-w-[1400px] mx-auto">
@@ -29,7 +31,6 @@ export default function SoftHero() {
               transition={{ duration: 0.85, delay: 0.2, ease }}
             >
               Software Development Company in Trivandrum, Kerala
-              <br />
               Custom Business Software That Scales
             </motion.h1>
 
@@ -48,8 +49,11 @@ export default function SoftHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.52, ease }}
             >
-              <button className="px-8 py-3 rounded-full bg-blue-600 text-white hover:bg-blue-700 hover:text-white transition">
-                Start Your Project
+              <button 
+                onClick={() => openModal("Software Development Hero")}
+                className="px-8 py-3 rounded-full bg-blue-600 text-white hover:bg-blue-700 hover:text-white transition"
+              >
+               Request a Custom Quote
               </button>
             </motion.div>
           </div>

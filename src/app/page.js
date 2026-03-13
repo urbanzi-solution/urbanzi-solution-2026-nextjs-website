@@ -13,6 +13,14 @@ import RunningText from "@/components/RunningText";
 import TestimonialSection from "@/components/TestimonialSection";
 
 import Footer from "@/components/Footer";
+export const metadata = {
+  title: "Digital Growth Agency in Kerala | Urbanzi Solutions - Scaling Businesses",
+  description: "Urbanzi Solutions is Kerala's leading digital agency based in Trivandrum. We build mobile apps, websites, and offer SEO & digital marketing services to help your business grow online.",
+  alternates: {
+    canonical: "https://urbanzi.in/",
+  },
+};
+
 export default function Home() {
   return (
     <>

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { PencilRuler, Bug, Settings } from "lucide-react";
 import { SiAndroid, SiApple, SiFlutter, SiReact } from "react-icons/si";
+import { useLeadModal } from "@/context/LeadContext";
 
 const ease = [0.22, 1, 0.36, 1];
 
@@ -18,6 +19,7 @@ const services = [
 ];
 
 export default function MobileAppServicesSection() {
+  const { openModal } = useLeadModal();
   return (
     <section className="bg-[#020617] py-10 md:py-20 px-5 md:px-6 text-white">
       <div className="max-w-7xl mx-auto">
@@ -64,7 +66,10 @@ export default function MobileAppServicesSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3, ease }}
         >
-          <button className="px-8 py-3 bg-white text-black font-medium rounded-full hover:scale-105 transition duration-300 shadow-[0_0_20px_rgba(59,130,246,0.4)]">
+          <button 
+            onClick={() => openModal("Mobile App Services Section")}
+            className="px-8 py-3 bg-white text-black font-medium rounded-full hover:scale-105 transition duration-300 shadow-[0_0_20px_rgba(59,130,246,0.4)]"
+          >
             Explore All Services →
           </button>
         </motion.div>

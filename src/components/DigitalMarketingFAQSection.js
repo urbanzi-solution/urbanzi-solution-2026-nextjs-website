@@ -19,6 +19,21 @@ const faqs = [
     answer:
       "Yes. You receive clear monthly reports covering traffic, leads, conversions, campaign performance, and ROI insights.",
   },
+  {
+    question: "What social media platforms do you manage?",
+    answer:
+      "We manage all major platforms including Instagram, Facebook, LinkedIn, and YouTube — based on where your target audience in Kerala spends their time most.",
+  },
+  {
+    question: "Can you run Google Ads for a small budget?",
+    answer:
+      "Yes. We work with businesses of all sizes and budgets. Even with a small ad budget, we focus on high-intent keywords and audiences to make every rupee count.",
+  },
+  {
+    question: "Do you handle both content creation and paid ads?",
+    answer:
+      "Yes. Urbanzi is a full-service agency — we handle content creation, social media management, SEO, and paid advertising all under one roof so your entire digital presence stays consistent and coordinated.",
+  },
 ];
 
 export default function DigitalMarketingFAQSection() {

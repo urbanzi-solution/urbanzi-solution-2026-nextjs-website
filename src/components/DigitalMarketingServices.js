@@ -6,10 +6,11 @@ import {
   BuildingStorefrontIcon,
   CursorArrowRaysIcon,
   PencilSquareIcon,
-  CameraIcon,
   ChatBubbleLeftRightIcon,
   PresentationChartLineIcon,
+  EnvelopeIcon,
 } from "@heroicons/react/24/outline";
+import { useLeadModal } from "@/context/LeadContext";
 
 const services = [
   {
@@ -38,9 +39,9 @@ const services = [
     desc: "Want to be found when customers search? We create optimized content that improves rankings and organic traffic.",
   },
   {
-    icon: CameraIcon,
-    title: "Social Media Marketing Company",
-    desc: "Ready to build a loyal community around your brand? We manage content and engagement across all major platforms.",
+    icon: EnvelopeIcon,
+    title: "Email Marketing",
+    desc: "Still not using email marketing? We create automated email campaigns that nurture leads, re-engage past customers, and drive consistent sales for your business.",
   },
   {
     icon: ChatBubbleLeftRightIcon,
@@ -55,6 +56,7 @@ const services = [
 ];
 
 export default function DigitalMarketingServices() {
+  const { openModal } = useLeadModal();
   return (
     <section className="bg-[#050914] text-white py-10 md:py-20 px-6">
       <div className="max-w-7xl mx-auto">
@@ -113,12 +115,12 @@ export default function DigitalMarketingServices() {
 
         {/* CTA */}
         <div className="flex justify-center mt-10 md:mt-12">
-          <a
-            href="/contact"
+          <button
+            onClick={() => openModal("Digital Marketing Services Section")}
             className="bg-white text-black px-6 md:px-8 py-3 rounded-full text-xs md:text-sm font-medium hover:bg-gray-200 transition"
           >
             Get Your Marketing Strategy →
-          </a>
+          </button>
         </div>
 
       </div>

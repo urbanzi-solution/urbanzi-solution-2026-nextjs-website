@@ -16,6 +16,14 @@ const faqs = [
     q: "Do you provide long-term support?",
     a: " Yes. We offer ongoing maintenance, performance optimization, security updates, and feature upgrades",
   },
+  {
+    q: "Can you build software that integrates with tools we already use?",
+    a: "Yes. We build integrations with third-party tools like payment gateways, ERPs, CRMs, and APIs so your new software works seamlessly with what you already have.",
+  },
+  {
+    q: "Do you work with businesses outside Trivandrum and Kerala?",
+    a: "Absolutely. While we are based in Trivandrum, Kerala, we work with clients across India. All project communication and updates are handled remotely with full transparency.",
+  },
 ];
 
 export default function SoftFaq() {

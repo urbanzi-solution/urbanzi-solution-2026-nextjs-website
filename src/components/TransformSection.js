@@ -65,10 +65,12 @@ export default function TransformSection() {
 
         {/* Steps */}
         <div className="space-y-12">
-          <ProcessRow index={0} title="Understand" description="We analyze your business workflows and challenges" />
-          <ProcessRow index={1} title="Design" description="We craft optimized, user-focused digital systems" />
-          <ProcessRow index={2} title="Build" description="We develop scalable, secure, high-performance software" />
-          <ProcessRow index={3} title="Scale" description="We support and evolve your system as you grow" isLast />
+          <ProcessRow index={0} title="Listen" description="We sit with you, understand your goals, and hear what your business truly needs" />
+          <ProcessRow index={1} title="Research" description="We study your market, competitors, and audience in Kerala like it's our own business" />
+          <ProcessRow index={2} title="Plan" description="We craft a clear digital strategy — no guesswork, just a focused roadmap built for results" />
+          <ProcessRow index={3} title="Create" description="We design and build your solution with precision, creativity, and attention to every detail" />
+          <ProcessRow index={4} title="Launch" description="We go live with confidence — tested, optimized, and ready to perform from day one" />
+          <ProcessRow index={5} title="Grow" description="We stay with you after launch, track results, and keep improving so your business keeps winning" isLast />
         </div>
 
       </div>

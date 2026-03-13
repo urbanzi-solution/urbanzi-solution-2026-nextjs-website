@@ -66,8 +66,10 @@ export default function CaseStudies() {
               </h3>
 
               <p className="text-gray-300 mb-6 md:mb-8 max-w-md text-sm md:text-base">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Arrow Cabs, one of Trivandrum's trusted car rental
+                services, partnered with Urbanzi for a full website
+                redesign and SEO strategy. We helped them rank on
+                Google and drive consistent daily bookings online.
               </p>
 
               <div className="flex flex-wrap gap-3 md:gap-6">
@@ -112,8 +114,10 @@ export default function CaseStudies() {
               </h3>
 
               <p className="text-gray-300 mb-6 md:mb-8 max-w-md text-sm md:text-base">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                We built a strong brand identity and digital marketing
+                strategy that helped this Kerala client grow their
+                online reach — bringing real leads and measurable
+                results every month.
               </p>
 
               <div className="flex flex-wrap gap-3 md:gap-6">

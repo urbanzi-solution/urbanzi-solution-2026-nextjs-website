@@ -50,18 +50,20 @@ export default function TestimonialSection() {
             viewport={{ once: true, amount: 0.15 }}
           >
             <Card
-              text="Working with Urbanzi Solution has been a wonderful experience. They took the time to understand our needs and delivered a solution that was both effective and user-friendly."
+              text="Urbanzi truly understood what my startup needed. They built our app from scratch and guided us through every step. Best tech team in Trivandrum, no doubt."
               name="Arjun"
+              role="Startup Founder, Trivandrum"
             />
 
             <Card
-              text="Urbanzi Solution didn't just build us a website, they helped us shape our brand online. The team is approachable and creative."
+              text="They didn't just build our website — they shaped our entire online identity. Our enquiries doubled within two months of launching with Urbanzi."
               name="Akshay"
+              role="Business Owner, Kerala"
             />
 
             {/* Hidden on mobile */}
             <div className="hidden md:block">
-              <FadeCard text="Working with Urbanzi Solution has been a wonderful experience. They took the time to understand our needs." />
+              <FadeCard text="Urbanzi truly understood what my startup needed. They built our app from scratch and guided us through every step. Best tech team in Trivandrum." />
             </div>
           </motion.div>
 
@@ -74,18 +76,20 @@ export default function TestimonialSection() {
             viewport={{ once: true, amount: 0.15 }}
           >
             <Card
-              text="Urbanzi Solution blends technical expertise with a human touch. They not only delivered a top-quality application but also supported us patiently."
+              text="Urbanzi handled our e-commerce store end to end. The design is clean, the performance is fast, and our Kerala customers love the experience. Highly recommend."
               name="Wazim"
+              role="E-commerce Entrepreneur, Kerala"
             />
 
             <Card
-              text="What I appreciate most about Urbanzi Solution is their honesty and dedication. Truly a team you can trust."
+              text="From logo to website to social media — Urbanzi handled everything for our brand. They are honest, fast, and genuinely care about your success."
               name="Jeril"
+              role="Restaurant Owner, Trivandrum"
             />
 
             {/* Hidden on mobile */}
             <div className="hidden md:block">
-              <FadeCard text="Working with Urbanzi Solution has been a wonderful experience. They took the time to understand our needs." />
+              <FadeCard text="Urbanzi handled our e-commerce store end to end. The design is clean, the performance is fast, and our Kerala customers love the experience." />
             </div>
           </motion.div>
 
@@ -98,18 +102,20 @@ export default function TestimonialSection() {
             viewport={{ once: true, amount: 0.15 }}
           >
             <Card
-              text="The team genuinely cares about their clients' success. Their work has been transformative and built long-term trust."
+              text="Our Google rankings improved dramatically after Urbanzi handled our SEO. They know exactly how to target the right audience in Kerala. Real results, real growth."
               name="Samad"
+              role="Marketing Manager, Kerala"
             />
 
             <Card
-              text="Working with Urbanzi solutions has transformed the way our business operates online. A perfect blend of expertise and care."
+              text="Working with Urbanzi transformed how our business runs online. Their team is always available, always improving. A partner you can trust for the long run."
               name="Mathew"
+              role="SME Owner, Trivandrum"
             />
 
             {/* Hidden on mobile */}
             <div className="hidden md:block">
-              <FadeCard text="Working with Urbanzi Solution has been a wonderful experience. They took the time to understand our needs." />
+              <FadeCard text="Our Google rankings improved dramatically after Urbanzi handled our SEO. They know exactly how to target the right audience in Kerala." />
             </div>
           </motion.div>
 
@@ -124,7 +130,7 @@ export default function TestimonialSection() {
 }
 
 /* CARD */
-function Card({ text, name }) {
+function Card({ text, name, role }) {
   return (
     <div className="bg-neutral-200 text-black rounded-2xl p-5 md:p-6 shadow-lg">
       <div className="flex gap-1 text-orange-500">
@@ -148,7 +154,7 @@ function Card({ text, name }) {
 
         <div>
           <p className="font-semibold text-blue-700">{name}</p>
-          <p className="text-xs text-neutral-500">Startup Founder</p>
+          <p className="text-xs text-neutral-500">{role}</p>
         </div>
       </div>
     </div>

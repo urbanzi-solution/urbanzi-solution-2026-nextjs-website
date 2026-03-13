@@ -36,11 +36,17 @@ export default function MissionSection() {
           </h2>
 
           <p className="text-gray-300 mb-6 leading-relaxed text-lg">
-            At Urbanzi, our mission is to revolutionize how individuals and businesses manage their finances. We combine intelligent design, cutting-edge technology, and a user-first mindset to create solutions that truly empower our users.
+            At Urbanzi, our mission is to empower businesses across 
+Kerala with smart, reliable, and impactful digital solutions. 
+We combine thoughtful design, cutting-edge technology, and a 
+client-first mindset to build products that truly help our 
+customers grow.
           </p>
 
           <p className="text-gray-300 leading-relaxed text-lg">
-            We believe financial management should be simple, empowering, and secure — not overwhelming or complicated.
+            We believe great digital experiences should be accessible to 
+every business — whether you're a startup in Trivandrum or 
+an established brand scaling across Kerala.
           </p>
         </motion.div>
 

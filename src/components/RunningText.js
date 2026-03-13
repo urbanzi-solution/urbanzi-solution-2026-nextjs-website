@@ -1,7 +1,7 @@
 "use client";
 
 export default function RunningHeadline() {
-  const text = "Make your company standout from the competition.";
+  const text = "Kerala's Most Trusted Digital Agency — Trivandrum's Choice for Web, App & SEO.";
 
   return (
     <div className="w-full overflow-hidden bg-black py-8 md:py-10">
@@ -27,7 +27,7 @@ export default function RunningHeadline() {
         }
 
         .animate-marquee-left {
-          animation: marqueeLeft 15s linear infinite;
+          animation: marqueeLeft 25s linear infinite;
           will-change: transform;
         }
       `}</style>

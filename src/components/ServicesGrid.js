@@ -1,16 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import {
   DevicePhoneMobileIcon,
   GlobeAltIcon,
   PaintBrushIcon,
-  CloudIcon,
   MegaphoneIcon,
   MagnifyingGlassIcon,
   ShoppingCartIcon,
   PencilIcon,
   ShieldCheckIcon,
+  CodeBracketIcon,
 } from "@heroicons/react/24/outline";
 
 const services = [
@@ -19,15 +20,7 @@ const services = [
     title: "App Development",
     desc: "Empower your ideas with seamless mobile experiences.",
     hover: "hover:bg-[#2563EB]",
-    link: "/app-development",
-  },
-  {
-    icon: GlobeAltIcon,
-    title: "Web Development",
-    desc: "Transform your vision into engaging digital experiences.",
-    hover: "hover:bg-white",
-    whiteHover: true,
-    link: "/web-development",
+    link: "/services/app-development",
   },
   {
     icon: PaintBrushIcon,
@@ -37,18 +30,26 @@ const services = [
     link: "/services/ui-ux-design",
   },
   {
-    icon: CloudIcon,
-    title: "Cloud Solutions",
-    desc: "Secure cloud platforms that scale with your ambitions.",
+    icon: GlobeAltIcon,
+    title: "Web Development",
+    desc: "Transform your vision into engaging digital experiences.",
+    hover: "hover:bg-white",
+    whiteHover: true,
+    link: "/services/web-development",
+  },
+  {
+    icon: CodeBracketIcon,
+    title: "Software Development",
+    desc: "Custom enterprise software built for your business needs.",
     hover: "hover:bg-[#853500]",
-    link: "/services/cloud-solutions",
+    link: "/services/software-development",
   },
   {
     icon: MegaphoneIcon,
     title: "Digital Marketing",
     desc: "Campaigns that build strong brand relationships.",
     hover: "hover:bg-[#2563EB]",
-    link: "/digital-marketing",
+    link: "/services/digital-marketing",
   },
   {
     icon: MagnifyingGlassIcon,
@@ -56,7 +57,7 @@ const services = [
     desc: "Smart strategies that improve your search visibility.",
     hover: "hover:bg-white",
     whiteHover: true,
-    link: "/seo",
+    link: "/services/seo",
   },
   {
     icon: ShoppingCartIcon,
@@ -71,7 +72,7 @@ const services = [
     desc: "Stunning visuals and motion storytelling.",
     hover: "hover:bg-white",
     whiteHover: true,
-    link: "/graphics-animation",
+    link: "/services/graphic-design-animation",
   },
   {
     icon: ShieldCheckIcon,
@@ -103,7 +104,7 @@ const cardVariants = {
 
 export default function ServicesGrid() {
   return (
-    <section className="bg-[#050914] text-white pb-10 md:py-10 px-0">
+    <section id="services" className="bg-[#050914] text-white pb-10 md:py-10 px-0">
       <div className="w-full">
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-white/10"
@@ -185,9 +186,12 @@ export default function ServicesGrid() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
         >
-          <button className="bg-white text-black px-8 py-3 rounded-full text-sm font-medium hover:bg-gray-200 transition">
-            See More
-          </button>
+          <Link 
+            href="/contact"
+            className="bg-white text-black px-8 py-3 rounded-full text-sm font-medium hover:bg-gray-200 transition"
+          >
+            Scale Your Business With Us
+          </Link>
         </motion.div>
       </div>
     </section>

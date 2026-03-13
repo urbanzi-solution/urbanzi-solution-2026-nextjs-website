@@ -1,9 +1,10 @@
-"use client"
+"use client";
 
-import Link from "next/link"
+import { useLeadModal } from "@/context/LeadContext"
 import { ArrowRight } from "lucide-react"
 
 export default function DigitCTA() {
+  const { openModal } = useLeadModal();
   return (
     <section className="relative py-14 md:py-20 px-6 bg-black text-white overflow-hidden -mt-20">
 
@@ -35,21 +36,21 @@ export default function DigitCTA() {
         <div className="flex flex-col md:flex-row justify-center gap-6">
 
           {/* Main CTA */}
-          <Link
-            href="/contact"
-            className="flex items-center justify-center gap-2 px-5 py-5 rounded-full bg-blue-500 font-semibold hover:scale-105 transition"
+          <button
+            onClick={() => openModal("Digital Marketing Audit Section")}
+            className="flex items-center justify-center gap-2 px-5 py-5 rounded-full bg-blue-500 font-semibold hover:scale-105 transition w-full md:w-auto"
           >
             Get a Free Marketing Audit
             <ArrowRight size={20}/>
-          </Link>
+          </button>
 
           {/* Secondary CTA */}
-          <Link
-            href="/contact"
-            className="flex items-center justify-center px-10 py-5 rounded-full border border-white/20 hover:bg-white/5 transition"
+          <button
+            onClick={() => openModal("Digital Marketing Strategy Section")}
+            className="flex items-center justify-center px-10 py-5 rounded-full border border-white/20 hover:bg-white/5 transition w-full md:w-auto"
           >
             Book a Strategy Call
-          </Link>
+          </button>
 
         </div>
 

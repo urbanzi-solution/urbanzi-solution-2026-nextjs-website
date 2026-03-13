@@ -29,7 +29,9 @@ export default function SoftWhoWeAre() {
             <h2 className="text-[42px] md:text-[52px] font-semibold text-[#9fd0ff]">Who We Are</h2>
             <div className="w-20 h-[3px] bg-[#9fd0ff] mt-4 mb-8" />
             <p className="text-white/90 text-[16px] md:text-[18px] leading-relaxed">
-              At <span className="font-semibold text-white">Urbanzi Solutions</span>, A software development company designs, builds, and maintains custom digital systems that automate workflows, centralize data, and improve operational efficiency. At Urbanzi, we help businesses in Kerala replace fragmented tools with scalable, secure, and purpose-built software that actually fits how they work.
+              Urbanzi is a trusted software development company in Trivandrum, Kerala, helping startups, SMEs, and enterprises design and build custom software systems that solve real operational problems. From internal business tools to full-scale SaaS platforms, we engineer software that improves productivity, visibility, and long-term scalability.
+              If off-the-shelf software forces your team to change how they work, you don’t need new habits — you need custom software built around your workflows.
+
             </p>
             <div className="mt-10">
               <a href="/contact" className="inline-flex items-center justify-center px-8 py-3 rounded-full border border-white/40 text-white hover:bg-white hover:text-black transition">

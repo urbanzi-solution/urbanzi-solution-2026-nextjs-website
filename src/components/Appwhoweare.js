@@ -41,7 +41,9 @@ export default function Appwhoweare() {
             <div className="w-16 md:w-20 h-[3px] bg-[#9fd0ff] mt-3 md:mt-4 mb-6 md:mb-8 mx-auto lg:mx-0" />
 
             <p className="text-white/90 text-[14px] sm:text-[16px] md:text-[18px] leading-relaxed">
-              At <span className="font-semibold text-white">Urbanzi Solutions</span>, Welcome! At Urbanzi Solutions, we believe your business deserves to be seen and celebrated online. Proudly based in Trivandrum and serving all of Kerala, our team combines creativity, empathy, and advanced technology to help real businesses like yours grow, connect, and succeed on the web. We know that navigating the digital world can be stressful, so we walk beside you at every step—making the journey simple and rewarding.
+              Urbanzi is a professional mobile app development company in Trivandrum, Kerala, delivering end-to-end mobile solutions for startups, SMEs, and enterprises. From concept validation to design, development, launch, and long-term support — we handle the entire mobile app lifecycle.
+We don’t build apps just to exist on app stores.
+ We build business tools that drive users, revenue, and retention.
             </p>
 
             <div className="mt-8 md:mt-10 flex justify-center lg:justify-start">

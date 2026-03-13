@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { MapPin, Search, FileText, Link2, BarChart3 } from "lucide-react";
+import { useLeadModal } from "@/context/LeadContext";
 
 const ease = [0.22, 1, 0.36, 1];
 
@@ -14,6 +15,7 @@ const services = [
 ];
 
 export default function SeoServicesSection() {
+  const { openModal } = useLeadModal();
   return (
     <section className="bg-black py-10 lg:pb-20  px-6 text-white">
       <div className="max-w-7xl mx-auto">
@@ -72,7 +74,10 @@ export default function SeoServicesSection() {
             From deep keyword research to technical audits and content optimization, our team knows the formulas behind real, safe, and lasting SEO results. Whether you run a shop, a clinic, or a global B2B brand, we have proven playbooks to move you up the rankings.
           </p>
           <div className="mt-10 flex justify-center">
-            <button className="px-8 py-3 rounded-full font-medium text-black bg-white hover:opacity-90 transition inline-flex items-center gap-2">
+            <button 
+              onClick={() => openModal("SEO Services Section")}
+              className="px-8 py-3 rounded-full font-medium text-black bg-white hover:opacity-90 transition inline-flex items-center gap-2"
+            >
               Get Your SEO Audit <span className="text-lg">→</span>
             </button>
           </div>

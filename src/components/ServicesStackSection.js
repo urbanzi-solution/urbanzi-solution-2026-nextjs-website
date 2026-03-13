@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 
 import { SiWordpress, SiShopify, SiNextdotjs } from "react-icons/si";
+import { useLeadModal } from "@/context/LeadContext";
 
 const services = [
   {
@@ -90,6 +91,7 @@ const services = [
 ];
 
 export default function ServicesStackSection() {
+  const { openModal } = useLeadModal();
 
   const rows = [];
   for (let i = 0; i < services.length; i += 2) {
@@ -102,27 +104,29 @@ export default function ServicesStackSection() {
       <div className="max-w-[1400px] mx-auto flex flex-col lg:grid lg:grid-cols-12 gap-10 md:gap-16">
 
         {/* LEFT SIDE */}
-        <div className="lg:col-span-5 md:sticky md:top-32 self-start text-center md:text-left">
+        <div className="lg:col-span-5 lg:sticky lg:top-32 self-start text-center md:text-left">
           <h2 className="text-3xl sm:text-4xl md:text-[58px] leading-[1.15] font-light">
-            Our Web <br className="hidden md:block"/>
+            Our Web <br className="hidden lg:block"/>
             Development <br className="hidden md:block"/>
             <span className="text-blue-300 italic font-normal">
               Services
             </span>
           </h2>
 
-          <button className="mt-8 md:mt-12 bg-white text-orange-600 px-7 py-3 rounded-full text-base md:text-lg font-medium hover:scale-105 transition-all duration-300">
+          <button 
+            onClick={() => openModal("Web Development Services Section")}
+            className="mt-8 md:mt-12 bg-white text-orange-600 px-7 py-3 rounded-full text-base md:text-lg font-medium hover:scale-105 transition-all duration-300"
+          >
             See More Services
           </button>
         </div>
 
         {/* RIGHT SIDE */}
-
         <div className="lg:col-span-7 relative flex justify-center lg:justify-end">
-          <div className="w-full md:w-[820px]">
+          <div className="w-full">
 
-            {/* MOBILE STACK */}
-            <div className="block md:hidden">
+            {/* MOBILE + TABLET STACK */}
+            <div className="block lg:hidden">
 
               {services.map((service, index) => {
 
@@ -134,9 +138,9 @@ export default function ServicesStackSection() {
                     className="sticky top-24 mb-10 transition-all duration-500 ease-out"
                     style={{ zIndex: index + 1 }}
                   >
-                    <div className="rounded-3xl p-7 flex flex-col justify-center items-center text-center shadow-xl bg-[#173070] transform-gpu transition-all duration-500 ease-out hover:scale-[1.02] will-change-transform">
+                    <div className="rounded-3xl p-7 flex flex-col justify-center items-center text-center shadow-xl bg-gradient-to-br from-[#0a1a35] to-[#02060f] border border-white/10 transform-gpu transition-all duration-500 ease-out hover:scale-[1.02] will-change-transform">
 
-                      <div className="bg-blue-600 p-4 rounded-xl mb-6 shadow-lg shadow-black/30">
+                      <div className="bg-white/5 p-4 rounded-xl mb-6 shadow-lg shadow-black/30">
                         <Icon size={28}/>
                       </div>
 
@@ -144,7 +148,7 @@ export default function ServicesStackSection() {
                         {service.title}
                       </h3>
 
-                      <p className="text-sm leading-relaxed opacity-90 max-w-[260px]">
+                      <p className="text-sm leading-relaxed opacity-90 max-w-[400px]">
                         {service.description}
                       </p>
 
@@ -156,15 +160,15 @@ export default function ServicesStackSection() {
             </div>
 
             {/* DESKTOP STACK */}
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
 
               {rows.map((row, rowIndex) => (
                 <div
                   key={rowIndex}
-                  className="mb-8 md:sticky md:top-28 transition-all duration-500 ease-out"
+                  className="mb-8 lg:sticky lg:top-28 transition-all duration-500 ease-out"
                   style={{ zIndex: rowIndex + 1 }}
                 >
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-3">
+                  <div className="grid grid-cols-2 gap-3">
 
                     {row.map((service, index) => {
 
@@ -173,10 +177,10 @@ export default function ServicesStackSection() {
                       return (
                         <div
                           key={index}
-                          className="rounded-3xl p-12 flex flex-col justify-center items-center text-center shadow-xl bg-[#173070] transform-gpu transition-all duration-500 ease-out hover:scale-[1.03] will-change-transform"
+                          className="rounded-3xl p-12 flex flex-col justify-center items-center text-center shadow-xl bg-gradient-to-br from-[#0a1a35] to-[#02060f] border border-white/10 transform-gpu transition-all duration-500 ease-out hover:scale-[1.03] will-change-transform"
                         >
 
-                          <div className="bg-blue-600 p-5 rounded-xl mb-8 shadow-lg shadow-black/30">
+                          <div className="bg-white/5 p-5 rounded-xl mb-8 shadow-lg shadow-black/30">
                             <Icon size={28}/>
                           </div>
 

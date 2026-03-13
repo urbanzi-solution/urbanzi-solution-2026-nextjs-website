@@ -5,10 +5,11 @@ import { motion } from "framer-motion";
 const ease = [0.22, 1, 0.36, 1];
 
 const steps = [
-  { no: "1", title: "Design & Prototype", desc: "Worried that you'll hate the look or feel? We show you every step, gather your input, and make sure the experience matches your brand AND your users' needs." },
-  { no: "2", title: "Development", desc: "Our coders quietly handle every detail—so you don't have to worry about bugs or slowdowns." },
-  { no: "3", title: "Test & Launch", desc: "Launching doesn't need to be scary. We ensure your app is smooth, secure, and ready for every device—then walk you through the big day." },
-  { no: "4", title: "Support & Grow", desc: "We're here even after launch—resolving issues quickly, helping with updates, and working with you to grow your app's reach." },
+  { no: "1", title: "Discovery & Planning", desc: "You tell us your idea, your audience, and your goals. We ask the right questions, define the scope, and build a clear plan before a single line of code is written." },
+  { no: "2", title: "Design & Prototype", desc: "Worried that you'll hate the look or feel? We show you every step, gather your input, and make sure the experience matches your brand and your users' needs." },
+  { no: "3", title: "Development", desc: "Our coders quietly handle every detail—so you don't have to worry about bugs or slowdowns." },
+  { no: "4", title: "Test & Launch", desc: "Launching doesn't need to be scary. We ensure your app is smooth, secure, and ready for every device—then walk you through the big day." },
+  { no: "5", title: "Support & Grow", desc: "We're here even after launch—resolving issues quickly, helping with updates, and working with you to grow your app's reach." },
 ];
 
 export default function ProcessSection() {
