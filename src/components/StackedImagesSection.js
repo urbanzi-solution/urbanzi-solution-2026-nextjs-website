@@ -57,6 +57,23 @@ export default function FloatingStackSection() {
     >
       <div className="sticky top-0 overflow-hidden h-[100dvh]">
 
+        {/* ── BACKGROUND SHADE LAYER ── */}
+        <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
+          {pairs.map((pair, pi) => (
+            <div key={`shade-${pi}`}>
+              {pair.images.map((src, i) => (
+                <img
+                  key={i}
+                  src={src}
+                  style={{ ...pair.pos[i], position: "absolute" }}
+                  className="w-32 md:w-52 rounded-3xl blur-3xl object-cover aspect-[4/3] grayscale opacity-40"
+                  alt=""
+                />
+              ))}
+            </div>
+          ))}
+        </div>
+
         {/* ── CENTER TEXT ── */}
         <div className="absolute inset-0 flex flex-col items-center justify-center z-30 text-center px-6 pointer-events-none gap-4">
           <h2 className="text-3xl md:text-6xl font-light tracking-tight leading-tight">
@@ -80,7 +97,7 @@ export default function FloatingStackSection() {
           const opacity = useTransform(
             smoothScroll,
             [start, start + 0.15, end - 0.15, end],
-            [0, 1, 1, 0]
+            [pi === 0 ? 0.35 : 0, 1, 1, 0]
           );
           
           // Subtle scale and blur-to-clear effect
@@ -96,7 +113,7 @@ export default function FloatingStackSection() {
           const driftDown = useTransform(smoothScroll, [start, end], [-35, 35]);
 
           // Ghost preview — more subtle for premium feel
-          const ghostOpacity = useTransform(smoothScroll, [start, start + 0.15], [0, 0.25]);
+          const ghostOpacity = useTransform(smoothScroll, [start, start + 0.15], [pi === 0 ? 0.25 : 0.05, 0.25]);
           const ghostScale   = useTransform(smoothScroll, [start, end], [0.86, 1.0]);
 
           return (

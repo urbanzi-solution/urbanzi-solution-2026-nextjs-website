@@ -50,7 +50,7 @@ export default function ValuesSection() {
   const [active, setActive] = useState(1);
 
   return (
-    <section className="bg-black text-white px-6 md:px-12 md:pb-25 relative overflow-hidden">
+    <section className="bg-black text-white px-6 md:px-12 md:pb-25 relative pb-20 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 items-start">
           

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function HeroGlobeSection() {
   return (
@@ -18,7 +19,7 @@ export default function HeroGlobeSection() {
             Your Strategic Partner for Digital Growth
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mt-5 mb-8">
             We build powerful apps, websites, and digital solutions
             for businesses across Kerala and beyond.
           </p>
@@ -44,7 +45,7 @@ export default function HeroGlobeSection() {
 
       {/* ================= GLOBE SECTION ================= */}
 
-      <div className="relative flex items-center justify-center">
+      <div className="relative flex items-center md:pt-10 lg:pt-20 justify-center">
 
         {/* Rotating Globe */}
         <div className="
@@ -89,13 +90,114 @@ export default function HeroGlobeSection() {
         {/* TEXT ON GLOBE */}3
         <div className="relative z-30 text-center px-4 md:px-6 py-15 md:py-20 max-w-4xl w-full">
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight">
-            <span className="block">Urbanzi Delivers</span>
-            <span className="block text-gray-200">B2B Virtual</span>
-            <span className="block text-gray-300">Characters</span>
-            <span className="block text-gray-400">Solutions</span>
-            <span className="block text-gray-500">
+            <motion.span 
+              initial={{ opacity: 0.8 }}
+              animate={{ 
+                opacity: [0.8, 1, 0.8],
+                color: ["#fff", "#3b82f6", "#fff"],
+                textShadow: [
+                  "0px 0px 0px rgba(59, 130, 246, 0)",
+                  "0px 0px 15px rgba(59, 130, 246, 0.5)",
+                  "0px 0px 0px rgba(59, 130, 246, 0)"
+                ]
+              }}
+              transition={{ 
+                duration: 3, 
+                repeat: Infinity, 
+                ease: "easeInOut" 
+              }}
+              className="block"
+            >
+              Urbanzi Delivers
+            </motion.span>
+            
+            <motion.span 
+              initial={{ opacity: 0.7 }}
+              animate={{ 
+                opacity: [0.7, 1, 0.7],
+                color: ["#e5e7eb", "#22d3ee", "#e5e7eb"],
+                textShadow: [
+                  "0px 0px 0px rgba(34, 211, 238, 0)",
+                  "0px 0px 12px rgba(34, 211, 238, 0.4)",
+                  "0px 0px 0px rgba(34, 211, 238, 0)"
+                ]
+              }}
+              transition={{ 
+                duration: 3, 
+                repeat: Infinity, 
+                ease: "easeInOut",
+                delay: 0.3
+              }}
+              className="block"
+            >
+              B2B Virtual
+            </motion.span>
+            
+            <motion.span 
+              initial={{ opacity: 0.6 }}
+              animate={{ 
+                opacity: [0.6, 1, 0.6],
+                color: ["#d1d5db", "#3b82f6", "#d1d5db"],
+                textShadow: [
+                  "0px 0px 0px rgba(59, 130, 246, 0)",
+                  "0px 0px 10px rgba(59, 130, 246, 0.3)",
+                  "0px 0px 0px rgba(59, 130, 246, 0)"
+                ]
+              }}
+              transition={{ 
+                duration: 3, 
+                repeat: Infinity, 
+                ease: "easeInOut",
+                delay: 0.6
+              }}
+              className="block"
+            >
+              Characters
+            </motion.span>
+            
+            <motion.span 
+              initial={{ opacity: 0.5 }}
+              animate={{ 
+                opacity: [0.5, 1, 0.5],
+                color: ["#9ca3af", "#22d3ee", "#9ca3af"],
+                textShadow: [
+                  "0px 0px 0px rgba(34, 211, 238, 0)",
+                  "0px 0px 10px rgba(34, 211, 238, 0.3)",
+                  "0px 0px 0px rgba(34, 211, 238, 0)"
+                ]
+              }}
+              transition={{ 
+                duration: 3, 
+                repeat: Infinity, 
+                ease: "easeInOut",
+                delay: 0.9
+              }}
+              className="block"
+            >
+              Solutions
+            </motion.span>
+            
+            <motion.span 
+              initial={{ opacity: 0.4 }}
+              animate={{ 
+                opacity: [0.4, 1, 0.4],
+                color: ["#6b7280", "#fff", "#6b7280"],
+                textShadow: [
+                  "0px 0px 0px rgba(255, 255, 255, 0)",
+                  "0px 0px 10px rgba(255, 255, 255, 0.2)",
+                  "0px 0px 0px rgba(255, 255, 255, 0)"
+                ]
+              }}
+              transition={{ 
+                duration: 3, 
+                repeat: Infinity, 
+                ease: "easeInOut",
+                delay: 1.2
+              }}
+              className="block"
+            >
               Customized For Businesses
-            </span>
+            </motion.span>
           </h2>
         </div>
 
