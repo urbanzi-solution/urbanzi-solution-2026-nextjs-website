@@ -4,7 +4,7 @@ export const metadata = {
   title: "Cybersecurity Services | Urbanzi Solutions",
   description: "Secure your digital assets with professional cybersecurity services in Trivandrum, Kerala.",
   alternates: {
-    canonical: "https://urbanzi.in/services/cybersecurity",
+    canonical: "https://www.urbanzi.in/services/cybersecurity",
   },
 };
 

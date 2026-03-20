@@ -5,6 +5,6 @@ export default function robots() {
       allow: "/",
       disallow: "/private/",
     },
-    sitemap: "https://urbanzi.in/sitemap.xml",
+    sitemap: "https://www.urbanzi.in/sitemap.xml",
   };
 }

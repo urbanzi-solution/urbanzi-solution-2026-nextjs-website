@@ -13,7 +13,7 @@ export const metadata = {
   description:
     "Urbanzi Solutions is a full-service digital marketing agency in Trivandrum, Kerala. We offer social media marketing, Google Ads, SEO, and content marketing to grow your business online.",
   alternates: {
-    canonical: "https://urbanzi.in/services/digital-marketing",
+    canonical: "https://www.urbanzi.in/services/digital-marketing",
   },
 };
 

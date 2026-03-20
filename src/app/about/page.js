@@ -10,7 +10,7 @@ export const metadata = {
   description:
     "Learn about Urbanzi Solutions — a passionate team of developers, designers, and marketers based in Trivandrum, Kerala. Building digital solutions that help businesses grow.",
   alternates: {
-    canonical: "https://urbanzi.in/about",
+    canonical: "https://www.urbanzi.in/about",
   },
 };
 

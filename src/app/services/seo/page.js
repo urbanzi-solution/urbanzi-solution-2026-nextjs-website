@@ -12,7 +12,7 @@ export const metadata = {
   title: "SEO Services in Kerala & Trivandrum | Urbanzi Solutions",
   description: "Urbanzi Solutions is a trusted SEO company in Trivandrum, Kerala. We offer local SEO, Google My Business optimization, on-page SEO, and backlink building to help your business rank and grow.",
   alternates: {
-    canonical: "https://urbanzi.in/services/seo",
+    canonical: "https://www.urbanzi.in/services/seo",
   },
 };
 

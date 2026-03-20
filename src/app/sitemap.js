@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = "https://urbanzi.in";
+  const baseUrl = "https://www.urbanzi.in";
   
   const routes = [
     "",

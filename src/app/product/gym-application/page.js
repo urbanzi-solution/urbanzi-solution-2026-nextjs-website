@@ -16,7 +16,7 @@ export const metadata = {
     card: "summary_large_image",
   },
   alternates: {
-    canonical: "https://urbanzi.in/product/gym-application",
+    canonical: "https://www.urbanzi.in/product/gym-application",
   }
 };
 

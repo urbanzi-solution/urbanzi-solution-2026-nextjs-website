@@ -13,7 +13,7 @@ export const metadata = {
   description:
     "Urbanzi Solutions offers professional graphic designing, brand identity, motion graphics, and animation services in Trivandrum, Kerala. Visuals built to capture attention and convert.",
   alternates: {
-    canonical: "https://urbanzi.in/services/graphic-design-animation",
+    canonical: "https://www.urbanzi.in/services/graphic-design-animation",
   },
 };
 

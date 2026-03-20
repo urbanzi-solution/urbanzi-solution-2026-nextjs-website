@@ -13,7 +13,7 @@ export const metadata = {
   description:
     "Urbanzi Solutions builds custom software, CRM, ERP, and SaaS platforms for businesses in Trivandrum and Kerala. Scalable, secure, and built around your workflows.",
   alternates: {
-    canonical: "https://urbanzi.in/services/software-development",
+    canonical: "https://www.urbanzi.in/services/software-development",
   },
 };
 
