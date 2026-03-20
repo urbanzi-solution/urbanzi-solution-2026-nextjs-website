@@ -6,7 +6,7 @@ export default function sitemap() {
     "/about",
     "/contact",
     "/blogs",
-    "/careers",
+    "/product/gym-application",
     "/clients",
     "/services",
     "/services/app-development",

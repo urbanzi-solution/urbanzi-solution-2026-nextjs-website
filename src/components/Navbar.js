@@ -7,10 +7,12 @@ import { Menu, X, ChevronDown } from "lucide-react";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [productsOpen, setProductsOpen] = useState(false);
 
   const closeMenu = () => {
     setOpen(false);
     setServicesOpen(false);
+    setProductsOpen(false);
   };
 
   // Prevent page scroll when menu opens
@@ -117,9 +119,46 @@ export default function Navbar() {
             Clients
           </Link>
 
-          <Link href="/careers" className="hover:text-white transition">
-            Careers
-          </Link>
+          {/* PRODUCT */}
+          <div className="relative group">
+            <Link
+              href="/product/gym-application"
+              className="flex items-center gap-1 hover:text-white transition"
+            >
+              Product
+              <ChevronDown
+                size={16}
+                className="transition-transform duration-200 group-hover:rotate-180"
+              />
+            </Link>
+
+            {/* Dropdown */}
+            <div
+              className="
+              absolute left-0 top-[calc(100%+12px)]
+              bg-[#0b1220]/90 backdrop-blur-xl
+              border border-white/10
+              rounded-2xl
+              w-60
+              opacity-0 invisible
+              translate-y-2
+              group-hover:opacity-100
+              group-hover:visible
+              group-hover:translate-y-0
+              transition-all duration-300
+              shadow-[0_8px_32px_rgba(0,0,0,0.5)]
+              overflow-hidden
+              "
+            >
+              <div className="px-4 py-2 text-[10px] uppercase tracking-widest text-gray-500 border-b border-white/5">
+                Our Products
+              </div>
+
+              <Link href="/product/gym-application" className="flex items-center gap-2 px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 transition-colors">
+                Gym Application
+              </Link>
+            </div>
+          </div>
 
           <Link href="/blogs" className="hover:text-white transition">
             Blogs
@@ -215,7 +254,27 @@ export default function Navbar() {
 
           <Link href="/clients" onClick={closeMenu}>Clients</Link>
 
-          <Link href="/careers" onClick={closeMenu}>Careers</Link>
+          {/* PRODUCTS */}
+          <div>
+            <div className="flex items-center justify-between">
+              <Link href="/product/gym-application" onClick={closeMenu}>
+                Product
+              </Link>
+              <button onClick={() => setProductsOpen(!productsOpen)}>
+                <ChevronDown
+                  className={`transition ${productsOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+            </div>
+            <div
+              className={`flex flex-col ml-4 mt-4 space-y-4 text-base text-gray-400 overflow-hidden transition-all duration-300 ${productsOpen ? "max-h-96" : "max-h-0"
+                }`}
+            >
+              <Link href="/product/gym-application" onClick={closeMenu}>
+                Gym Application
+              </Link>
+            </div>
+          </div>
 
           <Link href="/blogs" onClick={closeMenu}>Blogs</Link>
 

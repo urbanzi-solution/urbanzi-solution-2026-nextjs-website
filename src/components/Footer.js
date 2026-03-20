@@ -96,18 +96,18 @@ export default function Footer() {
           </p>
 
           <div className="flex gap-4">
-            <div className="w-9 h-9 bg-[#1F3A6D] rounded-full flex items-center justify-center text-white text-sm">
+            <a href="https://www.facebook.com/profile.php?id=61573639366321#" className="w-9 h-9 bg-[#1F3A6D] rounded-full flex items-center justify-center text-white text-sm hover:scale-110 transition">
               <FaFacebookF />
-            </div>
-            <div className="w-9 h-9 bg-[#1F3A6D] rounded-full flex items-center justify-center text-white text-sm">
+            </a>
+            <a href="#" className="w-9 h-9 bg-[#1F3A6D] rounded-full flex items-center justify-center text-white text-sm hover:scale-110 transition">
               <FaPinterestP />
-            </div>
-            <div className="w-9 h-9 bg-[#1F3A6D] rounded-full flex items-center justify-center text-white text-sm">
+            </a>
+            <a href="https://www.linkedin.com/company/urbanzi-solutions-llp" className="w-9 h-9 bg-[#1F3A6D] rounded-full flex items-center justify-center text-white text-sm hover:scale-110 transition">
               <FaLinkedinIn />
-            </div>
-            <div className="w-9 h-9 bg-[#1F3A6D] rounded-full flex items-center justify-center text-white text-sm">
+            </a>
+            <a href="https://www.instagram.com/urbanzi_solutions/" className="w-9 h-9 bg-[#1F3A6D] rounded-full flex items-center justify-center text-white text-sm hover:scale-110 transition">
               <FaInstagram />
-            </div>
+            </a>
           </div>
         </div>
       </div>

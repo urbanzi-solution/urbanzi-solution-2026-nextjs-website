@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ProductsSection() {
   const products = [
@@ -15,6 +16,7 @@ export default function ProductsSection() {
       desc: "Our Gym Management Software helps fitness centers across Kerala manage memberships, payments, and schedules from one simple dashboard. Save time and grow your business.",
       img: "/gym.webp",
       alt: "Gym",
+      href: "/product/gym-application"
     },
     {
       title: "WHATSAPP AUTOMATION",
@@ -42,9 +44,17 @@ export default function ProductsSection() {
               will-change-transform"
             >
               <div className="flex-1">
-                <h2 className="text-2xl font-semibold mb-4 transition-colors duration-300 group-hover:text-white">
-                  {product.title}
-                </h2>
+                {product.href ? (
+                  <Link href={product.href} className="inline-block group/link">
+                    <h2 className="text-2xl font-semibold mb-4 transition-colors duration-300 group-hover:text-white group-hover/link:text-blue-400">
+                      {product.title} <span className="inline-block transition-transform group-hover/link:translate-x-1">→</span>
+                    </h2>
+                  </Link>
+                ) : (
+                  <h2 className="text-2xl font-semibold mb-4 transition-colors duration-300 group-hover:text-white">
+                    {product.title}
+                  </h2>
+                )}
                 <p className="text-gray-400 leading-relaxed transition-colors duration-300 group-hover:text-gray-300">
                   {product.desc}
                 </p>
