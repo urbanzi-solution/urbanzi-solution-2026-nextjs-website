@@ -1,16 +1,22 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Link from "next/link";
-import { ChevronLeft, ChevronRight, ArrowUpRight } from "lucide-react";
+import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight, ArrowRight, ExternalLink } from "lucide-react";
 
 const cases = [
   {
+    id: "joseco",
     title: "Joseco Furniture",
     subtitle: "Digital transformation for a 35-year furniture brand",
-    work: "Website · Digital Warranty · CRM · Meta Ads",
-    image: "/car.webp",
+    description: "We rebuilt their entire digital ecosystem, from a high-converting e-commerce site to a custom CRM and the industry's first digital warranty portal.",
+    work: "E-commerce · Custom CRM · Digital Warranty · Meta Ads",
+    image: "/Joseco Funiture Case study photo.webp",
     href: "/portfolio/case-studies/joseco-furniture",
+    services: ["web-development", "software-development", "digital-marketing", "ecommerce-solutions"],
+    accent: "blue",
     stats: [
       { value: "27%", label: "Sales Growth" },
       { value: "550+", label: "Warranty Users" },
@@ -18,133 +24,161 @@ const cases = [
     ],
   },
   {
+    id: "arrow-cabs",
     title: "Arrow Cabs",
     subtitle: "Best car rental service in Trivandrum",
-    work: "Website Redesign · Local SEO",
-    image: "/car.webp",
-    href: "/portfolio/case-studies",
+    description: "Surviving algorithm updates and migration dips to move from page 10 to page 1 of Google, driving consistent organic bookings without ad spend.",
+    work: "SEO Strategy · Local SEO · Web Redesign",
+    image: "/Arrowcabs Case study image.webp",
+    href: "/portfolio/case-studies/arrow-cabs",
+    services: ["web-development", "seo"],
+    accent: "emerald",
     stats: [
       { value: "Top 3", label: "Google Rankings" },
-      { value: "Local SEO", label: "Trivandrum Area" },
-      { value: "Daily", label: "Online Bookings" },
+      { value: "8.1", label: "Avg. Position" },
+      { value: "260+", label: "Monthly Clicks" },
     ],
   },
 ];
 
-export default function CaseStudiesSection() {
-  const [index, setIndex] = useState(0);
-  const data = cases[index];
+export default function CaseStudiesSection({ service }) {
+  const filteredCases = useMemo(() => {
+    if (!service) return cases;
+    return cases.filter((c) => c.services.includes(service));
+  }, [service]);
 
-  const next = () => setIndex((p) => (p + 1) % cases.length);
-  const prev = () => setIndex((p) => (p - 1 + cases.length) % cases.length);
+  const [index, setIndex] = useState(0);
+
+  if (filteredCases.length === 0) return null;
+
+  const safeIndex = index >= filteredCases.length ? 0 : index;
+  const data = filteredCases[safeIndex];
+
+  const next = () => setIndex((p) => (p + 1) % filteredCases.length);
+  const prev = () => setIndex((p) => (p - 1 + filteredCases.length) % filteredCases.length);
 
   return (
-    <section className="bg-black pt-30 md:pt-30 lg:pt-20 px-4 md:px-6 -mt-20">
-      <div className="max-w-6xl mx-auto rounded-[28px] p-6 md:p-10
-        bg-gradient-to-br from-[#030303] via-[#000000] to-[#020202]
-        text-white shadow-[0_15px_40px_rgba(0,0,0,0.35)]">
+    <section className="bg-black py-24 px-4 md:px-8 relative overflow-hidden">
+      {/* Background Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none" />
 
-        {/* HEADER */}
-        <div className="flex justify-between items-start mb-8 md:mb-10">
-          <h2 className="text-2xl md:text-4xl font-light leading-tight">
-            Real Results for
-            <br />
-            <span className="italic text-white/70">Real Businesses</span>
-          </h2>
-
-          <div className="flex gap-2 md:gap-3">
-            <button
-              onClick={prev}
-              className="w-8 h-8 md:w-9 md:h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition"
-            >
-              <ChevronLeft size={18} />
-            </button>
-            <button
-              onClick={next}
-              className="w-8 h-8 md:w-9 md:h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition"
-            >
-              <ChevronRight size={18} />
-            </button>
-          </div>
-        </div>
-
-        <div className="h-px bg-white/15 mb-8 md:mb-10" />
-
-        {/* MAIN GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr_0.9fr] gap-6 items-stretch">
-
-          {/* IMAGE CARD */}
-          <div
-            className="rounded-2xl overflow-hidden relative min-h-[240px] md:min-h-[340px] bg-cover bg-center"
-            style={{ backgroundImage: `url(${data.image})` }}
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
           >
-            <div className="absolute inset-0 bg-black/40" />
-            <div className="relative p-5 md:p-6 flex flex-col justify-end h-full">
-              <h3 className="text-lg md:text-xl font-semibold">{data.title}</h3>
-              <p className="text-white/80 text-xs md:text-sm">{data.subtitle}</p>
-            </div>
-          </div>
+            <div className="text-[10px] uppercase tracking-[0.2em] text-blue-500 font-bold mb-3">Portfolio</div>
+            <h2 className="text-4xl md:text-5xl font-light text-white leading-tight">
+              Real Results for<br />
+              <span className="italic text-gray-500">Real Businesses</span>
+            </h2>
+          </motion.div>
 
-          {/* CENTER CONTENT */}
-          <div className="rounded-2xl p-6 md:p-8 backdrop-blur-md border border-white/10 flex flex-col justify-between">
-            <div>
-              <p className="text-white/70 text-xs md:text-sm mb-8 md:mb-10">
-                Work: {data.work}
-              </p>
-
-              <div className="grid grid-cols-3 gap-2 md:gap-3">
-                {data.stats.map((item, i) => (
-                  <div
-                    key={i}
-                    className="bg-white/10 rounded-xl p-3 md:p-4 border border-white/10 text-center"
-                  >
-                    <h4 className="text-lg md:text-xl font-semibold text-emerald-300 mb-1">
-                      {item.value}
-                    </h4>
-                    <p className="text-[10px] md:text-xs text-white/70">{item.label}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="flex justify-end mt-5 md:mt-6">
-              <Link
-                href={data.href}
-                className="flex items-center gap-1 text-xs text-white/60 hover:text-white transition"
-              >
-                Read case study <ArrowUpRight size={14} />
-              </Link>
-            </div>
-          </div>
-
-          {/* SIDE SELECTOR */}
-          <div className="flex flex-col gap-3 md:gap-4">
-            {cases.map((item, i) => (
-              <div
-                key={i}
-                onClick={() => setIndex(i)}
-                className={`flex justify-between items-center rounded-xl p-4 md:p-5 cursor-pointer transition border
-                ${i === index ? "bg-white/15 border-white/30" : "bg-white/5 border-white/10"}`}
-              >
-                <span className="text-xs md:text-sm">{item.title}</span>
-                <ArrowUpRight size={14} />
-              </div>
-            ))}
-
-            <Link
+          <div className="flex items-center gap-4">
+            <Link 
               href="/portfolio/case-studies"
-              className="flex justify-between items-center rounded-xl p-4 md:p-5 border border-dashed border-white/10 text-white/40 hover:text-white/60 hover:border-white/20 transition text-xs md:text-sm"
+              className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-2 mr-4"
             >
-              View all case studies <ArrowUpRight size={14} />
+              View All <ArrowRight size={14} />
             </Link>
+            {filteredCases.length > 1 && (
+              <div className="flex gap-2">
+                <button
+                  onClick={prev}
+                  className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-all text-white"
+                >
+                  <ChevronLeft size={20} />
+                </button>
+                <button
+                  onClick={next}
+                  className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-all text-white"
+                >
+                  <ChevronRight size={20} />
+                </button>
+              </div>
+            )}
           </div>
-
         </div>
 
-        <div className="mt-10 md:mt-12 flex justify-between text-xs text-white/40">
-          <span>{index + 1} / {cases.length}</span>
-        </div>
+        {/* Content Wrapper */}
+        <div className="relative">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={data.id}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              transition={{ duration: 0.5, ease: "circOut" }}
+              className="grid lg:grid-cols-12 gap-8 items-stretch"
+            >
+              {/* Left Side: Image Content */}
+              <div className="lg:col-span-7 group relative">
+                <Link href={data.href} className="block relative aspect-[16/10] rounded-3xl overflow-hidden border border-white/10">
+                  <Image
+                    src={data.image}
+                    alt={data.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                  <div className="absolute bottom-8 left-8 right-8">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
+                      <span className="text-[10px] uppercase tracking-widest text-blue-400 font-bold">Featured Case Study</span>
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-semibold text-white">{data.title}</h3>
+                  </div>
+                  <div className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <ExternalLink size={20} />
+                  </div>
+                </Link>
+              </div>
 
+              {/* Right Side: Stats & Info */}
+              <div className="lg:col-span-5 flex flex-col justify-center">
+                <div className="bg-white/[0.03] border border-white/10 rounded-3xl p-8 md:p-10 backdrop-blur-sm h-full flex flex-col justify-between">
+                  <div>
+                    <div className="text-xs text-gray-500 uppercase tracking-widest mb-4">Focus: {data.work}</div>
+                    <p className="text-gray-400 text-base md:text-lg leading-relaxed mb-8">
+                      {data.description}
+                    </p>
+
+                    <div className="grid grid-cols-3 gap-4 mb-10">
+                      {data.stats.map((stat, i) => (
+                        <div key={i} className="text-center">
+                          <div className={`text-2xl md:text-3xl font-bold mb-1 ${data.accent === 'blue' ? 'text-blue-400' : 'text-emerald-400'}`}>
+                            {stat.value}
+                          </div>
+                          <div className="text-[10px] text-gray-500 uppercase tracking-wider">{stat.label}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between pt-8 border-t border-white/5">
+                    <div className="flex gap-1">
+                      {filteredCases.map((_, i) => (
+                        <div 
+                          key={i} 
+                          className={`h-1 transition-all duration-300 rounded-full ${i === safeIndex ? 'w-8 bg-blue-500' : 'w-2 bg-white/20'}`}
+                        />
+                      ))}
+                    </div>
+                    <Link
+                      href={data.href}
+                      className={`inline-flex items-center gap-2 text-sm font-semibold transition-all hover:gap-3 ${data.accent === 'blue' ? 'text-blue-400' : 'text-emerald-400'}`}
+                    >
+                      View Case Study <ArrowRight size={16} />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
       </div>
     </section>
   );

@@ -27,7 +27,7 @@ export default function SoftwareDevelopmentPage() {
       <SoftProcess />
       <SoftWhyBest />
       <WhyChooseSoftware />
-      <CaseStudiesSection />
+      <CaseStudiesSection service="software-development" />
       <SoftFaq />
       <RelatedServices current="software-development" />
       <CTASoft />

@@ -27,7 +27,7 @@ export default function DigitalMarketingPage() {
       <OurProcess />
       <WhyWeAreBest />
       <WhyChooseMarketing />
-      <CaseStudiesSection />
+      <CaseStudiesSection service="digital-marketing" />
       <DigitalMarketingFAQSection />
       <RelatedServices current="digital-marketing" />
       <DigitCTA />

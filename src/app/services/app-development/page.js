@@ -27,7 +27,7 @@ export default function AppDevelopmentPage() {
       <ProcessSection />
       <WhyBestMobileDevelopment />
       <WhyChooseApp />
-      <CaseStudiesSection />
+      <CaseStudiesSection service="app-development" />
       <MobileAppFAQ />
       <RelatedServices current="app-development" />
       <AppCTA />

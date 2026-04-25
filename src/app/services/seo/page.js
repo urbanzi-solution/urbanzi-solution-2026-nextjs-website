@@ -27,7 +27,7 @@ export default function SeoPage() {
       <OurSeoProcessSection />
       <WhyBestSeoSection />
       <WhyChooseSEO />
-      <CaseStudiesSection />
+      <CaseStudiesSection service="seo" />
       <SeoFaqSection />
       <RelatedServices current="seo" />
       <SEOCTAA />

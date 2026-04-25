@@ -27,7 +27,7 @@ export default function WebDevelopmentPage() {
       <OurExpertiseSection />
       <OurProcessSection />
       <WhyWeAreBestSection />
-      <CaseStudiesSection />
+      <CaseStudiesSection service="web-development" />
       <FAQSection />
       <RelatedServices current="web-development" />
       <WebCTA />

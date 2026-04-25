@@ -616,13 +616,20 @@ export default function JosecoFurnitureCaseStudy() {
                 </div>
               </motion.div>
 
-              {/* Track 4 — image */}
               <motion.div
                 variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }}
+                className="grid md:grid-cols-2 gap-4"
               >
                 <ImgSlot 
-                  label="Meta Ads Performance Dashboard" 
-                  hint="Facebook Ads Manager screenshot showing reach, CPC ₹35–40, and lead volume" 
+                  label="Meta Ads — Overall Performance (Sept–April)" 
+                  hint="Combined dashboard showing 3,000+ total leads across all locations" 
+                  src="/Joseco Meta Dashbaord screenshot all total.webp"
+                  onImageClick={setSelectedImg}
+                />
+                <ImgSlot 
+                  label="Meta Ads — Optimized April Campaign" 
+                  hint="High-performance ads achieving ₹35–40 CPC and consistent 20+ leads/day" 
+                  src="/Joseco Meta Dashbaord screenshot Current campaign.webp"
                   onImageClick={setSelectedImg}
                 />
               </motion.div>

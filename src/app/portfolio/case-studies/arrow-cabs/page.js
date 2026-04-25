@@ -1,7 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import {
@@ -34,10 +36,31 @@ const fadeUp = {
 
 const stagger = { visible: { transition: { staggerChildren: 0.1 } } };
 
-function ImgSlot({ label, hint }) {
+function ImgSlot({ label, hint, src, onImageClick }) {
+  if (src) {
+    return (
+      <div 
+        className="w-full rounded-2xl overflow-hidden border border-white/10 bg-white/[0.02] flex flex-col group h-full cursor-zoom-in transition-all hover:border-blue-500/30"
+        onClick={() => onImageClick && onImageClick({ src, label, hint })}
+      >
+        <div className="relative aspect-video w-full overflow-hidden bg-gray-900">
+          <Image 
+            src={src} 
+            alt={label}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
+        <div className="p-4 bg-white/[0.02] border-t border-white/5 flex-grow">
+          <div className="text-xs font-medium text-gray-300">{label}</div>
+          {hint && <div className="text-[10px] text-gray-500 mt-1 leading-relaxed">{hint}</div>}
+        </div>
+      </div>
+    );
+  }
   return (
-    <div className="w-full rounded-2xl border-2 border-dashed border-white/15 bg-white/[0.02] flex flex-col items-center justify-center gap-3 py-12 px-6 text-center">
-      <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-xl">📸</div>
+    <div className="w-full h-full rounded-2xl border-2 border-dashed border-white/15 bg-white/[0.02] flex flex-col items-center justify-center gap-3 py-12 px-6 text-center">
+      <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-xl text-gray-500">📸</div>
       <div className="text-sm font-medium text-gray-300">{label}</div>
       {hint && <div className="text-xs text-gray-600 max-w-xs">{hint}</div>}
       <div className="text-[10px] uppercase tracking-widest text-gray-700 mt-1">Image placeholder — replace with actual asset</div>
@@ -92,9 +115,53 @@ const gscWeekly = [
 ];
 
 export default function ArrowCabsCaseStudy() {
+  const [selectedImg, setSelectedImg] = useState(null);
+
   return (
     <>
       <Navbar />
+
+      <AnimatePresence>
+        {selectedImg && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedImg(null)}
+            className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center p-4 md:p-10 cursor-zoom-out"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className="relative max-w-6xl w-full h-full flex flex-col items-center justify-center gap-6"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="relative w-full h-[70vh] md:h-[80vh] rounded-2xl overflow-hidden">
+                <Image
+                  src={selectedImg.src}
+                  alt={selectedImg.label}
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+              
+              <div className="text-center max-w-2xl">
+                <h3 className="text-xl md:text-2xl font-light text-white mb-2">{selectedImg.label}</h3>
+                <p className="text-gray-400 text-sm md:text-base leading-relaxed">{selectedImg.hint}</p>
+              </div>
+
+              <button
+                onClick={() => setSelectedImg(null)}
+                className="absolute top-0 right-0 md:-top-4 md:-right-10 w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+              >
+                ✕
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <main className="bg-[#050816] text-white overflow-hidden">
 
@@ -687,6 +754,8 @@ export default function ArrowCabsCaseStudy() {
               <ImgSlot
                 label="Google Search Console — 16-Month Performance Graph"
                 hint="Full chart March 2025 – April 2026 showing clicks, impressions, rebuild dip + recovery"
+                src="/arrow cabs 16 months metrics - April 2026.webp"
+                onImageClick={setSelectedImg}
               />
             </motion.div>
 
@@ -736,6 +805,8 @@ export default function ArrowCabsCaseStudy() {
               <ImgSlot
                 label="Google Search Console — Last 28 Days Screenshot"
                 hint="267 clicks · 14.2K impressions · 1.9% CTR · avg position 8.1"
+                src="/arrow cabs 28 days metrics - April 2026.webp"
+                onImageClick={setSelectedImg}
               />
             </motion.div>
 
@@ -821,8 +892,18 @@ export default function ArrowCabsCaseStudy() {
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} className="mb-8">
               <div className="text-xs uppercase tracking-widest text-blue-400 mb-4">Killippalam · April 1–22, 2026</div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <ImgSlot label="Killippalam — Calls Made" hint="April 1–22, 2026" />
-                <ImgSlot label="Killippalam — Profile Views" hint="April 1–22, 2026" />
+                <ImgSlot 
+                  label="Killippalam — Calls Made" 
+                  hint="April 1–22, 2026" 
+                  src="/April 2026 GMB Calls.webp"
+                  onImageClick={setSelectedImg}
+                />
+                <ImgSlot 
+                  label="Killippalam — Profile Views" 
+                  hint="April 1–22, 2026" 
+                  src="/April 2026 GMB Views.webp"
+                  onImageClick={setSelectedImg}
+                />
               </div>
             </motion.div>
 

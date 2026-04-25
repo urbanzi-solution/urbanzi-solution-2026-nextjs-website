@@ -26,7 +26,7 @@ export default function GraphicDesigningAnimationPage() {
       <GraphicsServicesSection />
       <GraphicsProcessSection />
       <GraphicsExpertise />
-      <CaseStudiesSection />
+      <CaseStudiesSection service="graphic-design-animation" />
       <WhyChooseGraphics />
       <GraphicsFaq />
       <RelatedServices current="graphic-design-animation" />

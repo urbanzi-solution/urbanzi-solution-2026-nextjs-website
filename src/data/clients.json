@@ -1,0 +1,55 @@
+{
+  "categories": [
+    "All",
+    "SEO",
+    "Web Development",
+    "Digital Marketing",
+    "Software Development",
+    "Google My Business",
+    "CRM"
+  ],
+
+  "clients": [
+    {
+      "id": "joseco-furniture",
+      "name": "Joseco Furniture",
+      "tagline": "35-year furniture brand taken digital",
+      "logo": null,
+      "logoText": "JF",
+      "logoColor": "#8b5cf6",
+      "logoBg": "#1e1030",
+      "industry": "Furniture Manufacturing & Retail",
+      "location": "Marthandam, Tamil Nadu",
+      "since": "Aug 2025",
+      "url": "https://josecofurniture.com",
+      "caseStudy": "/portfolio/case-studies/joseco-furniture",
+      "featured": true,
+      "categories": [
+        "Web Development",
+        "Digital Marketing",
+        "Software Development",
+        "CRM"
+      ]
+    },
+    {
+      "id": "arrow-cabs",
+      "name": "Arrow Cabs",
+      "tagline": "20-year cab company ranked on page 1",
+      "logo": null,
+      "logoText": "AC",
+      "logoColor": "#3b82f6",
+      "logoBg": "#0a1628",
+      "industry": "Car Rental & Transportation",
+      "location": "Trivandrum, Kerala",
+      "since": "Mar 2025",
+      "url": "https://arrowcabs.co.in",
+      "caseStudy": "/portfolio/case-studies/arrow-cabs",
+      "featured": true,
+      "categories": [
+        "SEO",
+        "Web Development",
+        "Google My Business"
+      ]
+    }
+  ]
+}

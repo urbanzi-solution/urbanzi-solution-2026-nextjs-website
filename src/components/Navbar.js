@@ -151,6 +151,10 @@ export default function Navbar() {
               <Link href="/portfolio/case-studies" className="flex items-center gap-2 px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 transition-colors">
                 Case Studies
               </Link>
+
+              <Link href="/portfolio/clients" className="flex items-center gap-2 px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 transition-colors">
+                Our Clients
+              </Link>
             </div>
           </div>
 
@@ -298,10 +302,13 @@ export default function Navbar() {
               </button>
             </div>
             <div
-              className={`flex flex-col ml-4 mt-4 space-y-4 text-base text-gray-400 overflow-hidden transition-all duration-300 ${portfolioOpen ? "max-h-20" : "max-h-0"}`}
+              className={`flex flex-col ml-4 mt-4 space-y-4 text-base text-gray-400 overflow-hidden transition-all duration-300 ${portfolioOpen ? "max-h-40" : "max-h-0"}`}
             >
               <Link href="/portfolio/case-studies" onClick={closeMenu}>
                 Case Studies
+              </Link>
+              <Link href="/portfolio/clients" onClick={closeMenu}>
+                Our Clients
               </Link>
             </div>
           </div>
