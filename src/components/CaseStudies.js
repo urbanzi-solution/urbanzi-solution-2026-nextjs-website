@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function CaseStudies() {
@@ -36,97 +37,91 @@ export default function CaseStudies() {
         {/* Cards */}
         <div className="grid md:grid-cols-2 gap-6 md:gap-8">
 
-          {/* CARD 1 */}
-          <motion.div
-            className="relative group rounded-3xl overflow-hidden cursor-pointer"
-            initial={{ opacity: 0, x: -60 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <Image
-              src="/car.webp"
-              alt="Arrow Cabs"
-              width={800}
-              height={600}
-              className="w-full h-[360px] md:h-[500px] object-cover transition duration-700 group-hover:scale-110"
-            />
+          {/* CARD 1: Joseco Furniture */}
+          <Link href="/portfolio/case-studies/joseco-furniture" className="block group">
+            <motion.div
+              className="relative group rounded-3xl overflow-hidden cursor-pointer h-full"
+              initial={{ opacity: 0, x: -60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <Image
+                src="/Joseco Funiture Case study photo.webp"
+                alt="Joseco Furniture"
+                width={800}
+                height={600}
+                className="w-full h-[360px] md:h-[500px] object-cover transition duration-700 group-hover:scale-110"
+              />
 
-            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/75 transition duration-500" />
+              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/75 transition duration-500" />
 
-            <div className="absolute bottom-6 md:bottom-10 left-6 md:left-10 transition duration-500 group-hover:opacity-0">
-              <div className="h-[1px] bg-white/60 w-16 md:w-24 mb-4 md:mb-6" />
-              <h3 className="text-2xl md:text-4xl font-bold">Arrow Cabs</h3>
-              <p className="text-gray-300 mt-1 md:mt-2 text-sm md:text-base">Website / SEO</p>
-            </div>
-
-            <div className="absolute inset-0 p-6 md:p-10 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition duration-500">
-              <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4">
-                Best car rental in Trivandrum
-              </h3>
-
-              <p className="text-gray-300 mb-6 md:mb-8 max-w-md text-sm md:text-base">
-                Arrow Cabs, one of Trivandrum's trusted car rental
-                services, partnered with Urbanzi for a full website
-                redesign and SEO strategy. We helped them rank on
-                Google and drive consistent daily bookings online.
-              </p>
-
-              <div className="flex flex-wrap gap-3 md:gap-6">
-                <Stat number="3000+" label="Campaigns Delivered" />
-                <Stat number="75%" label="Conversion Rate" />
-                <Stat number="95+" label="Client Satisfaction" />
+              <div className="absolute bottom-6 md:bottom-10 left-6 md:left-10 transition duration-500 group-hover:opacity-0">
+                <div className="h-[1px] bg-white/60 w-16 md:w-24 mb-4 md:mb-6" />
+                <h3 className="text-2xl md:text-4xl font-bold">Joseco Furniture</h3>
+                <p className="text-gray-300 mt-1 md:mt-2 text-sm md:text-base">E-commerce · Custom CRM · Marketing</p>
               </div>
-            </div>
-          </motion.div>
 
-          {/* CARD 2 */}
-          <motion.div
-            className="relative group rounded-3xl overflow-hidden cursor-pointer"
-            initial={{ opacity: 0, x: 60 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <Image
-              src="/market.webp"
-              alt="Digital Marketing Pro"
-              width={800}
-              height={600}
-              className="w-full h-[360px] md:h-[500px] object-cover transition duration-700 group-hover:scale-110"
-            />
+              <div className="absolute inset-0 p-6 md:p-10 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4">
+                  Transforming traditional furniture retail
+                </h3>
 
-            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/75 transition duration-500" />
+                <p className="text-gray-300 mb-6 md:mb-8 max-w-md text-sm md:text-base">
+                  We built a digital ecosystem for Joseco — including an e-commerce platform and a custom digital warranty system. This transformation led to 27% sales growth and expansion into new geographic markets.
+                </p>
 
-            <div className="absolute bottom-6 md:bottom-10 left-6 md:left-10 transition duration-500 group-hover:opacity-0">
-              <div className="h-[1px] bg-white/60 w-16 md:w-24 mb-4 md:mb-6" />
-              <h3 className="text-2xl md:text-4xl font-bold">
-                Digital Marketing Pro
-              </h3>
-              <p className="text-gray-300 mt-1 md:mt-2 text-sm md:text-base">
-                Branding / Marketing
-              </p>
-            </div>
-
-            <div className="absolute inset-0 p-6 md:p-10 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition duration-500">
-              <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4">
-                Leading marketing agency
-              </h3>
-
-              <p className="text-gray-300 mb-6 md:mb-8 max-w-md text-sm md:text-base">
-                We built a strong brand identity and digital marketing
-                strategy that helped this Kerala client grow their
-                online reach — bringing real leads and measurable
-                results every month.
-              </p>
-
-              <div className="flex flex-wrap gap-3 md:gap-6">
-                <Stat number="3000+" label="Campaigns Delivered" />
-                <Stat number="75%" label="Conversion Rate" />
-                <Stat number="95+" label="Client Satisfaction" />
+                <div className="flex flex-wrap gap-3 md:gap-4">
+                  <Stat number="27%" label="Sales Growth" />
+                  <Stat number="550+" label="Warranty Users" />
+                  <Stat number="70%" label="Paper Reduced" />
+                </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </Link>
+
+          {/* CARD 2: Arrow Cabs */}
+          <Link href="/portfolio/case-studies/arrow-cabs" className="block group">
+            <motion.div
+              className="relative group rounded-3xl overflow-hidden cursor-pointer h-full"
+              initial={{ opacity: 0, x: 60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <Image
+                src="/Arrowcabs Case study image.webp"
+                alt="Arrow Cabs"
+                width={800}
+                height={600}
+                className="w-full h-[360px] md:h-[500px] object-cover transition duration-700 group-hover:scale-110"
+              />
+
+              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/75 transition duration-500" />
+
+              <div className="absolute bottom-6 md:bottom-10 left-6 md:left-10 transition duration-500 group-hover:opacity-0">
+                <div className="h-[1px] bg-white/60 w-16 md:w-24 mb-4 md:mb-6" />
+                <h3 className="text-2xl md:text-4xl font-bold">Arrow Cabs</h3>
+                <p className="text-gray-300 mt-1 md:mt-2 text-sm md:text-base">Website · SEO · GMB</p>
+              </div>
+
+              <div className="absolute inset-0 p-6 md:p-10 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4">
+                  From Page 10 to Page 1 in Trivandrum
+                </h3>
+
+                <p className="text-gray-300 mb-6 md:mb-8 max-w-md text-sm md:text-base">
+                  Arrow Cabs partnered with Urbanzi to rebuild their digital presence. Through strategic SEO and GMB optimization, we took them from zero online visibility to dominating local searches and driving 200+ monthly calls.
+                </p>
+
+                <div className="flex flex-wrap gap-3 md:gap-4">
+                  <Stat number="172K" label="Impressions" />
+                  <Stat number="200+" label="GMB Calls/mo" />
+                  <Stat number="Page 1" label="Search Ranking" />
+                </div>
+              </div>
+            </motion.div>
+          </Link>
 
         </div>
       </div>

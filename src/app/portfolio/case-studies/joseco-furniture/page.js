@@ -24,6 +24,7 @@ import {
   Search,
   Award,
   Monitor,
+  Instagram,
 } from "lucide-react";
 
 const fadeUp = {
@@ -40,11 +41,13 @@ const stagger = {
   visible: { transition: { staggerChildren: 0.1 } },
 };
 
-function ImgSlot({ label, hint, src, videoId, onImageClick }) {
+function ImgSlot({ label, hint, src, videoId, localVideo, instagramId, aspect = "video", onImageClick }) {
+  const aspectClass = aspect === "reel" ? "aspect-[9/16]" : "aspect-video";
+
   if (videoId) {
     return (
       <div className="w-full rounded-2xl overflow-hidden border border-white/10 bg-white/[0.02] flex flex-col group h-full">
-        <div className="relative aspect-video w-full overflow-hidden bg-black">
+        <div className={`relative ${aspectClass} w-full overflow-hidden bg-black`}>
           <iframe
             src={`https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1`}
             title={label}
@@ -60,13 +63,50 @@ function ImgSlot({ label, hint, src, videoId, onImageClick }) {
       </div>
     );
   }
+  if (localVideo) {
+    return (
+      <div className="w-full rounded-2xl overflow-hidden border border-white/10 bg-white/[0.02] flex flex-col group h-full">
+        <div className={`relative ${aspectClass} w-full overflow-hidden bg-black`}>
+          <video
+            src={localVideo}
+            controls
+            className="absolute inset-0 w-full h-full border-0"
+            poster={src}
+          ></video>
+        </div>
+        <div className="p-4 bg-white/[0.02] border-t border-white/5 flex-grow">
+          <div className="text-xs font-medium text-gray-300">{label}</div>
+          {hint && <div className="text-[10px] text-gray-500 mt-1 leading-relaxed">{hint}</div>}
+        </div>
+      </div>
+    );
+  }
+  if (instagramId) {
+    return (
+      <div className="w-full rounded-2xl overflow-hidden border border-white/10 bg-white/[0.02] flex flex-col group h-full">
+        <div className={`relative ${aspectClass} w-full overflow-hidden bg-black`}>
+          <iframe
+            src={`https://www.instagram.com/reel/${instagramId}/embed`}
+            title={label}
+            className="absolute inset-0 w-full h-full border-0"
+            allowTransparency="true"
+            allow="encrypted-media"
+          ></iframe>
+        </div>
+        <div className="p-4 bg-white/[0.02] border-t border-white/5 flex-grow">
+          <div className="text-xs font-medium text-gray-300">{label}</div>
+          {hint && <div className="text-[10px] text-gray-500 mt-1 leading-relaxed">{hint}</div>}
+        </div>
+      </div>
+    );
+  }
   if (src) {
     return (
       <div 
         className="w-full rounded-2xl overflow-hidden border border-white/10 bg-white/[0.02] flex flex-col group h-full cursor-zoom-in transition-all hover:border-blue-500/30"
         onClick={() => onImageClick && onImageClick({ src, label, hint })}
       >
-        <div className="relative aspect-video w-full overflow-hidden bg-gray-900">
+        <div className={`relative ${aspectClass} w-full overflow-hidden bg-gray-900`}>
           <Image 
             src={src} 
             alt={label}
@@ -210,6 +250,7 @@ export default function JosecoFurnitureCaseStudy() {
                     { label: "Digital Warranty",     href: "/services/software-development", icon: Shield   },
                     { label: "CRM",                  href: "/services/software-development", icon: Users    },
                     { label: "Meta Ads",             href: "/services/digital-marketing",  icon: BarChart3  },
+                    { label: "Graphics & Animation", href: "/services/graphic-design-animation", icon: Monitor },
                     { label: "Office Digitalization", href: "/services/software-development", icon: Monitor },
                     { label: "Brand Visibility",     href: "/services/digital-marketing",  icon: TrendingUp },
                   ].map(({ label, href, icon: TagIcon }) => (
@@ -638,6 +679,60 @@ export default function JosecoFurnitureCaseStudy() {
           </div>
         </section>
 
+        {/* ── GRAPHICS & AI ANIMATIONS ── */}
+        <section className="py-20 px-4 md:px-8 bg-[#0a1628]/30">
+          <div className="max-w-7xl mx-auto">
+            <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="mb-10">
+              <div className="text-[10px] uppercase tracking-widest text-blue-400 mb-3">Graphics & AI Animations</div>
+              <h2 className="text-3xl md:text-4xl font-light">
+                Visual storytelling through<br />
+                <span className="text-blue-400 italic">AI-powered animations</span>
+              </h2>
+              <p className="text-gray-400 max-w-2xl mt-4 text-sm leading-relaxed">
+                To bridge the gap between traditional craft and modern expectations, we leveraged AI animation to create engaging visual content. From explaining complex warranty steps to high-impact delivery announcements, these creatives brought a new level of professionalism to Joseco's digital presence.
+              </p>
+              <div className="mt-6 p-4 bg-blue-500/5 border border-blue-500/10 rounded-2xl inline-block">
+                <p className="text-xs text-blue-300 font-medium italic">
+                  "Joseco all creative and edited by Urbanzi"
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="grid md:grid-cols-2 gap-6 mb-12"
+              variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }}
+            >
+              <motion.div variants={fadeUp}>
+                <ImgSlot
+                  label="Free Kerala Delivery AI Video"
+                  hint="AI-generated video announcement for state-wide free delivery"
+                  localVideo="/Joseco Free Kerala Delivery AI Video creation.mp4"
+                />
+              </motion.div>
+              <motion.div variants={fadeUp}>
+                <ImgSlot
+                  label="Warranty Claims AI Walkthrough"
+                  hint="Step-by-step AI animation explaining the digital warranty process"
+                  localVideo="/Warranty Claims Steps Ai Walkthrough.mp4"
+                />
+              </motion.div>
+            </motion.div>
+
+            <motion.div 
+              variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
+              className="flex justify-center"
+            >
+              <Link 
+                href="/services/graphic-design-animation"
+                className="inline-flex items-center gap-2 bg-white/5 border border-white/10 text-white px-6 py-3 rounded-full hover:bg-white/10 transition-all group"
+              >
+                Learn about our Graphics & Animation services
+                <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+              </Link>
+            </motion.div>
+          </div>
+        </section>
+
         {/* ── BRAND VISIBILITY ── */}
         <section className="py-20 px-4 md:px-8">
           <div className="max-w-7xl mx-auto">
@@ -672,6 +767,123 @@ export default function JosecoFurnitureCaseStudy() {
                 />
               </motion.div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* ── ORGANIC REACH & REELS ── */}
+        <section className="py-20 px-4 md:px-8 bg-white/[0.02]">
+          <div className="max-w-7xl mx-auto">
+            {/* Reel Row 1: Warranty */}
+            <div className="grid lg:grid-cols-12 gap-12 lg:gap-24 items-center mb-24">
+              <motion.div 
+                className="lg:col-span-7"
+                variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}
+              >
+                <div className="text-[10px] uppercase tracking-widest text-blue-400 mb-3">Customer Trust</div>
+                <h2 className="text-3xl md:text-4xl font-light mb-6">
+                  Building credibility through<br />
+                  <span className="text-blue-400 italic">authentic storytelling</span>
+                </h2>
+                <p className="text-gray-400 text-sm leading-relaxed mb-8">
+                  Authenticity is the currency of social media. By sharing the "why" behind the lifetime warranty and showing the faces behind the brand, we humanized Joseco Furniture, making it the preferred choice for modern buyers.
+                </p>
+                
+                <div className="bg-blue-500/10 border border-blue-500/20 rounded-3xl p-8 relative overflow-hidden group hover:border-blue-500/40 transition-colors">
+                  <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <TrendingUp size={80} />
+                  </div>
+                  <div className="relative z-10">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center">
+                        <Smartphone size={20} className="text-green-400" />
+                      </div>
+                      <div className="text-base font-semibold text-white">Direct WhatsApp Leads</div>
+                    </div>
+                    <p className="text-gray-200 text-lg leading-relaxed italic">
+                      "By promoting or boosting this video, we are getting <strong className="text-blue-400">2–3 quality leads</strong> daily, delivered directly to the owner's WhatsApp."
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+              
+              <motion.div 
+                className="lg:col-span-5 flex justify-center"
+                variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}
+              >
+                <div className="w-full max-w-[320px]">
+                  <ImgSlot
+                    label="Organic Reel: Digital Warranty"
+                    hint="How the digital system builds lifetime trust"
+                    localVideo="/joseco-organic-reel-1.mp4"
+                    aspect="reel"
+                  />
+                  <a 
+                    href="https://www.instagram.com/reel/DWX55kMArs7/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="mt-4 flex items-center justify-center gap-2 text-xs text-gray-400 hover:text-white transition-colors group/link"
+                  >
+                    <Instagram size={14} className="group-hover/link:text-pink-500 transition-colors" /> 
+                    View on Instagram 
+                    <ExternalLink size={10} />
+                  </a>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Reel Row 2: Craftsmanship */}
+            <div className="grid lg:grid-cols-12 gap-12 lg:gap-24 items-center">
+              <motion.div 
+                className="lg:col-span-7 lg:order-2"
+                variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}
+              >
+                <div className="text-[10px] uppercase tracking-widest text-blue-400 mb-3">Organic Strategy</div>
+                <h2 className="text-3xl md:text-4xl font-light mb-6">
+                  Short-form content for<br />
+                  <span className="text-blue-400 italic">maximum engagement</span>
+                </h2>
+                <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                  Our organic strategy involved cutting long-form podcasts into high-impact reels. These bite-sized pieces of content showcased Joye Alex Alexander's expertise and the 35-year craftsmanship of Joseco's furniture.
+                </p>
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    { label: "40%", desc: "Profile Visit Increase" },
+                    { label: "Daily", desc: "WhatsApp Inquiries" },
+                    { label: "High", desc: "Retention & Trust" },
+                    { label: "Organic", desc: "Market Reach" },
+                  ].map((stat) => (
+                    <div key={stat.label} className="bg-white/5 border border-white/10 rounded-2xl p-4">
+                      <div className="text-xl font-bold text-blue-400 mb-1">{stat.label}</div>
+                      <div className="text-[10px] text-gray-500 uppercase tracking-wider">{stat.desc}</div>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+              
+              <motion.div 
+                className="lg:col-span-5 lg:order-1 flex justify-center"
+                variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}
+              >
+                <div className="w-full max-w-[320px]">
+                  <ImgSlot
+                    label="Organic Reel: Furniture Craftsmanship"
+                    hint="Highlighting the 35-year legacy and quality"
+                    localVideo="/joseco-organic-reel-2.mp4"
+                    aspect="reel"
+                  />
+                  <a 
+                    href="https://www.instagram.com/reel/DWRNZpFF6k_/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="mt-4 flex items-center justify-center gap-2 text-xs text-gray-400 hover:text-white transition-colors group/link"
+                  >
+                    <Instagram size={14} className="group-hover/link:text-pink-500 transition-colors" /> 
+                    View on Instagram 
+                    <ExternalLink size={10} />
+                  </a>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </section>
 

@@ -15,7 +15,7 @@ const cases = [
     work: "E-commerce · Custom CRM · Digital Warranty · Meta Ads",
     image: "/Joseco Funiture Case study photo.webp",
     href: "/portfolio/case-studies/joseco-furniture",
-    services: ["web-development", "software-development", "digital-marketing", "ecommerce-solutions"],
+    services: ["web-development", "software-development", "digital-marketing", "ecommerce-solutions", "graphic-design-animation"],
     accent: "blue",
     stats: [
       { value: "27%", label: "Sales Growth" },
