@@ -6,6 +6,7 @@ import WhyBestMobileDevelopment from "@/components/WhyBestMobileDevelopment";
 import WhyChooseApp from "@/components/WhyChooseApp";
 import CaseStudiesSection from "@/components/CaseStudiesSection";
 import MobileAppFAQ from "@/components/MobileAppFAQ";
+import RelatedServices from "@/components/RelatedServices";
 import AppCTA from "@/components/AppCTA";
 import Footer from "@/components/Footer";
 
@@ -18,18 +19,19 @@ export const metadata = {
 };
 
 export default function AppDevelopmentPage() {
- return (
-    <> 
-    <AppHero />
-    <Appwhoweare />
-    <MobileAppServicesSection />
-    <ProcessSection />
-    <WhyBestMobileDevelopment />
-    <WhyChooseApp />
-    <CaseStudiesSection />
-    <MobileAppFAQ />
-    <AppCTA />
-    <Footer />
+  return (
+    <>
+      <AppHero />
+      <Appwhoweare />
+      <MobileAppServicesSection />
+      <ProcessSection />
+      <WhyBestMobileDevelopment />
+      <WhyChooseApp />
+      <CaseStudiesSection />
+      <MobileAppFAQ />
+      <RelatedServices current="app-development" />
+      <AppCTA />
+      <Footer />
     </>
- );
+  );
 }

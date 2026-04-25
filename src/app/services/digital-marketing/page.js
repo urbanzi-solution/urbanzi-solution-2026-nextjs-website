@@ -6,20 +6,21 @@ import WhyWeAreBest from "@/components/WhyWeAreBest";
 import WhyChooseMarketing from "@/components/WhyChooseMarketing";
 import CaseStudiesSection from "@/components/CaseStudiesSection";
 import DigitalMarketingFAQSection from "@/components/DigitalMarketingFAQSection";
+import RelatedServices from "@/components/RelatedServices";
 import DigitCTA from "@/components/DigitCTA";
 import Footer from "@/components/Footer";
+
 export const metadata = {
   title: "Digital Marketing Agency in Trivandrum, Kerala | Urbanzi Solutions",
-  description:
-    "Urbanzi Solutions is a full-service digital marketing agency in Trivandrum, Kerala. We offer social media marketing, Google Ads, SEO, and content marketing to grow your business online.",
+  description: "Urbanzi Solutions is a full-service digital marketing agency in Trivandrum, Kerala. We offer social media marketing, Google Ads, SEO, and content marketing to grow your business online.",
   alternates: {
     canonical: "https://www.urbanzi.in/services/digital-marketing",
   },
 };
 
 export default function DigitalMarketingPage() {
- return (
-    <> 
+  return (
+    <>
       <InnovationHero />
       <WhoWeAre />
       <DigitalMarketingServices />
@@ -28,6 +29,7 @@ export default function DigitalMarketingPage() {
       <WhyChooseMarketing />
       <CaseStudiesSection />
       <DigitalMarketingFAQSection />
+      <RelatedServices current="digital-marketing" />
       <DigitCTA />
       <Footer />
     </>

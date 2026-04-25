@@ -6,30 +6,32 @@ import SoftWhyBest from "@/components/SoftWhyBest";
 import WhyChooseSoftware from "@/components/WhyChooseSoft";
 import CaseStudiesSection from "@/components/CaseStudiesSection";
 import SoftFaq from "@/components/SoftFaq";
+import RelatedServices from "@/components/RelatedServices";
 import CTASoft from "@/components/CTASoft";
 import Footer from "@/components/Footer";
+
 export const metadata = {
   title: "Custom Software Development in Kerala & Trivandrum | Urbanzi Solutions",
-  description:
-    "Urbanzi Solutions builds custom software, CRM, ERP, and SaaS platforms for businesses in Trivandrum and Kerala. Scalable, secure, and built around your workflows.",
+  description: "Urbanzi Solutions builds custom software, CRM, ERP, and SaaS platforms for businesses in Trivandrum and Kerala. Scalable, secure, and built around your workflows.",
   alternates: {
     canonical: "https://www.urbanzi.in/services/software-development",
   },
 };
 
 export default function SoftwareDevelopmentPage() {
- return (
-    <> 
-    <SoftHero />
-    <SoftWhoWeAre />
-    <SoftwareServicesSection/>
-    <SoftProcess />
-    <SoftWhyBest />
-    <WhyChooseSoftware />
-    <CaseStudiesSection />
-    <SoftFaq/>
-   <CTASoft />
-    <Footer />
+  return (
+    <>
+      <SoftHero />
+      <SoftWhoWeAre />
+      <SoftwareServicesSection />
+      <SoftProcess />
+      <SoftWhyBest />
+      <WhyChooseSoftware />
+      <CaseStudiesSection />
+      <SoftFaq />
+      <RelatedServices current="software-development" />
+      <CTASoft />
+      <Footer />
     </>
- );
+  );
 }

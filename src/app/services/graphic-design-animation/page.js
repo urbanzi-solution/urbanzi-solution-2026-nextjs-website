@@ -6,30 +6,32 @@ import GraphicsExpertise from "@/components/GraphicsExpertise";
 import CaseStudiesSection from "@/components/CaseStudiesSection";
 import WhyChooseGraphics from "@/components/WhyChooseGraphics";
 import GraphicsFaq from "@/components/GraphicsFaq";
+import RelatedServices from "@/components/RelatedServices";
 import GraphicsCTA from "@/components/GraphicsCTA";
 import Footer from "@/components/Footer";
+
 export const metadata = {
   title: "Graphic Design & Animation Services in Kerala | Urbanzi Solutions",
-  description:
-    "Urbanzi Solutions offers professional graphic designing, brand identity, motion graphics, and animation services in Trivandrum, Kerala. Visuals built to capture attention and convert.",
+  description: "Urbanzi Solutions offers professional graphic designing, brand identity, motion graphics, and animation services in Trivandrum, Kerala. Visuals built to capture attention and convert.",
   alternates: {
     canonical: "https://www.urbanzi.in/services/graphic-design-animation",
   },
 };
 
 export default function GraphicDesigningAnimationPage() {
- return (
+  return (
     <>
-    <GraphicsHero />
-    <GraphicsWhoWeAre />
-    <GraphicsServicesSection />
-    <GraphicsProcessSection />
-    <GraphicsExpertise />
-    <CaseStudiesSection />
-    <WhyChooseGraphics />
-    <GraphicsFaq />
-    <GraphicsCTA />
-    <Footer />
+      <GraphicsHero />
+      <GraphicsWhoWeAre />
+      <GraphicsServicesSection />
+      <GraphicsProcessSection />
+      <GraphicsExpertise />
+      <CaseStudiesSection />
+      <WhyChooseGraphics />
+      <GraphicsFaq />
+      <RelatedServices current="graphic-design-animation" />
+      <GraphicsCTA />
+      <Footer />
     </>
- );
- }
+  );
+}

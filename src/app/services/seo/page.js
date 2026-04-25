@@ -6,8 +6,10 @@ import WhyBestSeoSection from "@/components/WhyBestSeoSection";
 import WhyChooseSEO from "@/components/WhyChooseSEO";
 import CaseStudiesSection from "@/components/CaseStudiesSection";
 import SeoFaqSection from "@/components/SeoFaqSection";
+import RelatedServices from "@/components/RelatedServices";
 import SEOCTAA from "@/components/SEOCTAA";
 import Footer from "@/components/Footer";
+
 export const metadata = {
   title: "SEO Services in Kerala & Trivandrum | Urbanzi Solutions",
   description: "Urbanzi Solutions is a trusted SEO company in Trivandrum, Kerala. We offer local SEO, Google My Business optimization, on-page SEO, and backlink building to help your business rank and grow.",
@@ -17,18 +19,19 @@ export const metadata = {
 };
 
 export default function SeoPage() {
- return (
+  return (
     <>
-    <SeoHero />
-    <SeoWebWhoWeAre />
-    <SeoServicesSection />
-    <OurSeoProcessSection />
-    <WhyBestSeoSection />
-    <WhyChooseSEO />
-    <CaseStudiesSection />
-    <SeoFaqSection />
-    <SEOCTAA />
-    <Footer />
+      <SeoHero />
+      <SeoWebWhoWeAre />
+      <SeoServicesSection />
+      <OurSeoProcessSection />
+      <WhyBestSeoSection />
+      <WhyChooseSEO />
+      <CaseStudiesSection />
+      <SeoFaqSection />
+      <RelatedServices current="seo" />
+      <SEOCTAA />
+      <Footer />
     </>
- );
+  );
 }

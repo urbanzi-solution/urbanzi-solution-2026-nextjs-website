@@ -8,11 +8,13 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
+  const [portfolioOpen, setPortfolioOpen] = useState(false);
 
   const closeMenu = () => {
     setOpen(false);
     setServicesOpen(false);
     setProductsOpen(false);
+    setPortfolioOpen(false);
   };
 
   // Prevent page scroll when menu opens
@@ -115,9 +117,42 @@ export default function Navbar() {
 
           </div>
 
-          <Link href="/clients" className="hover:text-white transition">
-            Clients
-          </Link>
+          {/* PORTFOLIO */}
+          <div className="relative group">
+            <button className="flex items-center gap-1 hover:text-white transition">
+              Portfolio
+              <ChevronDown
+                size={16}
+                className="transition-transform duration-200 group-hover:rotate-180"
+              />
+            </button>
+
+            <div
+              className="
+              absolute left-0 top-[calc(100%+12px)]
+              bg-[#0b1220]/90 backdrop-blur-xl
+              border border-white/10
+              rounded-2xl
+              w-52
+              opacity-0 invisible
+              translate-y-2
+              group-hover:opacity-100
+              group-hover:visible
+              group-hover:translate-y-0
+              transition-all duration-300
+              shadow-[0_8px_32px_rgba(0,0,0,0.5)]
+              overflow-hidden
+              "
+            >
+              <div className="px-4 py-2 text-[10px] uppercase tracking-widest text-gray-500 border-b border-white/5">
+                Our Work
+              </div>
+
+              <Link href="/portfolio/case-studies" className="flex items-center gap-2 px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 transition-colors">
+                Case Studies
+              </Link>
+            </div>
+          </div>
 
           {/* PRODUCT */}
           <div className="relative group">
@@ -252,7 +287,24 @@ export default function Navbar() {
 
           </div>
 
-          <Link href="/clients" onClick={closeMenu}>Clients</Link>
+          {/* PORTFOLIO */}
+          <div>
+            <div className="flex items-center justify-between">
+              <span className="text-gray-300">Portfolio</span>
+              <button onClick={() => setPortfolioOpen(!portfolioOpen)}>
+                <ChevronDown
+                  className={`transition ${portfolioOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+            </div>
+            <div
+              className={`flex flex-col ml-4 mt-4 space-y-4 text-base text-gray-400 overflow-hidden transition-all duration-300 ${portfolioOpen ? "max-h-20" : "max-h-0"}`}
+            >
+              <Link href="/portfolio/case-studies" onClick={closeMenu}>
+                Case Studies
+              </Link>
+            </div>
+          </div>
 
           {/* PRODUCTS */}
           <div>

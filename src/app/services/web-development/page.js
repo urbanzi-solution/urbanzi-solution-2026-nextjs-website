@@ -1,14 +1,14 @@
-import ServiceHeroSection from "@/components/ServiceHeroSection";
 import WebHero from "@/components/WebbHero";
 import WhoWeAreSection from "@/components/WhoWeAreSection";
 import ServicesStackSection from "@/components/ServicesStackSection";
 import OurExpertiseSection from "@/components/OurExpertiseSection";
 import OurProcessSection from "@/components/OurProcessSection";
 import WhyWeAreBestSection from "@/components/WhyWeAreBestSection";
-import FAQSection from "@/components/FAQSection";
-import Footer from "@/components/Footer";
-import WebCTA from "@/components/WebCTA";
 import CaseStudiesSection from "@/components/CaseStudiesSection";
+import FAQSection from "@/components/FAQSection";
+import RelatedServices from "@/components/RelatedServices";
+import WebCTA from "@/components/WebCTA";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Web Development Services in Kerala & Trivandrum | Urbanzi Solutions",
@@ -29,9 +29,9 @@ export default function WebDevelopmentPage() {
       <WhyWeAreBestSection />
       <CaseStudiesSection />
       <FAQSection />
+      <RelatedServices current="web-development" />
       <WebCTA />
       <Footer />
-      
     </>
   );
 }
