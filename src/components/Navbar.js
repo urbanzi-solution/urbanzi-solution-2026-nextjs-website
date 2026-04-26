@@ -196,6 +196,14 @@ export default function Navbar() {
               <Link href="/product/gym-application" className="flex items-center gap-2 px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 transition-colors">
                 Gym Application
               </Link>
+
+              <Link href="/products/whatsapp-marketing-software-india" className="flex items-center gap-2 px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 transition-colors">
+                BulkReach — WhatsApp Software
+              </Link>
+
+              <Link href="/products/momentry-digital-invitations" className="flex items-center gap-2 px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 transition-colors">
+                Momentry — Digital Invitations
+              </Link>
             </div>
           </div>
 
@@ -331,6 +339,14 @@ export default function Navbar() {
             >
               <Link href="/product/gym-application" onClick={closeMenu}>
                 Gym Application
+              </Link>
+
+              <Link href="/products/whatsapp-marketing-software-india" onClick={closeMenu}>
+                BulkReach — WhatsApp Software
+              </Link>
+
+              <Link href="/products/momentry-digital-invitations" onClick={closeMenu}>
+                Momentry — Digital Invitations
               </Link>
             </div>
           </div>

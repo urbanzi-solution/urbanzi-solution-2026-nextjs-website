@@ -7,6 +7,8 @@ export default function sitemap() {
     "/contact",
     "/blogs",
     "/product/gym-application",
+    "/products/whatsapp-marketing-software-india",
+    "/products/momentry-digital-invitations",
     "/clients",
     "/services",
     "/services/app-development",

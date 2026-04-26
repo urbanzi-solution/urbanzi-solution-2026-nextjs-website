@@ -22,7 +22,7 @@
   overflow-x: hidden;
 }
 
-.gymContainer section { padding: 100px 40px; }
+.gymContainer section { padding: 80px 40px; }
 .gymContainer .container { max-width: 1100px; margin: 0 auto; }
 
 /* ─── HERO ─── */
@@ -128,8 +128,8 @@
 
 .gymContainer .hero-stats {
   display: flex; justify-content: center; gap: 48px;
-  margin-top: 56px;
-  padding-top: 40px;
+  margin-top: 40px;
+  padding-top: 24px;
   border-top: 1px solid var(--dark-border);
 }
 .gymContainer .stat-item { text-align: center; }
@@ -172,7 +172,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-  margin-top: 56px;
+  margin-top: 40px;
 }
 .gymContainer .usp-card {
   padding: 36px 30px;
@@ -212,8 +212,8 @@
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
-  margin-top: 64px;
-  padding-bottom: 64px;
+  margin-top: 48px;
+  padding-bottom: 48px;
   border-bottom: 1px solid var(--dark-border);
 }
 .gymContainer .feature-block:last-child { border-bottom: none; padding-bottom: 0; }
@@ -313,7 +313,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  margin-top: 56px;
+  margin-top: 40px;
 }
 .gymContainer .plan-card {
   padding: 36px 28px;
@@ -402,7 +402,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
-  margin-top: 56px;
+  margin-top: 40px;
   counter-reset: step;
 }
 .gymContainer .step {
@@ -435,7 +435,7 @@
 .gymContainer .device-section { background: var(--dark); text-align: center; }
 .gymContainer .device-grid {
   display: flex; justify-content: center; gap: 48px;
-  margin-top: 48px; flex-wrap: wrap;
+  margin-top: 32px; flex-wrap: wrap;
 }
 .gymContainer .device-item { text-align: center; }
 .gymContainer .device-icon {
@@ -459,7 +459,7 @@
 .gymContainer .faq { background: #080808; }
 .gymContainer .faq-list {
   max-width: 720px;
-  margin: 48px auto 0;
+  margin: 32px auto 0;
 }
 .gymContainer .faq-item {
   border-bottom: 1px solid var(--dark-border);
@@ -508,7 +508,7 @@
 .gymContainer .final-cta {
   background: var(--dark);
   text-align: center;
-  padding: 100px 40px 120px;
+  padding: 60px 20px 80px;
 }
 .gymContainer .cta-box {
   max-width: 700px;
@@ -559,7 +559,7 @@
   .gymContainer .feature-block.reverse .feature-visual { order: 2; }
 }
 @media (max-width: 768px) {
-  .gymContainer section { padding: 72px 20px; }
+  .gymContainer section { padding: 48px 20px; }
   .gymContainer .usp-grid { grid-template-columns: 1fr; }
   .gymContainer .plans-grid { grid-template-columns: 1fr; }
   .gymContainer .steps { grid-template-columns: 1fr; }
