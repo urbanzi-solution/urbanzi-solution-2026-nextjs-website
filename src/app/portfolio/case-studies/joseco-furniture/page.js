@@ -185,7 +185,7 @@ export default function JosecoFurnitureCaseStudy() {
       <main className="bg-[#050816] text-white overflow-hidden">
 
         {/* ── HERO ── */}
-        <section className="relative min-h-[90vh] flex items-end pb-16 pt-32 px-4 md:px-8">
+        <section className="relative min-h-[70vh] flex items-end pb-12 pt-28 px-4 md:px-8">
           {/* Background gradient */}
           <div className="absolute inset-0 bg-gradient-to-br from-[#0a1628] via-[#050816] to-[#050816]" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(59,130,246,0.12),transparent)]" />
@@ -286,7 +286,7 @@ export default function JosecoFurnitureCaseStudy() {
         </section>
 
         {/* ── CLIENT OVERVIEW ── */}
-        <section className="py-20 px-4 md:px-8">
+        <section className="py-12 md:py-16 px-4 md:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-3 gap-10">
               <motion.div
@@ -329,7 +329,7 @@ export default function JosecoFurnitureCaseStudy() {
         </section>
 
         {/* ── CHALLENGES ── */}
-        <section className="py-20 px-4 md:px-8 bg-white/[0.02]">
+        <section className="py-12 md:py-16 px-4 md:px-8 bg-white/[0.02]">
           <div className="max-w-7xl mx-auto">
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="mb-14">
               <div className="text-[10px] uppercase tracking-widest text-blue-400 mb-3">The Problem</div>
@@ -400,7 +400,7 @@ export default function JosecoFurnitureCaseStudy() {
         </section>
 
         {/* ── DISCOVERY ── */}
-        <section className="py-20 px-4 md:px-8">
+        <section className="py-12 md:py-16 px-4 md:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-14 items-center">
               <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
@@ -455,7 +455,7 @@ export default function JosecoFurnitureCaseStudy() {
         </section>
 
         {/* ── SOLUTION ── */}
-        <section className="py-20 px-4 md:px-8 bg-white/[0.02]">
+        <section className="py-12 md:py-16 px-4 md:px-8 bg-white/[0.02]">
           <div className="max-w-7xl mx-auto">
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="mb-14">
               <div className="text-[10px] uppercase tracking-widest text-blue-400 mb-3">The Solution</div>
@@ -680,7 +680,7 @@ export default function JosecoFurnitureCaseStudy() {
         </section>
 
         {/* ── GRAPHICS & AI ANIMATIONS ── */}
-        <section className="py-20 px-4 md:px-8 bg-[#0a1628]/30">
+        <section className="py-12 md:py-16 px-4 md:px-8 bg-[#0a1628]/30">
           <div className="max-w-7xl mx-auto">
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="mb-10">
               <div className="text-[10px] uppercase tracking-widest text-blue-400 mb-3">Graphics & AI Animations</div>
@@ -734,7 +734,7 @@ export default function JosecoFurnitureCaseStudy() {
         </section>
 
         {/* ── BRAND VISIBILITY ── */}
-        <section className="py-20 px-4 md:px-8">
+        <section className="py-12 md:py-16 px-4 md:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="mb-10">
               <div className="text-[10px] uppercase tracking-widest text-blue-400 mb-3">Brand Visibility</div>
@@ -771,7 +771,7 @@ export default function JosecoFurnitureCaseStudy() {
         </section>
 
         {/* ── ORGANIC REACH & REELS ── */}
-        <section className="py-20 px-4 md:px-8 bg-white/[0.02]">
+        <section className="py-12 md:py-16 px-4 md:px-8 bg-white/[0.02]">
           <div className="max-w-7xl mx-auto">
             {/* Reel Row 1: Warranty */}
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-24 items-center mb-24">
@@ -888,7 +888,7 @@ export default function JosecoFurnitureCaseStudy() {
         </section>
 
         {/* ── CHALLENGE: ANDROMEDA UPDATE ── */}
-        <section className="py-20 px-4 md:px-8">
+        <section className="py-12 md:py-16 px-4 md:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="mb-12">
               <div className="text-[10px] uppercase tracking-widest text-orange-400 mb-3">Implementation Challenge</div>
@@ -954,7 +954,7 @@ export default function JosecoFurnitureCaseStudy() {
         </section>
 
         {/* ── RESULTS ── */}
-        <section className="py-20 px-4 md:px-8 bg-white/[0.02]">
+        <section className="py-12 md:py-16 px-4 md:px-8 bg-white/[0.02]">
           <div className="max-w-7xl mx-auto">
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="mb-14">
               <div className="text-[10px] uppercase tracking-widest text-blue-400 mb-3">Results</div>
@@ -1056,7 +1056,7 @@ export default function JosecoFurnitureCaseStudy() {
         </section>
 
         {/* ── TESTIMONIAL ── */}
-        <section className="py-20 px-4 md:px-8">
+        <section className="py-12 md:py-16 px-4 md:px-8">
           <div className="max-w-4xl mx-auto">
             <motion.div
               variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}
@@ -1087,7 +1087,7 @@ export default function JosecoFurnitureCaseStudy() {
         </section>
 
         {/* ── TECH STACK ── */}
-        <section className="py-20 px-4 md:px-8 bg-white/[0.02]">
+        <section className="py-12 md:py-16 px-4 md:px-8 bg-white/[0.02]">
           <div className="max-w-7xl mx-auto">
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="mb-10">
               <div className="text-[10px] uppercase tracking-widest text-blue-400 mb-3">Technical Architecture</div>
@@ -1137,7 +1137,7 @@ export default function JosecoFurnitureCaseStudy() {
         </section>
 
         {/* ── KEY LESSONS ── */}
-        <section className="py-20 px-4 md:px-8">
+        <section className="py-12 md:py-16 px-4 md:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="mb-12">
               <div className="text-[10px] uppercase tracking-widest text-blue-400 mb-3">Lessons</div>

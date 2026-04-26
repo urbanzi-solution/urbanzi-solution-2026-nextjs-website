@@ -166,7 +166,7 @@ export default function ArrowCabsCaseStudy() {
       <main className="bg-[#050816] text-white overflow-hidden">
 
         {/* ── HERO ── */}
-        <section className="relative min-h-[90vh] flex items-end pb-16 pt-32 px-4 md:px-8">
+        <section className="relative min-h-[70vh] flex items-end pb-12 pt-28 px-4 md:px-8">
           <div className="absolute inset-0 bg-gradient-to-br from-[#0a1628] via-[#050816] to-[#050816]" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(59,130,246,0.10),transparent)]" />
           <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
@@ -264,7 +264,7 @@ export default function ArrowCabsCaseStudy() {
         </section>
 
         {/* ── THE BACKGROUND ── */}
-        <section className="py-20 px-4 md:px-8">
+        <section className="py-12 md:py-16 px-4 md:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-3 gap-10">
               <motion.div
@@ -315,7 +315,7 @@ export default function ArrowCabsCaseStudy() {
         </section>
 
         {/* ── CHALLENGES ── */}
-        <section className="py-20 px-4 md:px-8 bg-white/[0.02]">
+        <section className="py-12 md:py-16 px-4 md:px-8 bg-white/[0.02]">
           <div className="max-w-7xl mx-auto">
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="mb-14">
               <div className="text-[10px] uppercase tracking-widest text-blue-400 mb-3">The Problem</div>
@@ -356,7 +356,7 @@ export default function ArrowCabsCaseStudy() {
         </section>
 
         {/* ── PHASE 1: FOUNDATION ── */}
-        <section className="py-20 px-4 md:px-8">
+        <section className="py-12 md:py-16 px-4 md:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="mb-12">
               <div className="text-[10px] uppercase tracking-widest text-blue-400 mb-3">Phase 1 · March – May 2025</div>
@@ -410,7 +410,7 @@ export default function ArrowCabsCaseStudy() {
         </section>
 
         {/* ── FIRST RESULTS ── */}
-        <section className="py-20 px-4 md:px-8 bg-white/[0.02]">
+        <section className="py-12 md:py-16 px-4 md:px-8 bg-white/[0.02]">
           <div className="max-w-7xl mx-auto">
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="mb-12">
               <div className="text-[10px] uppercase tracking-widest text-blue-400 mb-3">First Victory · June 2025</div>
@@ -458,7 +458,7 @@ export default function ArrowCabsCaseStudy() {
         </section>
 
         {/* ── THE DILEMMA ── */}
-        <section className="py-20 px-4 md:px-8">
+        <section className="py-12 md:py-16 px-4 md:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="mb-12">
               <div className="text-[10px] uppercase tracking-widest text-orange-400 mb-3">The Dilemma · Mid-2025</div>
@@ -509,7 +509,7 @@ export default function ArrowCabsCaseStudy() {
         </section>
 
         {/* ── PHASE 2: BLOG STRATEGY ── */}
-        <section className="py-20 px-4 md:px-8 bg-white/[0.02]">
+        <section className="py-12 md:py-16 px-4 md:px-8 bg-white/[0.02]">
           <div className="max-w-7xl mx-auto">
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="mb-12">
               <div className="text-[10px] uppercase tracking-widest text-blue-400 mb-3">Phase 2 · June – December 2025</div>
@@ -555,7 +555,7 @@ export default function ArrowCabsCaseStudy() {
         </section>
 
         {/* ── ALGORITHM CHALLENGE ── */}
-        <section className="py-20 px-4 md:px-8">
+        <section className="py-12 md:py-16 px-4 md:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
               variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}
@@ -582,7 +582,7 @@ export default function ArrowCabsCaseStudy() {
         </section>
 
         {/* ── REBUILD ── */}
-        <section className="py-20 px-4 md:px-8 bg-white/[0.02]">
+        <section className="py-12 md:py-16 px-4 md:px-8 bg-white/[0.02]">
           <div className="max-w-7xl mx-auto">
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="mb-12">
               <div className="text-[10px] uppercase tracking-widest text-blue-400 mb-3">Phase 3 · February 2026</div>
@@ -631,7 +631,7 @@ export default function ArrowCabsCaseStudy() {
         </section>
 
         {/* ── MIGRATION DIP ── */}
-        <section className="py-20 px-4 md:px-8">
+        <section className="py-12 md:py-16 px-4 md:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="mb-12">
               <div className="text-[10px] uppercase tracking-widest text-orange-400 mb-3">Implementation Challenge · February 2026</div>
@@ -693,7 +693,7 @@ export default function ArrowCabsCaseStudy() {
         </section>
 
         {/* ── WAR ── */}
-        <section className="py-20 px-4 md:px-8 bg-white/[0.02]">
+        <section className="py-12 md:py-16 px-4 md:px-8 bg-white/[0.02]">
           <div className="max-w-7xl mx-auto">
             <motion.div
               variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}
@@ -720,7 +720,7 @@ export default function ArrowCabsCaseStudy() {
         </section>
 
         {/* ── GSC RESULTS ── */}
-        <section className="py-20 px-4 md:px-8">
+        <section className="py-12 md:py-16 px-4 md:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="mb-14">
               <div className="text-[10px] uppercase tracking-widest text-blue-400 mb-3">Search Performance</div>
@@ -834,7 +834,7 @@ export default function ArrowCabsCaseStudy() {
         </section>
 
         {/* ── GMB DATA ── */}
-        <section className="py-20 px-4 md:px-8 bg-white/[0.02]">
+        <section className="py-12 md:py-16 px-4 md:px-8 bg-white/[0.02]">
           <div className="max-w-7xl mx-auto">
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="mb-12">
               <div className="text-[10px] uppercase tracking-widest text-blue-400 mb-3">Google My Business · 3 Locations</div>
@@ -931,7 +931,7 @@ export default function ArrowCabsCaseStudy() {
         </section>
 
         {/* ── REDIRECT MILESTONE ── */}
-        <section className="py-20 px-4 md:px-8">
+        <section className="py-12 md:py-16 px-4 md:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
               variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}
@@ -957,7 +957,7 @@ export default function ArrowCabsCaseStudy() {
         </section>
 
         {/* ── TESTIMONIAL ── */}
-        <section className="py-20 px-4 md:px-8 bg-white/[0.02]">
+        <section className="py-12 md:py-16 px-4 md:px-8 bg-white/[0.02]">
           <div className="max-w-4xl mx-auto">
             <motion.div
               variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}
@@ -984,7 +984,7 @@ export default function ArrowCabsCaseStudy() {
         </section>
 
         {/* ── LESSONS ── */}
-        <section className="py-20 px-4 md:px-8">
+        <section className="py-12 md:py-16 px-4 md:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="mb-12">
               <div className="text-[10px] uppercase tracking-widest text-blue-400 mb-3">Lessons</div>
