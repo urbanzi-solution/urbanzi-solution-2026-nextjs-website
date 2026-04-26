@@ -119,7 +119,7 @@ export default function CaseStudiesSection({ service }) {
                 <Link href={data.href} className="block relative aspect-[16/10] rounded-3xl overflow-hidden border border-white/10">
                   <Image
                     src={data.image}
-                    alt={data.title}
+                    alt={"Urbanzi Solutions Case Study - " + data.title + ": " + data.subtitle}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />

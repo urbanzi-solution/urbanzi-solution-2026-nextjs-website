@@ -19,6 +19,7 @@ function FaqItem({ question, answer }) {
 
 export default function GymContent() {
   const { openModal } = useLeadModal();
+  const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -122,51 +123,88 @@ export default function GymContent() {
             From member management to financial reports — every tool a gym owner or trainer needs, all in one place.
           </p>
 
-          {/* Feature 1 */}
+          {/* Feature 1: Dashboard */}
           <div className="feature-block fade-up">
+            <div className="feature-text">
+              <h3>Complete Gym Dashboard</h3>
+              <p>
+                Get a bird&apos;s-eye view of your gym&apos;s performance. Monitor active members, 
+                daily attendance, and revenue at a glance. Make informed decisions with real-time data.
+              </p>
+              <ul className="feature-list">
+                <li>Real-time active member count and status</li>
+                <li>Today&apos;s attendance tracking for members and trainers</li>
+                <li>Quick revenue summary and recent transactions</li>
+                <li>Clean, easy-to-read metrics</li>
+              </ul>
+            </div>
+            <div className="feature-visual image-only">
+              <img 
+                src="/gym-apps-mockup/Gym App - Dashboard mockup.webp" 
+                alt="Urbanzi Gym Application - Dashboard overview showing member statistics, attendance, and revenue metrics" 
+                style={{ width: "100%", height: "auto", borderRadius: "12px", boxShadow: "0 10px 30px rgba(0,0,0,0.5)", cursor: "zoom-in", transition: "transform 0.3s" }} 
+                onClick={() => setSelectedImage("/gym-apps-mockup/Gym App - Dashboard mockup.webp")}
+                onMouseEnter={(e) => e.target.style.transform = "scale(1.02)"}
+                onMouseLeave={(e) => e.target.style.transform = "scale(1)"}
+              />
+            </div>
+          </div>
+
+          {/* Feature 2: Member Management */}
+          <div className="feature-block reverse fade-up">
             <div className="feature-text">
               <h3>Member Management Made Simple</h3>
               <p>
                 See every member&apos;s status at a glance. Filter your member list by active plans, 
-                pending fees, expiry dates, or even blacklisted members. Click on any profile to see their 
-                full details — and contact them instantly.
+                pending fees, expiry dates, or even blacklisted members. Find anyone in seconds.
               </p>
               <ul className="feature-list">
-                <li>Filter members by plan, expiry (today, tomorrow, 2 days, 3 days, or custom range)</li>
-                <li>View member profile with plan history and transaction records</li>
-                <li>One-tap call or WhatsApp directly from the member profile</li>
-                <li>Renew plans, add pending balance, or edit plans in seconds</li>
-                <li>Track member attendance with daily records</li>
+                <li>Filter members by plan, expiry (today, tomorrow, 2 days, custom range)</li>
+                <li>Quick search by name or phone number</li>
+                <li>Clear status indicators (Active, Expiring, Expired)</li>
+                <li>Manage pending balances easily</li>
               </ul>
             </div>
-            <div className="feature-visual">
-              <div className="mock-ui">
-                <div className="mock-bar"><div className="mock-dot"></div><div className="mock-dot"></div><div className="mock-dot"></div></div>
-                <div className="mock-row">
-                  <div className="mock-avatar"></div>
-                  <div style={{flex: 1}}><div className="mock-line w60" style={{marginBottom: "6px"}}></div><div className="mock-line w40"></div></div>
-                  <div className="mock-badge active">Active</div>
-                </div>
-                <div className="mock-row">
-                  <div className="mock-avatar" style={{background:"linear-gradient(135deg,#FF6D00,#FF8F00)"}}></div>
-                  <div style={{flex: 1}}><div className="mock-line w80" style={{marginBottom: "6px"}}></div><div className="mock-line w40"></div></div>
-                  <div className="mock-badge expiring">Expiring</div>
-                </div>
-                <div className="mock-row">
-                  <div className="mock-avatar" style={{background:"linear-gradient(135deg,#ef5350,#e53935)"}}></div>
-                  <div style={{flex: 1}}><div className="mock-line w60" style={{marginBottom: "6px"}}></div><div className="mock-line w40"></div></div>
-                  <div className="mock-badge expired">Expired</div>
-                </div>
-                <div className="mock-row">
-                  <div className="mock-avatar" style={{background:"linear-gradient(135deg,#42A5F5,#1E88E5)"}}></div>
-                  <div style={{flex: 1}}><div className="mock-line w80" style={{marginBottom: "6px"}}></div><div className="mock-line w40"></div></div>
-                  <div className="mock-badge active">Active</div>
-                </div>
-              </div>
+            <div className="feature-visual image-only">
+              <img 
+                src="/gym-apps-mockup/Gym App - Member list page mockup.webp" 
+                alt="Urbanzi Gym Application - Comprehensive member management list with status filters and search functionality" 
+                style={{ width: "100%", height: "auto", borderRadius: "12px", boxShadow: "0 10px 30px rgba(0,0,0,0.5)", cursor: "zoom-in", transition: "transform 0.3s" }} 
+                onClick={() => setSelectedImage("/gym-apps-mockup/Gym App - Member list page mockup.webp")}
+                onMouseEnter={(e) => e.target.style.transform = "scale(1.02)"}
+                onMouseLeave={(e) => e.target.style.transform = "scale(1)"}
+              />
             </div>
           </div>
 
-          {/* Feature 2 */}
+          {/* Feature 3: Detailed Member Profiles */}
+          <div className="feature-block fade-up">
+            <div className="feature-text">
+              <h3>Detailed Member Profiles</h3>
+              <p>
+                Click on any profile to see their full details. Access their plan history, 
+                transaction records, and attendance logs. Everything you need to know, in one place.
+              </p>
+              <ul className="feature-list">
+                <li>View complete plan history and current status</li>
+                <li>Detailed transaction and payment records</li>
+                <li>One-tap call or WhatsApp directly from the profile</li>
+                <li>Renew plans or edit details in seconds</li>
+              </ul>
+            </div>
+            <div className="feature-visual image-only">
+              <img 
+                src="/gym-apps-mockup/Gym App - Member page mockup.webp" 
+                alt="Urbanzi Gym Application - Detailed member profile page showing plan history, transactions, and attendance logs" 
+                style={{ width: "100%", height: "auto", borderRadius: "12px", boxShadow: "0 10px 30px rgba(0,0,0,0.5)", cursor: "zoom-in", transition: "transform 0.3s" }} 
+                onClick={() => setSelectedImage("/gym-apps-mockup/Gym App - Member page mockup.webp")}
+                onMouseEnter={(e) => e.target.style.transform = "scale(1.02)"}
+                onMouseLeave={(e) => e.target.style.transform = "scale(1)"}
+              />
+            </div>
+          </div>
+
+          {/* Feature 4: Trainer & PT Session Tracking */}
           <div className="feature-block reverse fade-up">
             <div className="feature-text">
               <h3>Trainer &amp; PT Session Tracking</h3>
@@ -181,34 +219,19 @@ export default function GymContent() {
                 <li>Easy plan creation and management</li>
               </ul>
             </div>
-            <div className="feature-visual">
-              <div className="mock-ui">
-                <div className="mock-bar"><div className="mock-dot"></div><div className="mock-dot"></div><div className="mock-dot"></div></div>
-                <div style={{display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px"}}>
-                  <div style={{background: "rgba(255,255,255,0.02)", padding: "16px", borderRadius: "10px"}}>
-                    <div style={{fontSize: "0.7rem", color: "var(--gray-1)", marginBottom: "8px"}}>TRAINERS TODAY</div>
-                    <div style={{fontFamily: "var(--font-display)", fontSize: "1.6rem", fontWeight: "700", color: "var(--brand-glow)"}}>8/10</div>
-                  </div>
-                  <div style={{background: "rgba(255,255,255,0.02)", padding: "16px", borderRadius: "10px"}}>
-                    <div style={{fontSize: "0.7rem", color: "var(--gray-1)", marginBottom: "8px"}}>PT SESSIONS</div>
-                    <div style={{fontFamily: "var(--font-display)", fontSize: "1.6rem", fontWeight: "700", color: "var(--accent)"}}>14</div>
-                  </div>
-                </div>
-                <div className="mock-row" style={{marginTop: "12px"}}>
-                  <div className="mock-avatar" style={{background: "linear-gradient(135deg,#7E57C2,#5E35B1)"}}></div>
-                  <div style={{flex: 1}}><div className="mock-line w60"></div></div>
-                  <div className="mock-badge active">Present</div>
-                </div>
-                <div className="mock-row">
-                  <div className="mock-avatar" style={{background:"linear-gradient(135deg,#26A69A,#00897B)"}}></div>
-                  <div style={{flex: 1}}><div className="mock-line w80"></div></div>
-                  <div className="mock-badge active">Present</div>
-                </div>
-              </div>
+            <div className="feature-visual image-only">
+              <img 
+                src="/gym-apps-mockup/Gym App - Trainer and PT attandance.webp" 
+                alt="Urbanzi Gym Application - Trainer attendance and personal training session tracking interface" 
+                style={{ width: "100%", height: "auto", borderRadius: "12px", boxShadow: "0 10px 30px rgba(0,0,0,0.5)", cursor: "zoom-in", transition: "transform 0.3s" }} 
+                onClick={() => setSelectedImage("/gym-apps-mockup/Gym App - Trainer and PT attandance.webp")}
+                onMouseEnter={(e) => e.target.style.transform = "scale(1.02)"}
+                onMouseLeave={(e) => e.target.style.transform = "scale(1)"}
+              />
             </div>
           </div>
 
-          {/* Feature 3 */}
+          {/* Feature 5: Financial Reports */}
           <div className="feature-block fade-up">
             <div className="feature-text">
               <h3>Financial Reports &amp; Transaction History</h3>
@@ -223,22 +246,54 @@ export default function GymContent() {
                 <li>Clean, easy-to-read report dashboard</li>
               </ul>
             </div>
+            <div className="feature-visual image-only">
+              <img 
+                src="/gym-apps-mockup/Gym App - Report mockup.webp" 
+                alt="Urbanzi Gym Application - Financial reporting dashboard with transaction history and downloadable data" 
+                style={{ width: "100%", height: "auto", borderRadius: "12px", boxShadow: "0 10px 30px rgba(0,0,0,0.5)", cursor: "zoom-in", transition: "transform 0.3s" }} 
+                onClick={() => setSelectedImage("/gym-apps-mockup/Gym App - Report mockup.webp")}
+                onMouseEnter={(e) => e.target.style.transform = "scale(1.02)"}
+                onMouseLeave={(e) => e.target.style.transform = "scale(1)"}
+              />
+            </div>
+          </div>
+
+          {/* Feature 6: WhatsApp Reminders */}
+          <div className="feature-block reverse fade-up">
+            <div className="feature-text">
+              <h3>Automated WhatsApp Expiry Reminders</h3>
+              <p>
+                Never lose a member because they forgot to renew. Our system automatically 
+                sends professional WhatsApp reminders directly to your members before their plan ends. 
+                You have full control over when these notifications are sent.
+              </p>
+              <ul className="feature-list">
+                <li>Set automated reminders (e.g., 3 days or 1 week before expiry)</li>
+                <li>Direct-to-WhatsApp delivery for maximum visibility</li>
+                <li>Branded messages with your gym&apos;s name and renewal link</li>
+                <li>Reduces manual follow-ups and improves retention</li>
+              </ul>
+            </div>
             <div className="feature-visual">
               <div className="mock-ui">
                 <div className="mock-bar"><div className="mock-dot"></div><div className="mock-dot"></div><div className="mock-dot"></div></div>
-                <div style={{background:"rgba(255,255,255,0.02)", padding:"16px", borderRadius:"10px", marginBottom:"12px"}}>
-                  <div style={{fontSize:"0.7rem", color:"var(--gray-1)", marginBottom:"4px"}}>THIS MONTH REVENUE</div>
-                  <div style={{fontFamily:"var(--font-display)", fontSize:"1.8rem", fontWeight:"700", color:"var(--white-pure)"}}>₹2,45,800</div>
-                  <div style={{fontSize:"0.72rem", color:"var(--brand-glow)", marginTop:"4px"}}>↑ 12% from last month</div>
+                <div style={{background: "#075e54", padding: "10px 16px", borderRadius: "10px 10px 0 0", display: "flex", alignItems: "center", gap: "10px"}}>
+                   <div className="mock-avatar" style={{width: "24px", height: "24px", background: "#eee"}}></div>
+                   <div style={{fontSize: "0.8rem", fontWeight: "600", color: "#fff"}}>Gym Notifications</div>
                 </div>
-                <div style={{display:"flex", gap:"8px", height:"60px", alignItems:"flex-end"}}>
-                  <div style={{flex: 1, background: "var(--brand)", borderRadius: "4px 4px 0 0", height: "30%"}}></div>
-                  <div style={{flex: 1, background: "var(--brand)", borderRadius: "4px 4px 0 0", height: "50%"}}></div>
-                  <div style={{flex: 1, background: "var(--brand)", borderRadius: "4px 4px 0 0", height: "40%"}}></div>
-                  <div style={{flex: 1, background: "var(--brand)", borderRadius: "4px 4px 0 0", height: "65%"}}></div>
-                  <div style={{flex: 1, background: "var(--brand)", borderRadius: "4px 4px 0 0", height: "55%"}}></div>
-                  <div style={{flex: 1, background: "var(--brand)", borderRadius: "4px 4px 0 0", height: "80%"}}></div>
-                  <div style={{flex: 1, background: "var(--brand-glow)", borderRadius: "4px 4px 0 0", height: "100%"}}></div>
+                <div style={{background: "#e5ddd5", padding: "15px", borderRadius: "0 0 10px 10px", minHeight: "140px"}}>
+                   <div style={{background: "#fff", padding: "10px", borderRadius: "8px", maxWidth: "85%", fontSize: "0.8rem", color: "#333", position: "relative", boxShadow: "0 1px 2px rgba(0,0,0,0.1)"}}>
+                      <div style={{fontWeight: "600", marginBottom: "4px"}}>Hi Alex! 👋</div>
+                      Your <b>Gold Membership</b> at <b>Urban Fitness</b> expires in 3 days. 
+                      Renew now to continue your training without interruption!
+                      <div style={{fontSize: "0.65rem", textAlign: "right", color: "#999", marginTop: "4px"}}>10:45 AM</div>
+                   </div>
+                   <div style={{marginTop: "10px", display: "flex", justifyContent: "flex-end"}}>
+                      <div style={{background: "#dcf8c6", padding: "10px", borderRadius: "8px", maxWidth: "85%", fontSize: "0.8rem", color: "#333", position: "relative", boxShadow: "0 1px 2px rgba(0,0,0,0.1)"}}>
+                         Thanks! I&apos;ll renew today.
+                         <div style={{fontSize: "0.65rem", textAlign: "right", color: "#999", marginTop: "4px"}}>10:50 AM ✓✓</div>
+                      </div>
+                   </div>
                 </div>
               </div>
             </div>
@@ -268,6 +323,7 @@ export default function GymContent() {
                 <li>Financial reports &amp; downloads</li>
                 <li>Member attendance (manual)</li>
                 <li>WhatsApp &amp; call from profile</li>
+                <li className="disabled">Automated WhatsApp reminders</li>
                 <li className="disabled">Fingerprint attendance</li>
                 <li className="disabled">Member self-service login</li>
                 <li className="disabled">Online plan top-up</li>
@@ -285,6 +341,8 @@ export default function GymContent() {
                 <li>Biometric member attendance</li>
                 <li>Biometric trainer attendance</li>
                 <li>Automated attendance reports</li>
+                <li>Automated WhatsApp reminders</li>
+                <li>Set notification trigger days</li>
                 <li>Hardware setup support</li>
                 <li className="disabled">Member self-service login</li>
                 <li className="disabled">Online plan top-up</li>
@@ -424,6 +482,15 @@ export default function GymContent() {
           </p>
         </div>
       </section>
+      {/* ════════════ LIGHTBOX ════════════ */}
+      {selectedImage && (
+        <div className="lightbox-overlay" onClick={() => setSelectedImage(null)}>
+          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <img src={selectedImage} alt="Urbanzi Gym Application - Full screen high-fidelity mockup preview" />
+            <button className="lightbox-close" onClick={() => setSelectedImage(null)}>&times;</button>
+          </div>
+        </div>
+      )}
     </>
   );
 }

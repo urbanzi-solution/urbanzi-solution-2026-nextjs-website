@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import HeroGlobeSection from "@/components/HeroGlobeSection";
 import HeroSection from "@/components/HeroSection";
 import StackedImagesSection from "@/components/StackedImagesSection";
@@ -14,7 +13,7 @@ import TestimonialSection from "@/components/TestimonialSection";
 
 import Footer from "@/components/Footer";
 export const metadata = {
-  title: "Digital Growth Agency in Kerala | Urbanzi Solutions - Scaling Businesses",
+  title: "Digital Growth Agency in Kerala | Scaling Businesses",
   description: "Urbanzi Solutions is Kerala's leading digital agency based in Trivandrum. We build mobile apps, websites, and offer SEO & digital marketing services to help your business grow online.",
   alternates: {
     canonical: "https://www.urbanzi.in/",
@@ -24,7 +23,6 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <Navbar />
       <HeroGlobeSection />
       <HeroSection />
       <StackedImagesSection />

@@ -25,7 +25,7 @@ export default function OurProcessSection() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.85, ease }}
         >
-          <Image src="/process.webp" alt="Process" fill className="object-cover" priority />
+          <Image src="/process.webp" alt="Urbanzi Solutions development process - Discover, Design, Development, and Launch stages" fill className="object-cover" priority />
         </motion.div>
 
         {/* RIGHT CONTENT */}

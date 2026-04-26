@@ -161,7 +161,7 @@ export default function ClientsPage() {
                             <div className="relative w-full h-full">
                               <Image
                                 src={client.logo}
-                                alt={client.name}
+                                alt={"Urbanzi Solutions Client - " + client.name + " (" + client.location + "): " + client.tagline}
                                 fill
                                 className="object-contain p-4 drop-shadow-2xl"
                                 sizes="(max-width: 768px) 100vw, 33vw"

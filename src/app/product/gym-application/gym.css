@@ -14,6 +14,8 @@
   --green-subtle: rgba(59,130,246,0.1);
   --font-display: 'Outfit', sans-serif;
   --font-body: 'DM Sans', sans-serif;
+  --section-py: 100px;
+  --feature-py: 80px;
 
   font-family: var(--font-body);
   background: var(--dark);
@@ -22,7 +24,7 @@
   overflow-x: hidden;
 }
 
-.gymContainer section { padding: 80px 40px; }
+.gymContainer section { padding: var(--section-py) 40px; }
 .gymContainer .container { max-width: 1100px; margin: 0 auto; }
 
 /* ─── HERO ─── */
@@ -212,8 +214,8 @@
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
-  margin-top: 48px;
-  padding-bottom: 48px;
+  margin-top: var(--feature-py);
+  padding-bottom: var(--feature-py);
   border-bottom: 1px solid var(--dark-border);
 }
 .gymContainer .feature-block:last-child { border-bottom: none; padding-bottom: 0; }
@@ -257,11 +259,65 @@
   position: relative;
   overflow: hidden;
 }
+.gymContainer .feature-visual.image-only {
+  background: none;
+  border: none;
+  padding: 0;
+  overflow: visible;
+}
 .gymContainer .feature-visual::before {
   content: '';
   position: absolute; inset: 0;
   background: linear-gradient(135deg, rgba(59,130,246,0.06), transparent);
   pointer-events: none;
+}
+.gymContainer .feature-visual.image-only::before {
+  display: none;
+}
+
+/* ─── LIGHTBOX ─── */
+.gymContainer .lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  cursor: zoom-out;
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
+.gymContainer .lightbox-content {
+  position: relative;
+  max-width: 95vw;
+  max-height: 95vh;
+}
+.gymContainer .lightbox-content img {
+  max-width: 100%;
+  max-height: 95vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+.gymContainer .lightbox-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.7);
+  font-size: 2.5rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s;
+}
+.gymContainer .lightbox-close:hover {
+  color: #fff;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
 }
 .gymContainer .mock-ui {
   width: 100%; position: relative; z-index: 2;
@@ -321,6 +377,8 @@
   border: 1px solid var(--dark-border);
   border-radius: 14px;
   position: relative;
+  display: flex;
+  flex-direction: column;
   transition: border-color 0.3s, transform 0.3s;
 }
 .gymContainer .plan-card:hover {
@@ -372,6 +430,7 @@
 .gymContainer .plan-features li.disabled::before { content: '—'; color: var(--gray-1); }
 .gymContainer .plan-btn {
   display: block; width: 100%; padding: 14px;
+  margin-top: auto;
   text-align: center; border-radius: 10px;
   font-family: var(--font-body);
   font-size: 0.9rem; font-weight: 600;
@@ -559,7 +618,8 @@
   .gymContainer .feature-block.reverse .feature-visual { order: 2; }
 }
 @media (max-width: 768px) {
-  .gymContainer section { padding: 48px 20px; }
+  .gymContainer { --section-py: 60px; --feature-py: 40px; }
+  .gymContainer section { padding: var(--section-py) 20px; }
   .gymContainer .usp-grid { grid-template-columns: 1fr; }
   .gymContainer .plans-grid { grid-template-columns: 1fr; }
   .gymContainer .steps { grid-template-columns: 1fr; }

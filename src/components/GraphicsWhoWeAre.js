@@ -17,7 +17,7 @@ export default function GraphicsWhoWeAre() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, ease }}
           >
-            <img src="/graphics.webp" alt="Who we are" className="max-w-full" />
+            <img src="/graphics.webp" alt="Urbanzi Solutions Creative Design team crafting premium visual identities and animations" className="max-w-full" />
           </motion.div>
 
           <motion.div

@@ -5,7 +5,7 @@ import TestimonialSection from "@/components/TestimonialSection";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Expert Digital Solutions & IT Services | Urbanzi Solutions",
+  title: "Expert Digital Solutions & IT Services",
   description: "Explore our full range of digital services in Trivandrum, Kerala. From enterprise software and mobile apps to SEO and digital marketing, we provide end-to-end solutions for your business.",
   alternates: {
     canonical: "https://www.urbanzi.in/services",

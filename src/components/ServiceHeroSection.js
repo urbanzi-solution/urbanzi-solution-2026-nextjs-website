@@ -64,7 +64,7 @@ export default function ServiceHeroSection() {
           >
             <Image
               src="/services-hero.webp"
-              alt="Web Development"
+              alt="Urbanzi Solutions Web Development services - building high-performance websites for businesses"
               fill
               priority
               className="object-cover"

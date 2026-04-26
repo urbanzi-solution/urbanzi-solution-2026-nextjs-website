@@ -5,10 +5,13 @@ export default function sitemap() {
     "",
     "/about",
     "/contact",
-    "/blogs",
     "/product/gym-application",
     "/products/whatsapp-marketing-software-india",
     "/products/momentry-digital-invitations",
+    "/portfolio/case-studies",
+    "/portfolio/case-studies/arrow-cabs",
+    "/portfolio/case-studies/joseco-furniture",
+    "/portfolio/clients",
     "/clients",
     "/services",
     "/services/app-development",
@@ -24,7 +27,7 @@ export default function sitemap() {
 
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified: new Date(),
+    lastModified: "2026-04-26",
     changeFrequency: "monthly",
     priority: route === "" ? 1 : 0.8,
   }));

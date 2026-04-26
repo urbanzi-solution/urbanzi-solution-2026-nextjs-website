@@ -309,7 +309,7 @@ export default function CaseStudiesIndex() {
                           <div className="relative min-h-[280px] md:min-h-0 overflow-hidden md:[direction:ltr]">
                             <Image
                               src={cs.img}
-                              alt={cs.client}
+                              alt={"Urbanzi Solutions Case Study - " + cs.client + " (" + cs.industry + "): " + cs.tag}
                               fill
                               className="object-cover transition-transform duration-700 group-hover:scale-105"
                               sizes="(max-width: 768px) 100vw, 50vw"

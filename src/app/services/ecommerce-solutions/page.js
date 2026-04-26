@@ -1,7 +1,7 @@
 import UnderDevelopment from "@/components/UnderDevelopment";
 
 export const metadata = {
-  title: "E-commerce Solutions | Urbanzi Solutions",
+  title: "E-commerce Solutions",
   description: "Custom e-commerce website development and solutions in Kerala. Boost your online sales with our expert services.",
   alternates: {
     canonical: "https://www.urbanzi.in/services/ecommerce-solutions",

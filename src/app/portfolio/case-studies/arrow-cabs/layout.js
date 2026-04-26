@@ -16,7 +16,7 @@ export const metadata = {
     canonical: "https://urbanzi.in/portfolio/case-studies/arrow-cabs",
   },
   openGraph: {
-    title: "Arrow Cabs — Page 1 from Zero in 16 Months | Urbanzi Solutions",
+    title: "Arrow Cabs — Page 1 from Zero in 16 Months",
     description:
       "A 20-year cab company invisible on Google. We rebuilt their website, optimised 3 GMB listings, and earned page 1 rankings — no paid ads, ever.",
     url: "https://urbanzi.in/portfolio/case-studies/arrow-cabs",
@@ -32,7 +32,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arrow Cabs — Page 1 from Zero in 16 Months | Urbanzi Solutions",
+    title: "Arrow Cabs — Page 1 from Zero in 16 Months",
     description:
       "A 20-year cab company invisible on Google. Page 1 in 16 months. Zero paid ads.",
     images: ["/logo.png"],

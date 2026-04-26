@@ -23,7 +23,7 @@ export default function CTASection() {
           {/* Background Image */}
           <Image
             src="/cta-bg.webp"
-            alt="CTA Background"
+            alt="Urbanzi Solutions Call to Action background - Start your digital growth journey with Kerala's leading agency"
             fill
             className="object-cover"
           />

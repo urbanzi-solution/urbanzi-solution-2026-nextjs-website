@@ -98,7 +98,7 @@ export default function BlogSection() {
               <div className="col-span-12 md:col-span-4">
                 <img
                   src={post.img}
-                  alt="Post"
+                  alt={"Urbanzi Solutions Blog - " + post.title}
                   className="w-full h-52 md:h-64 object-cover"
                 />
               </div>

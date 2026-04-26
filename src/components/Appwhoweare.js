@@ -20,7 +20,7 @@ export default function Appwhoweare() {
           >
             <img
               src="/appwho.webp"
-              alt="Who we are"
+              alt="Urbanzi Solutions App Development team building high-performance mobile applications and user-centric digital tools"
               className="max-w-full h-auto"
             />
           </motion.div>

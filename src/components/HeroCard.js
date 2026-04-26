@@ -26,14 +26,14 @@ export default function HeroSection() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
-            <h1 className="text-4xl md:text-5xl font-light leading-tight">
+            <h2 className="text-4xl md:text-5xl font-light leading-tight">
               <span className="block">
                 Build Beyond Boundaries Shape
               </span>
               <span className="block italic text-blue-400 font-normal">
                 Tomorrow, Together
               </span>
-            </h1>
+            </h2>
 
             <p className="mt-6 text-zinc-400 text-base md:text-lg leading-relaxed max-w-xl">
               Every dream deserves a chance to grow. At Urbanzi, we turn your ambitions into reality building digital solutions that connect, inspire, and make a difference. Let's create something extraordinary, together.

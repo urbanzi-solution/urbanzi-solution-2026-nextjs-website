@@ -1,6 +1,7 @@
 import "./momentry.css";
 import React from 'react';
 import MomentryContent from './MomentryContent';
+import ProductInternalLinks from '@/components/ProductInternalLinks';
 import Footer from '@/components/Footer';
 
 export const metadata = {
@@ -30,6 +31,8 @@ export default function MomentryPage() {
       <div className="momentry text-left pt-20 pb-10 md:pt-24 md:pb-12 lg:pt-28">
         <MomentryContent />
       </div>
+
+      <ProductInternalLinks currentProduct="/products/momentry-digital-invitations" />
 
       <Footer />
 

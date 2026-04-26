@@ -16,7 +16,7 @@ export const metadata = {
     canonical: "https://urbanzi.in/portfolio/case-studies/joseco-furniture",
   },
   openGraph: {
-    title: "Joseco Furniture — Digital Transformation Case Study | Urbanzi Solutions",
+    title: "Joseco Furniture — Digital Transformation Case Study",
     description:
       "35 years of craft, invisible online. We built a digital warranty system, CRM, Meta Ads, and a new website — driving 27% sales growth and 20–30 leads per day.",
     url: "https://urbanzi.in/portfolio/case-studies/joseco-furniture",
@@ -32,7 +32,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Joseco Furniture — Digital Transformation | Urbanzi Solutions",
+    title: "Joseco Furniture — Digital Transformation",
     description:
       "35 years of craft, invisible online. 27% sales growth, 20–30 leads/day after digital transformation.",
     images: ["/logo.png"],

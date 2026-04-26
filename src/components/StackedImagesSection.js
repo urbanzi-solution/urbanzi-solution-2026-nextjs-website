@@ -67,7 +67,7 @@ export default function FloatingStackSection() {
                   src={src}
                   style={{ ...pair.pos[i], position: "absolute" }}
                   className="w-32 md:w-52 rounded-3xl blur-3xl object-cover aspect-[4/3] grayscale opacity-40"
-                  alt=""
+                  alt="Urbanzi Solutions project background element showcasing digital innovation"
                 />
               ))}
             </div>
@@ -131,6 +131,7 @@ export default function FloatingStackSection() {
                       src={src}
                       style={{ ...next.pos[i], position: "absolute" }}
                       className="w-32 md:w-52 rounded-3xl blur-xl opacity-40 object-cover aspect-[4/3]"
+                      alt="Urbanzi Solutions portfolio preview image highlighting successful client collaborations"
                     />
                   ))}
                 </motion.div>
@@ -153,6 +154,7 @@ export default function FloatingStackSection() {
                       filter: blurValue
                     }}
                     className="w-40 md:w-72 rounded-2xl md:rounded-3xl object-cover aspect-[4/3] shadow-[0_30px_80px_rgba(0,0,0,0.9)]"
+                    alt="Urbanzi Solutions featured project - a high-performance digital solution for businesses"
                   />
                 ))}
               </motion.div>

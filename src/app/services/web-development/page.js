@@ -11,7 +11,7 @@ import WebCTA from "@/components/WebCTA";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Web Development Services in Kerala & Trivandrum | Urbanzi Solutions",
+  title: "Web Development Services in Kerala & Trivandrum",
   description: "Urbanzi Solutions offers professional web design and development services in Trivandrum, Kerala. We build fast, SEO-friendly websites, e-commerce stores, and custom web apps for businesses.",
   alternates: {
     canonical: "https://www.urbanzi.in/services/web-development",

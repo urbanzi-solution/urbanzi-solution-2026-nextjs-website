@@ -752,7 +752,7 @@ export default function ArrowCabsCaseStudy() {
             {/* 16-month graph placeholder */}
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} className="mb-10">
               <ImgSlot
-                label="Google Search Console — 16-Month Performance Graph"
+                label="Arrow Cabs SEO Progress - 16-Month Google Search Console Performance Graph"
                 hint="Full chart March 2025 – April 2026 showing clicks, impressions, rebuild dip + recovery"
                 src="/arrow cabs 16 months metrics - April 2026.webp"
                 onImageClick={setSelectedImg}
@@ -803,7 +803,7 @@ export default function ArrowCabsCaseStudy() {
             {/* Last 28 days screenshot placeholder */}
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} className="mb-8">
               <ImgSlot
-                label="Google Search Console — Last 28 Days Screenshot"
+                label="Arrow Cabs Recent SEO Performance - Last 28 Days Search Console Metrics"
                 hint="267 clicks · 14.2K impressions · 1.9% CTR · avg position 8.1"
                 src="/arrow cabs 28 days metrics - April 2026.webp"
                 onImageClick={setSelectedImg}
@@ -893,13 +893,13 @@ export default function ArrowCabsCaseStudy() {
               <div className="text-xs uppercase tracking-widest text-blue-400 mb-4">Killippalam · April 1–22, 2026</div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <ImgSlot 
-                  label="Killippalam — Calls Made" 
+                  label="Arrow Cabs GMB Performance Killippalam - Monthly Customer Calls via Google Business Profile" 
                   hint="April 1–22, 2026" 
                   src="/April 2026 GMB Calls.webp"
                   onImageClick={setSelectedImg}
                 />
                 <ImgSlot 
-                  label="Killippalam — Profile Views" 
+                  label="Arrow Cabs GMB Performance Killippalam - Local Business Profile Views and Search Visibility" 
                   hint="April 1–22, 2026" 
                   src="/April 2026 GMB Views.webp"
                   onImageClick={setSelectedImg}

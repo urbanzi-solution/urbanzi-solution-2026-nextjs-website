@@ -17,7 +17,7 @@ export default function WebWhoWeAre() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, ease }}
           >
-            <img src="/webare.webp" alt="Who we are" className="max-w-full" />
+            <img src="/webare.webp" alt="Urbanzi Solutions Web Development team working on custom digital solutions" className="max-w-full" />
           </motion.div>
 
           <motion.div

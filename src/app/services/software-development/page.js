@@ -8,10 +8,11 @@ import CaseStudiesSection from "@/components/CaseStudiesSection";
 import SoftFaq from "@/components/SoftFaq";
 import RelatedServices from "@/components/RelatedServices";
 import CTASoft from "@/components/CTASoft";
+import FeaturedProducts from "@/components/FeaturedProducts";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Custom Software Development in Kerala & Trivandrum | Urbanzi Solutions",
+  title: "Custom Software Development in Kerala & Trivandrum",
   description: "Urbanzi Solutions builds custom software, CRM, ERP, and SaaS platforms for businesses in Trivandrum and Kerala. Scalable, secure, and built around your workflows.",
   alternates: {
     canonical: "https://www.urbanzi.in/services/software-development",
@@ -28,6 +29,7 @@ export default function SoftwareDevelopmentPage() {
       <SoftWhyBest />
       <WhyChooseSoftware />
       <CaseStudiesSection service="software-development" />
+      <FeaturedProducts />
       <SoftFaq />
       <RelatedServices current="software-development" />
       <CTASoft />

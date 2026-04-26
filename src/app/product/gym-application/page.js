@@ -1,10 +1,11 @@
 import "./gym.css";
 import React from 'react';
 import GymContent from './GymContent';
+import ProductInternalLinks from '@/components/ProductInternalLinks';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: "Gym Management Software | Custom Gym App for Your Business — Urbanzi Solution LLP",
+  title: "Gym Management Software | Custom Gym App for Your Business",
   description: "Custom-branded gym management software that works on any device. Manage members, trainers, attendance, billing & more. Start your free 1-month trial today — no credit card needed.",
   keywords: "gym management software, gym app, fitness center management, member management, gym billing software, gym attendance tracking, gym CRM, fitness business software, PWA gym app",
   openGraph: {
@@ -30,6 +31,8 @@ export default function GymApplicationPage() {
       <div className="gymContainer text-left pt-24 pb-12 md:pt-28 md:pb-16 lg:pt-32">
         <GymContent />
       </div>
+
+      <ProductInternalLinks currentProduct="/product/gym-application" />
 
       <Footer />
 

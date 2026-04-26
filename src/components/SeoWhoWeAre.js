@@ -17,7 +17,7 @@ export default function SeoWebWhoWeAre() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, ease }}
           >
-            <img src="/Seoare.webp" alt="Who we are" className="max-w-70" />
+            <img src="/Seoare.webp" alt="Urbanzi Solutions SEO Specialists optimizing business visibility and search rankings" className="max-w-70" />
           </motion.div>
 
           <motion.div

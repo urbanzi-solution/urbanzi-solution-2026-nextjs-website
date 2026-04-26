@@ -1,6 +1,7 @@
 import "./bulkreach.css";
 import React from 'react';
 import BulkReachContent from './BulkReachContent';
+import ProductInternalLinks from '@/components/ProductInternalLinks';
 import Footer from '@/components/Footer';
 
 export const metadata = {
@@ -30,6 +31,8 @@ export default function BulkReachPage() {
       <div className="bulkReachContainer text-left pt-24 pb-12 md:pt-28 md:pb-16 lg:pt-32">
         <BulkReachContent />
       </div>
+
+      <ProductInternalLinks currentProduct="/products/whatsapp-marketing-software-india" />
 
       <Footer />
 

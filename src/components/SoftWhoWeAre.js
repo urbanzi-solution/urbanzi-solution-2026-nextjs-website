@@ -17,7 +17,7 @@ export default function SoftWhoWeAre() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, ease }}
           >
-            <img src="/soft.webp" alt="Who we are" className="max-w-full w-full sm:w-auto h-auto" />
+            <img src="/soft.webp" alt="Urbanzi Solutions Software Development team engineering custom business systems" className="max-w-full w-full sm:w-auto h-auto" />
           </motion.div>
 
           <motion.div

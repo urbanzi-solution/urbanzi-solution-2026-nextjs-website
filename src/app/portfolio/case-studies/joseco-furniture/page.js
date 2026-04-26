@@ -550,19 +550,19 @@ export default function JosecoFurnitureCaseStudy() {
                 className="grid md:grid-cols-3 gap-4"
               >
                 <ImgSlot 
-                  label="Warranty Login Screen" 
+                  label="Joseco Furniture Digital Warranty Portal - OTP Login Screen" 
                   hint="OTP entry screen from josecofurniture.com warranty portal" 
                   src="/Warranty login screen screenshot.webp"
                   onImageClick={setSelectedImg}
                 />
                 <ImgSlot 
-                  label="Customer Dashboard" 
+                  label="Joseco Furniture Customer Dashboard - Purchase History and Warranty Status" 
                   hint="Purchase history + warranty status view after login" 
                   src="/Customer dashboard showing purchase history.webp"
                   onImageClick={setSelectedImg}
                 />
                 <ImgSlot 
-                  label="Physical Warranty Card" 
+                  label="Joseco Furniture Physical Warranty Card with QR Code for Digital Registration" 
                   hint="Printed card with QR code given at point of sale" 
                   src="/Warranty card design - Mokup.webp"
                   onImageClick={setSelectedImg}
@@ -605,13 +605,13 @@ export default function JosecoFurnitureCaseStudy() {
                 className="grid md:grid-cols-2 gap-4"
               >
                 <ImgSlot 
-                  label="CRM Dashboard — Customer List" 
+                  label="Urbanzi CRM for Joseco Furniture - Integrated Customer and Purchase History Database" 
                   hint="Backend view showing all registered customers with purchase history" 
                   src="/CRM dashboard screenshot - customer list view.webp"
                   onImageClick={setSelectedImg}
                 />
                 <ImgSlot 
-                  label="CRM — Visitor Tracking View" 
+                  label="Urbanzi CRM for Joseco Furniture - Showroom Visitor Log and Conversion Tracking" 
                   hint="Walk-in visitor log captured by showroom staff" 
                   src="/CRM dashboard - visitor tracking view.webp"
                   onImageClick={setSelectedImg}
@@ -662,13 +662,13 @@ export default function JosecoFurnitureCaseStudy() {
                 className="grid md:grid-cols-2 gap-4"
               >
                 <ImgSlot 
-                  label="Meta Ads — Overall Performance (Sept–April)" 
+                  label="Joseco Furniture Meta Ads Campaign Performance - 3000+ Total Leads Overview" 
                   hint="Combined dashboard showing 3,000+ total leads across all locations" 
                   src="/Joseco Meta Dashbaord screenshot all total.webp"
                   onImageClick={setSelectedImg}
                 />
                 <ImgSlot 
-                  label="Meta Ads — Optimized April Campaign" 
+                  label="Joseco Furniture Optimized Meta Ads Dashboard - Daily Lead Generation and CPC Metrics" 
                   hint="High-performance ads achieving ₹35–40 CPC and consistent 20+ leads/day" 
                   src="/Joseco Meta Dashbaord screenshot Current campaign.webp"
                   onImageClick={setSelectedImg}
@@ -753,7 +753,7 @@ export default function JosecoFurnitureCaseStudy() {
             >
               <motion.div variants={fadeUp}>
                 <ImgSlot
-                  label="Podcast / Shoot — Behind the Scenes"
+                  label="Behind the Scenes Content Creation for Joseco Furniture - Owner-led Video Marketing"
                   hint="Photos from content shoot session with Joye Alex Alexander"
                   src="/Podcast Video creation photo 2.webp"
                   onImageClick={setSelectedImg}

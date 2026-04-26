@@ -10,7 +10,7 @@ export default function WhoWeAre() {
           <div className="flex justify-center">
             <img
               src="/who-we-are.webp"
-              alt="Who we are"
+              alt="Urbanzi Solutions - Digital Marketing and SEO Experts in Trivandrum, Kerala"
               className="max-w-full"
             />
           </div>

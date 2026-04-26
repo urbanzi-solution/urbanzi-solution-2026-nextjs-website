@@ -207,9 +207,9 @@ export default function Navbar() {
             </div>
           </div>
 
-          <Link href="/blogs" className="hover:text-white transition">
+          {/* <Link href="/blogs" className="hover:text-white transition">
             Blogs
-          </Link>
+          </Link> */}
           <Link href="/contact" className="hover:text-white transition">
             Contact Us
           </Link>
@@ -351,7 +351,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          <Link href="/blogs" onClick={closeMenu}>Blogs</Link>
+          {/* <Link href="/blogs" onClick={closeMenu}>Blogs</Link> */}
 
           <Link href="/contact" onClick={closeMenu}>Contact Us</Link>
 

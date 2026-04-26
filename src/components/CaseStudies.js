@@ -48,7 +48,7 @@ export default function CaseStudies() {
             >
               <Image
                 src="/Joseco Funiture Case study photo.webp"
-                alt="Joseco Furniture"
+                alt="Joseco Furniture Digital Transformation Case Study - E-commerce and CRM solutions"
                 width={800}
                 height={600}
                 className="w-full h-[360px] md:h-[500px] object-cover transition duration-700 group-hover:scale-110"
@@ -91,7 +91,7 @@ export default function CaseStudies() {
             >
               <Image
                 src="/Arrowcabs Case study image.webp"
-                alt="Arrow Cabs"
+                alt="Arrow Cabs SEO Case Study - Improving search rankings and local visibility in Trivandrum"
                 width={800}
                 height={600}
                 className="w-full h-[360px] md:h-[500px] object-cover transition duration-700 group-hover:scale-110"

@@ -11,7 +11,7 @@ import DigitCTA from "@/components/DigitCTA";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Digital Marketing Agency in Trivandrum, Kerala | Urbanzi Solutions",
+  title: "Digital Marketing Agency in Trivandrum, Kerala",
   description: "Urbanzi Solutions is a full-service digital marketing agency in Trivandrum, Kerala. We offer social media marketing, Google Ads, SEO, and content marketing to grow your business online.",
   alternates: {
     canonical: "https://www.urbanzi.in/services/digital-marketing",

@@ -14,7 +14,7 @@ export const metadata = {
     canonical: "https://urbanzi.in/portfolio/clients",
   },
   openGraph: {
-    title: "Our Clients | Urbanzi Solutions",
+    title: "Our Clients",
     description:
       "Businesses we've partnered with to build, grow, and transform their digital presence — SEO, web development, digital marketing, and more.",
     url: "https://urbanzi.in/portfolio/clients",
@@ -30,7 +30,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Our Clients | Urbanzi Solutions",
+    title: "Our Clients",
     description:
       "Businesses we've partnered with to build, grow, and transform their digital presence.",
     images: ["/logo.png"],

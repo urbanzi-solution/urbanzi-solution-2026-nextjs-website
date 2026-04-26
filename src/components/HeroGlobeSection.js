@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -61,9 +62,13 @@ export default function HeroGlobeSection() {
         opacity-70
         ">
 
-          <img
+          <Image
             src="/globe.webp"
-            alt="Globe"
+            alt="Interactive 3D digital growth globe representing Urbanzi Solutions global reach and digital expertise in Kerala"
+            width={900}
+            height={900}
+            priority
+            fetchPriority="high"
             className="w-full h-full object-contain select-none"
           />
 
@@ -203,6 +208,31 @@ export default function HeroGlobeSection() {
 
       </div>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Urbanzi Solutions",
+            "url": "https://www.urbanzi.in",
+            "logo": "https://www.urbanzi.in/logo.png",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+91-7012050812",
+              "contactType": "customer service"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Paradise, Sivajipuram, Machel P.O., Malayinkil",
+              "addressLocality": "Thiruvananthapuram",
+              "addressRegion": "Kerala",
+              "postalCode": "695571",
+              "addressCountry": "IN"
+            }
+          })
+        }}
+      />
     </section>
   );
 }

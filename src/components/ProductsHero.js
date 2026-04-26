@@ -21,7 +21,7 @@ export default function ProductsHero() {
         </motion.div>
 
         {/* Main Heading — word by word reveal */}
-        <motion.h1
+        <motion.h2
           className="text-2xl md:text-4xl font-light leading-snug mb-6 max-w-4xl"
           initial={{ opacity: 0, y: 28 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -32,7 +32,7 @@ export default function ProductsHero() {
           <span className="text-blue-400 italic font-normal">
             business.
           </span>
-        </motion.h1>
+        </motion.h2>
 
         {/* Description */}
         <motion.p

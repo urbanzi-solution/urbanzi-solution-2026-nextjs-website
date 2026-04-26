@@ -75,7 +75,7 @@ export default function TeamSection() {
                   <div className="relative h-[300px] w-full overflow-hidden">
                     <Image
                       src={member.image}
-                      alt={member.name}
+                      alt={member.name + " - " + member.role + " at Urbanzi Solutions"}
                       fill
                       className="object-cover group-hover:scale-110 transition duration-700 ease-out"
                     />

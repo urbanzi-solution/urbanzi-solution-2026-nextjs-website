@@ -11,7 +11,7 @@ import AppCTA from "@/components/AppCTA";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Mobile App Development in Kerala & Trivandrum | Urbanzi Solutions",
+  title: "Mobile App Development in Kerala & Trivandrum",
   description: "Urbanzi Solutions is a trusted mobile app development company in Trivandrum, Kerala. We build Android, iOS, Flutter & React Native apps for startups and businesses across India.",
   alternates: {
     canonical: "https://www.urbanzi.in/services/app-development",

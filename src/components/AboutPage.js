@@ -17,7 +17,7 @@ export default function AboutPage() {
         {/* Background Image */}
         <Image
           src="/marketin.webp"
-          alt="About Hero"
+          alt="Urbanzi Solutions About Hero - Starting an innovation journey for business growth"
           fill
           className="object-cover"
           priority
@@ -44,8 +44,8 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.38, ease }}
           >
-            At Urbanzi, we redefine how people manage and interact with money by
-            empowering businesses with smart tools that create a positive impact.
+            At Urbanzi, we empower businesses with cutting-edge digital solutions, 
+            helping them scale, innovate, and create a lasting impact in the digital world.
           </motion.p>
 
         </div>

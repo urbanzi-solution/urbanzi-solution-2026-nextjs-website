@@ -18,7 +18,7 @@ export default function MissionSection() {
         >
           <Image
             src="/mission.webp"   // put your image inside public folder
-            alt="Mission"
+            alt="Urbanzi Solutions mission - empowering Kerala businesses with reliable and impactful digital solutions"
             fill
             className="object-cover"
           />

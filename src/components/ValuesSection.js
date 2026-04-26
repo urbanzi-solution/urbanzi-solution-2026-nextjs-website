@@ -74,8 +74,7 @@ export default function ValuesSection() {
                 viewport={{ once: true }}
                 className="text-gray-400 text-xl leading-relaxed max-w-xl"
               >
-                We are committed to making money management accessible for everyone,
-                regardless of financial background.
+                We are committed to delivering exceptional digital experiences that empower businesses to thrive in a rapidly evolving market.
               </motion.p>
             </div>
 

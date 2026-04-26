@@ -119,7 +119,7 @@ export default function ContactSection() {
               <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl blur opacity-30 group-hover:opacity-50 transition duration-1000"></div>
               <Image
                 src="/contact.webp"
-                alt="Rocket Launch Illustration"
+                alt="Urbanzi Solutions Contact - A rocket launch illustration symbolizing business growth and new digital journeys"
                 width={800}
                 height={800}
                 className="rounded-3xl border border-white/10 relative z-10 w-full h-auto shadow-2xl transition duration-500 hover:scale-[1.01]"

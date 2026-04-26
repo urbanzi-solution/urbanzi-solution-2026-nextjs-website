@@ -17,7 +17,7 @@ export default function HeroSection() {
 
             {/* Heading */}
             <div className="overflow-hidden">
-              <motion.h1
+              <motion.h2
                 className="text-3xl sm:text-4xl md:text-5xl font-light leading-tight mb-6"
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -29,7 +29,7 @@ export default function HeroSection() {
                 <span className="block text-blue-400 italic font-medium">
                   Urbanzi Solutions
                 </span>
-              </motion.h1>
+              </motion.h2>
             </div>
 
             {/* Paragraph */}

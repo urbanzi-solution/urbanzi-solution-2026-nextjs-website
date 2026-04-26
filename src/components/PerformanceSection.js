@@ -49,7 +49,7 @@ export default function PerformanceSection() {
               <p className="text-gray-300 mb-8 text-sm md:text-base">
                 We prioritize long-term partnerships by delivering solutions that exceed expectations.
               </p>
-              <h3 className="text-4xl md:text-5xl font-bold text-blue-300">100%</h3>
+              <div className="text-4xl md:text-5xl font-bold text-blue-300">100%</div>
               <p className="text-blue-300 mt-2 text-base md:text-lg">Customer Satisfaction</p>
             </div>
           </motion.div>
@@ -66,7 +66,7 @@ export default function PerformanceSection() {
               <p className="text-gray-300 mb-8 text-sm md:text-base">
                 Our team is always available to ensure your systems run smoothly, anytime you need us.
               </p>
-              <h3 className="text-4xl md:text-6xl font-bold text-blue-300">24/7</h3>
+              <div className="text-4xl md:text-6xl font-bold text-blue-300">24/7</div>
               <p className="text-blue-300 mt-2 text-base md:text-xl">Support Available</p>
             </div>
 
@@ -93,7 +93,7 @@ export default function PerformanceSection() {
                 We build secure, stable, and reliable platforms you can trust to perform without interruption.
               </p>
               <div>
-                <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-300">99.9%</h3>
+                <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-300">99.9%</div>
                 <p className="text-blue-300 mt-2 text-base md:text-xl">Uptime Guarantee</p>
               </div>
             </div>

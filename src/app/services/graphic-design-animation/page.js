@@ -11,7 +11,7 @@ import GraphicsCTA from "@/components/GraphicsCTA";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Graphic Design & Animation Services in Kerala | Urbanzi Solutions",
+  title: "Graphic Design & Animation Services in Kerala",
   description: "Urbanzi Solutions offers professional graphic designing, brand identity, motion graphics, and animation services in Trivandrum, Kerala. Visuals built to capture attention and convert.",
   alternates: {
     canonical: "https://www.urbanzi.in/services/graphic-design-animation",
