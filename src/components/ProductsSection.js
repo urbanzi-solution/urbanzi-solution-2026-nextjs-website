@@ -9,21 +9,21 @@ export default function ProductsSection() {
     {
       title: "GYM MANAGEMENT",
       desc: "Our Gym Management Software helps fitness centers across Kerala manage memberships, payments, and schedules from one simple dashboard. Save time and grow your business.",
-      img: "/gym.webp",
+      img: "/Product-images/Gym managment software.webp",
       alt: "Urbanzi Solutions Gym Management Software - Comprehensive dashboard for fitness center operations",
       href: "/product/gym-application"
     },
     {
       title: "WHATSAPP AUTOMATION",
       desc: "Send instant updates, confirmations, and offers directly to your customers on WhatsApp. Our official API tool helps businesses stay connected without extra effort.",
-      img: "/whatsapp.webp",
+      img: "/Product-images/Whatsapp Bulk Reach image.webp",
       alt: "Urbanzi Solutions WhatsApp Automation Tool - Official API integration for automated business messaging",
       href: "/products/whatsapp-marketing-software-india"
     },
     {
       title: "MOMENTRY INVITES",
       desc: "Premium digital invitation websites for weddings, birthdays, and celebrations. Custom-built stories with RSVP, maps, and countdowns that leave a lasting impression.",
-      img: "/img5.webp",
+      img: "/Product-images/Momentry image.webp",
       alt: "Momentry Digital Invitations by Urbanzi - Premium wedding and event invitation websites",
       href: "/products/momentry-digital-invitations"
     },
