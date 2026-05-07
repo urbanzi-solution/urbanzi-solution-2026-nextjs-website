@@ -113,6 +113,10 @@ export default function Navbar() {
                 Graphic Design & Animation
               </Link>
 
+              <Link href="/services/cybersecurity" className="flex items-center gap-2 px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 transition-colors">
+                Cybersecurity
+              </Link>
+
             </div>
 
           </div>
@@ -293,6 +297,10 @@ export default function Navbar() {
 
               <Link href="/services/graphic-design-animation" onClick={closeMenu}>
                 Graphic Design
+              </Link>
+
+              <Link href="/services/cybersecurity" onClick={closeMenu}>
+                Cybersecurity
               </Link>
 
             </div>

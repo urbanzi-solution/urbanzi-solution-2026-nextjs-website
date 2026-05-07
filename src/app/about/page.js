@@ -3,6 +3,7 @@ import PerformanceSection from "@/components/PerformanceSection";
 import MissionSection from "@/components/MissionSection";
 import ValuesSection from "@/components/ValuesSection";
 import TeamSection from "@/components/TeamSection";
+import PartnersCarousel from "@/components/PartnersCarousel";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 export const metadata = {
@@ -22,6 +23,7 @@ export default function About() {
       <MissionSection />
       <ValuesSection />
       <TeamSection />
+      <PartnersCarousel />
       <CTASection />
       <Footer />
     </>

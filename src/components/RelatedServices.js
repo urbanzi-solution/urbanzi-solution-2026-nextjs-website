@@ -35,15 +35,21 @@ const ALL_SERVICES = {
     desc: "Brand identities, motion graphics, and visual content that make you unforgettable.",
     href: "/services/graphic-design-animation",
   },
+  "cybersecurity": {
+    label: "Cybersecurity",
+    desc: "VAPT, network security, compliance audits, and incident response to protect your business from cyber threats.",
+    href: "/services/cybersecurity",
+  },
 };
 
 const RELATED_MAP = {
   "web-development":          ["seo", "digital-marketing", "app-development"],
   "seo":                      ["web-development", "digital-marketing", "software-development"],
   "digital-marketing":        ["seo", "web-development", "graphic-design-animation"],
-  "software-development":     ["web-development", "app-development", "digital-marketing"],
-  "app-development":          ["software-development", "digital-marketing", "web-development"],
+  "software-development":     ["web-development", "app-development", "cybersecurity"],
+  "app-development":          ["software-development", "digital-marketing", "cybersecurity"],
   "graphic-design-animation": ["web-development", "digital-marketing", "app-development"],
+  "cybersecurity":            ["software-development", "web-development", "app-development"],
 };
 
 const ease = [0.22, 1, 0.36, 1];

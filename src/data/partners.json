@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Encrypted Bytes",
+    "url": "https://encryptbytes.com/",
+    "logo": "/partners/encrypted-bytes-logo.webp",
+    "initials": "EB",
+    "color": "#10B981",
+    "bg": "rgba(16,185,129,0.12)",
+    "border": "rgba(16,185,129,0.25)"
+  },
+  {
+    "name": "Noa Sec",
+    "url": "https://noasec.com/",
+    "logo": "/partners/noasec-cyber-security-solutions.webp",
+    "initials": "NS",
+    "color": "#3B82F6",
+    "bg": "rgba(59,130,246,0.12)",
+    "border": "rgba(59,130,246,0.25)"
+  }
+]

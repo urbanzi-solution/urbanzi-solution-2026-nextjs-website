@@ -663,6 +663,24 @@
   font-size: 0.8rem !important;
   color: var(--gray-1) !important;
 }
+.momentry .demo-inner--reverse {
+  direction: rtl;
+}
+.momentry .demo-inner--reverse > * {
+  direction: ltr;
+}
+.momentry .demo-event-tag {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 20px;
+  background: rgba(212,168,67,0.1);
+  border: 1px solid rgba(212,168,67,0.25);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--brand-glow);
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+}
 .momentry .demo-visual-wrap {
   width: 100%;
   display: flex;
@@ -1317,7 +1335,7 @@
   .momentry .hero-phone-frame { width: 220px; }
   .momentry .occasions-grid { grid-template-columns: repeat(2, 1fr); }
   .momentry .features-grid { grid-template-columns: repeat(2, 1fr); }
-  .momentry .demo-inner { grid-template-columns: 1fr; text-align: center; }
+  .momentry .demo-inner { grid-template-columns: 1fr; text-align: center; direction: ltr; }
   .momentry .demo .section-label { text-align: center; }
   .momentry .demo-text { text-align: center; }
   .momentry .demo-link { margin: 0 auto; }

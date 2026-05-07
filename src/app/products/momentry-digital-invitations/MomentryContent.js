@@ -305,7 +305,7 @@ export default function MomentryContent() {
       {/* ════════════ LIVE DEMO ════════════ */}
       <section className="demo">
         <div className="container">
-          <div className="section-label">Live Client Invitation</div>
+          <div className="section-label">Live Client Invitations</div>
           <div className="demo-inner">
             <Reveal delay={0.1} className="demo-text">
               <h3>See a Real Momentry Invitation — Built for a Real Client</h3>
@@ -345,6 +345,57 @@ export default function MomentryContent() {
                 >
                   <video
                     src="/momentry-mockup/sajin-keerthana-wedding-mockup.webm"
+                    autoPlay loop muted playsInline
+                    className="demo-video"
+                  />
+                  <div className="video-overlay-hint">Click to View Live Site</div>
+                </motion.div>
+              </a>
+            </Reveal>
+          </div>
+
+          {/* ── Baptism Demo ── */}
+          <div className="demo-inner demo-inner--reverse" style={{ marginTop: '72px' }}>
+            <Reveal delay={0.1} className="demo-text">
+              <div className="demo-event-tag">✝ Baptism Invitation</div>
+              <h3>Michelle&apos;s Baptism — A Joyful New Beginning</h3>
+              <p>
+                A heartfelt baptism invitation created for Michelle&apos;s special day — soft, elegant,
+                and deeply personal. Everything guests need is in one beautiful link: event details,
+                venue map, and a message from the family.
+              </p>
+              <p>
+                Momentry brings the same care to spiritual milestones as it does to weddings.
+                Every celebration deserves a memorable invite.
+              </p>
+              <a
+                href="https://michelle-baptism-invitation.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="demo-link"
+              >
+                View Baptism Invitation → michelle-baptism-invitation.vercel.app
+              </a>
+              <p className="demo-disclaimer">
+                Live preview — click to experience the invitation exactly as guests see it.
+              </p>
+            </Reveal>
+
+            <Reveal delay={0.25} className="demo-visual-wrap">
+              <a
+                href="https://michelle-baptism-invitation.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="demo-video-link"
+                style={{ display: 'block', width: '100%', maxWidth: '340px', margin: '0 auto' }}
+              >
+                <motion.div
+                  className="demo-video-wrapper"
+                  whileHover={{ y: -5, scale: 1.02 }}
+                  transition={{ type: 'spring', stiffness: 300, damping: 22 }}
+                >
+                  <video
+                    src="/momentry-mockup/Michellle baptism invitation.webm"
                     autoPlay loop muted playsInline
                     className="demo-video"
                   />

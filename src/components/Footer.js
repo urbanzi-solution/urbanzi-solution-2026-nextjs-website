@@ -64,6 +64,7 @@ export default function Footer() {
               <li><Link href="/services/app-development" className="hover:text-blue-700 transition">App Development</Link></li>
               <li><Link href="/services/seo" className="hover:text-blue-700 transition">SEO</Link></li>
               <li><Link href="/services/graphic-design-animation" className="hover:text-blue-700 transition">Graphics & Animation</Link></li>
+              <li><Link href="/services/cybersecurity" className="hover:text-blue-700 transition">Cybersecurity</Link></li>
             </ul>
           </div>
  

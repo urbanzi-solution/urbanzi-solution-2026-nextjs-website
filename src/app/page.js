@@ -10,7 +10,7 @@ import TransformSection from "@/components/TransformSection";
 import BlogSection from "@/components/BlogSection";
 import RunningText from "@/components/RunningText";
 import TestimonialSection from "@/components/TestimonialSection";
-
+import PartnersCarousel from "@/components/PartnersCarousel";
 import Footer from "@/components/Footer";
 export const metadata = {
   title: "Digital Growth Agency in Kerala | Scaling Businesses",
@@ -35,7 +35,7 @@ export default function Home() {
       <BlogSection />
       <RunningText />
       <TestimonialSection />
-    
+      <PartnersCarousel />
       <Footer />
     </>
   );
