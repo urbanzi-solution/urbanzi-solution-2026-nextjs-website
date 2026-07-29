@@ -214,6 +214,10 @@ export default function Navbar() {
           {/* <Link href="/blogs" className="hover:text-white transition">
             Blogs
           </Link> */}
+          <Link href="/careers" className="hover:text-white transition flex items-center gap-1.5">
+            Careers
+            <span className="bg-blue-600 text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full uppercase tracking-wide leading-none">Hiring</span>
+          </Link>
           <Link href="/contact" className="hover:text-white transition">
             Contact Us
           </Link>
@@ -360,6 +364,11 @@ export default function Navbar() {
           </div>
 
           {/* <Link href="/blogs" onClick={closeMenu}>Blogs</Link> */}
+
+          <Link href="/careers" onClick={closeMenu} className="flex items-center gap-2">
+            Careers
+            <span className="bg-blue-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide">Hiring</span>
+          </Link>
 
           <Link href="/contact" onClick={closeMenu}>Contact Us</Link>
 

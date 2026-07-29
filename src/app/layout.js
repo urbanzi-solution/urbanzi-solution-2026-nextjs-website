@@ -3,6 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import WhatsappButton from "@/components/WhatsappButton"
+import HiringPopup from "@/components/HiringPopup";
 import { LeadProvider } from "@/context/LeadContext";
 import LeadCaptureModal from "@/components/LeadCaptureModal";
 
@@ -59,6 +60,7 @@ export default function RootLayout({ children }) {
           <Navbar />
           {children}
           <LeadCaptureModal />
+          <HiringPopup />
         </LeadProvider>
         <WhatsappButton />
       </body>
