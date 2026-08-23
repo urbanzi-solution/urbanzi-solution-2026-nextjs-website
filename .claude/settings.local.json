@@ -2,7 +2,14 @@
   "permissions": {
     "allow": [
       "Bash(npx next *)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(mv \"Anoop.png\" \"anoop-tmp.png\")",
+      "Bash(mv \"anoop-tmp.png\" \"anoop.png\")",
+      "Bash(mv \"Govardhan Photo.jpeg\" \"govardhan-new.jpeg\")",
+      "Bash(mv \"Sajin.jpeg\" \"sajin-tmp.jpeg\")",
+      "Bash(mv \"sajin-tmp.jpeg\" \"sajin-new.jpeg\")",
+      "Bash(tasklist //FI \"IMAGENAME eq node.exe\")",
+      "Bash(tasklist //FI \"IMAGENAME eq next-swc*\")"
     ]
   }
 }

@@ -90,9 +90,6 @@ export default function Footer() {
                 <a href="tel:+917012050812" className="hover:text-blue-700 transition">+91 7012050812</a>
               </li>
               <li>
-                <a href="tel:+919074496405" className="hover:text-blue-700 transition">+91 9074496405</a>
-              </li>
-              <li>
                 <a href="mailto:contact@urbanzi.in" className="hover:text-blue-700 transition">contact@urbanzi.in</a>
               </li>
               <li>

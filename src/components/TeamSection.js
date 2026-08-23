@@ -8,31 +8,25 @@ const teamMembers = [
   {
     name: "Govardhan",
     role: "Co-Founder · Project Head",
-    image: "/govardhan.webp",
+    image: "/govardhan-new.jpeg",
     website: "#", // Placeholder
-  },
-  {
-    name: "Abhijith",
-    role: "Co-Founder · Project Manager (Operational Lead)",
-    image: "/abhijith.webp",
-    website: "https://abhijith.urbanzi.in", // Placeholder
   },
   {
     name: "Abhishek",
     role: "Co-Founder · Design Head",
-    image: "/abhishek.webp",
-    website: "#", // Placeholder
+    image: "/abhishek-new.jpeg",
+    website: "https://abhishek.urbanzi.in/",
   },
   {
     name: "Anoop",
     role: "Co-Founder · Partner",
-    image: "/annop.webp",
+    image: "/anoop.png",
     website: "#", // Placeholder
   },
   {
     name: "Sajin",
     role: "Co-Founder · Partner",
-    image: "/sajin.webp",
+    image: "/sajin-new.jpeg",
     website: "#", // Placeholder
   },
 ];
@@ -77,6 +71,7 @@ export default function TeamSection() {
                       src={member.image}
                       alt={member.name + " - " + member.role + " at Urbanzi Solutions"}
                       fill
+                      style={{ objectPosition: "center 20%" }}
                       className="object-cover group-hover:scale-110 transition duration-700 ease-out"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
