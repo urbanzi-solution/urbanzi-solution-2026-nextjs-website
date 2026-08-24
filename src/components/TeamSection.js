@@ -7,13 +7,13 @@ import { motion } from "framer-motion";
 const teamMembers = [
   {
     name: "Govardhan",
-    role: "Co-Founder · Project Head",
+    role: "Co-Founder · MD",
     image: "/govardhan-new.jpeg",
     website: "#", // Placeholder
   },
   {
     name: "Abhishek",
-    role: "Co-Founder · Design Head",
+    role: "Co-Founder · CEO",
     image: "/abhishek-new.jpeg",
     website: "https://abhishek.urbanzi.in/",
   },
